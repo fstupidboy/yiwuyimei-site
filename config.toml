@@ -1,9 +1,15 @@
 
 baseURL = "https://yiwuyimei.netlify.app/"
 languageCode = "en-us"
-title = "Yiwu Yimei Products"
-theme = "ananke"
+title = "Yiwu Yimei Export Products"
+theme = "PaperMod"
 enableRobotsTXT = true
 
 [params]
-  description = "Exporting quality products from China to the world."
+  homeInfoParams = { Title = "Yiwu Yimei", Content = "Your trusted exporter of quality Chinese products" }
+
+[[menu.main]]
+  identifier = "products"
+  name = "Products"
+  url = "/products/"
+  weight = 1
