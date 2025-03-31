@@ -1,3 +1,3 @@
-# Yiwu Yimei Export Website
+# Yiwu Yimei Fixed Site
 
-This site uses the Hugo **PaperMod** theme.
+Pre-configured Hugo + PaperMod + Netlify CMS working version.
