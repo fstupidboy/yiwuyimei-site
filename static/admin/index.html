@@ -3,13 +3,12 @@
   <head>
     <meta charset="utf-8" />
     <title>Content Manager</title>
-    <!-- 加载 CMS 主脚本 -->
-    <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
-    <!-- 加载 Netlify 身份验证小部件 -->
+    <!-- ✅ 先加载身份验证小部件 -->
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <!-- ✅ 然后加载 CMS -->
+    <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
   </head>
   <body>
-    <!-- 登录成功后跳转回后台 -->
     <script>
       if (window.netlifyIdentity) {
         window.netlifyIdentity.on("init", (user) => {
@@ -23,4 +22,3 @@
     </script>
   </body>
 </html>
-
