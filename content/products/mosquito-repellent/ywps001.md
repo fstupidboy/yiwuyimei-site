@@ -5,12 +5,12 @@ section: "new"
 cover:
   image: "/images/products/mosquito-repellent/ywps001.png"
   gallery:
-    - "/images/products/scent-diffusers/ywps001/01.png"
-    - "/images/products/scent-diffusers/ywps001/03.png"
-    - "/images/products/scent-diffusers/ywps001/04.png"
-    - "/images/products/scent-diffusers/ywps001/05.png"
-    - "/images/products/scent-diffusers/ywps001/06.jpg"
-    - "/images/products/scent-diffusers/ywps001/07.jpg"
+    - "/images/products/mosquito-repellent/ywps001/01.jpg"
+    - "/images/products/mosquito-repellent/ywps001/03.jpg"
+    - "/images/products/mosquito-repellent/ywps001/04.jpg"
+    - "/images/products/mosquito-repellent/ywps001/05.jpg"
+    - "/images/products/mosquito-repellent/ywps001/06.jpg"
+    - "/images/products/mosquito-repellent/ywps001/07.jpg"
 draft: false
 ---
 **Material:** ABS

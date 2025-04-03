@@ -1,6 +1,13 @@
-/* 全局布局 */
+/* ========== 响应式设计基础布局 ========== */
 
-/* 顶部导航栏 */
+/* ✅ 桌面 + 移动通用：限制宽度容器 */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ✅ 顶部导航栏 */
 .main-navbar {
   background-color: #fff;
   border-bottom: 1px solid #eee;
@@ -8,6 +15,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .site-title {
@@ -18,28 +26,19 @@
   font-size: 1.5rem;
 }
 
-.navbar-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-}
-
+/* ✅ 导航菜单 */
 .nav-menu {
   list-style: none;
   display: flex;
-  gap: 30px;
+  flex-wrap: wrap;
+  gap: 20px;
   margin: 0;
   padding: 0;
 }
 
-.nav-menu li {
-  position: relative;
-}
-
 .nav-menu a {
   text-decoration: none;
-  color: #444444;
+  color: #444;
   font-weight: 500;
   padding: 6px 8px;
   border-bottom: 2px solid transparent;
@@ -47,62 +46,32 @@
 }
 
 .nav-menu a:hover {
-  border-bottom: 2px solid #0077cc;
   color: #0077cc;
+  border-bottom: 2px solid #0077cc;
 }
 
-/* 下拉菜单 */
-.dropdown-menu {
-  display: none;
-  list-style: none;  /* 👈 加这一行取消前面的点 */
-  position: absolute;
-  background: white;
-  top: 100%;
-  left: 0;
-  min-width: 160px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  z-index: 1000;
-  padding: 10px 0;
-}
-
-.dropdown-menu li {
-  padding: 0;
-}
-
-.dropdown:hover .dropdown-menu {
-  display: block;
-}
-
-.dropdown-menu a {
-  display: block;
-  padding: 10px 20px;
-  color: #333;
-}
-
-.dropdown-menu a:hover {
-  background-color: #f0f0f0;
-}
-
-/* 主页布局 */
+/* ✅ 主页布局 */
 .page-wrapper {
   display: flex;
   gap: 30px;
   padding: 20px;
-  max-width: 1200px;
-  margin: 0 auto;
+  flex-wrap: wrap;
 }
 
+/* ✅ 侧边分类菜单 */
 .catalogue-sidebar {
-  flex: 0 0 220px;
-  background-color: #fafafa;
-  border-right: 1px solid #eaeaea;
+  flex: 1 1 220px;
+  background: #fafafa;
+  border-right: 1px solid #eee;
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 8px;
+  font-size: 0.95rem;
 }
 
 .catalogue-menu {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 .catalogue-menu li {
@@ -110,7 +79,6 @@
 }
 
 .catalogue-menu a {
-  font-family: 'Barlow Condensed', sans-serif;  
   text-decoration: none;
   color: #333;
   font-weight: 400;
@@ -120,82 +88,32 @@
   color: #0077cc;
 }
 
+/* ✅ 内容主区域 */
 .main-content {
-  flex: 1;
+  flex: 3 1 700px;
   padding: 20px;
-  max-width: 100%;  /* 添加这个确保不会被缩死 */
 }
 
-/* ========== 字体优化 & PaperMod 风格增强 ========== */
-
-/* 引入 Inter 字体（你还需要在 HTML head 加载 Google Fonts） */
-body {
-  font-family: "Futura", "Helvetica Neue", Arial, sans-serif;
-  font-size: 15px;
-  line-height: 1.6;
-  color: #2bbcc2;
-  background-color: #fff;
-}
-
-/* 标题统一样式 */
-h1, h2, h3, h4 {
-  font-weight: 400;
-  line-height: 1.3;
-  margin: 1em 0 0.5em;
-  color: #444444;
-}
-
-h1 {
-  font-size: 1.875rem;
-}
-
-h2 {
-  font-size: 1.5rem;
-  text-transform: uppercase;
+/* ✅ 标题样式 */
+h1, h2, h3 {
   font-family: "Futura", "Helvetica Neue", sans-serif;
   font-weight: 400;
+  color: #444;
+  text-transform: uppercase;
+  margin: 1em 0 0.5em;
 }
 
-h3 {
-  font-size: 1.125rem;
-}
+h1 { font-size: 2rem; }
+h2 { font-size: 1.5rem; color: #888; letter-spacing: 1px; }
+h3 { font-size: 1.2rem; }
 
-/* 链接美化 */
-a {
-  color: #0077cc;
-  text-decoration: none;
-  transition: all 0.2s ease;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-/* 分类侧边栏字体微调 */
-.catalogue-sidebar {
-  font-size: 0.95rem;
-}
-
-/* 产品价格和文字微调 */
-
-/* 欢迎语块微调 */
-.page-welcome h1 {
-  font-size: 1.6rem;
-  font-weight: 600;
-  margin-bottom: 0.25em;
-}
-
-.page-welcome p {
-  font-size: 1rem;
-  color: #555;
-}
-
+/* ✅ 产品缩略图 */
 .product-thumb {
   width: 150px;
   height: 150px;
-  aspect-ratio: 1/1; /* CSS 新属性，让图片正方形 */
-  object-fit: cover;  /* 保持比例裁剪成方形 */
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  object-fit: cover;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
   transition: transform 0.2s ease;
 }
 
@@ -203,85 +121,44 @@ a:hover {
   transform: scale(1.03);
 }
 
+/* ✅ 产品网格 */
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
   gap: 20px;
-  text-align: center;
-  padding: 10px;
-  margin-top: 20px;
+  justify-items: center;
 }
 
+/* ✅ 产品卡片 */
 .product-card {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
-  height: 100%;
-}
-.product-card img {
-  max-height: 200px;
-  object-fit: cover;
-}
-
-
-/* 横幅图片区域 */
-.homepage-banner {
-  display: flex;  
-  justify-content: center;     /* 图片居中 */
-  margin: 20px 0;         /* 上下间距 */
-}
-.homepage-banner img {
-  width: 100%;       /* 保持图片不会超出容器 */
-  max-width: 1200px;         /* 可设为图片最大宽度 */  
-  height: auto;
-  display: block; /* 允许 text-align 生效 */
-  margin-bottom: 24px;
-}
-/* 统一最大宽度限制 */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;  /* 可选，左右留点边距 */
-}
-
-.catalogue-listing-page {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 30px 20px;
-}
-
-.catalogue-title {
-  font-size: 1.8rem;
-  color: #333;
-  margin-bottom: 20px;
-}
-
-section h2 {
-  text-transform: uppercase;
-  font-family: "Futura", "Helvetica Neue", sans-serif;
-  font-weight: 600;
-  color: #888;  /* 浅灰色 */
-}
-
-h2.catalogue-title,
-.page-welcome h2,
-section h2,
-.catalogue-sidebar h2 {
-  text-transform: uppercase;  /* 全大写 */
-  font-family: "Futura", "Helvetica Neue", sans-serif; /* 更有设计感的字体 */
-  letter-spacing: 1px; /* 增加一点间距更现代 */
+  text-align: center;
 }
 
 .product-card p {
-  max-width: 160px;     /* 限制最大宽度 */
-  margin: 10px auto 0;  /* 上间距 + 居中 */
-  text-align: center;
-  white-space: normal;  /* 允许换行 */
-  word-break: break-word;  /* 长词也断开 */
+  max-width: 160px;
+  margin: 10px auto 0;
+  white-space: normal;
+  word-break: break-word;
   line-height: 1.4;
 }
 
+/* ✅ 横幅图片 */
+.homepage-banner {
+  text-align: center;
+  margin: 20px 0;
+}
+.homepage-banner img {
+  width: 100%;
+  height: auto;
+  max-width: 1200px;
+  border-radius: 0;
+  margin-bottom: 24px;
+}
+
+/* ✅ 回到首页按钮 */
 .home-circle-button {
   position: fixed;
   bottom: 30px;
@@ -296,12 +173,32 @@ section h2,
   border-radius: 50%;
   text-decoration: none;
   box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-  transition: background-color 0.2s ease, transform 0.2s ease;
   z-index: 999;
 }
-
 .home-circle-button:hover {
   background-color: #005fa3;
   transform: scale(1.05);
 }
 
+/* ✅ 移动端适配 */
+@media (max-width: 768px) {
+  .page-wrapper {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .main-content, .catalogue-sidebar {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+}
