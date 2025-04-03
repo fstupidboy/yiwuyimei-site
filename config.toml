@@ -2,32 +2,33 @@ baseURL = "https://www.yiwuyimei.com/"
 languageCode = "en-us"
 title = "YiwuYimei Products"
 theme = "PaperMod"
+enableRobotsTXT = true  # ✅ 自动生成 robots.txt
+googleAnalytics = ""    # ✅ 可选：填你的 GA 追踪 ID
 
 [outputs]
-  home = ["HTML", "RSS", "JSON"]
+  home = ["HTML", "RSS", "JSON", "SITEMAP"]  # ✅ 添加 sitemap 支持
   section = ["HTML", "RSS"]
   page = ["HTML"]
 
+[permalinks]
+  products = "/products/:slug/"
+
 [params]
+  description = "YiwuYimei exports high-quality products from China to the world."
+  keywords = ["Yiwu export", "China products", "small appliances", "fans", "diffusers"]
+  images = ["/images/og-default.jpg"]  # ✅ 用于社交分享的默认预览图
+
   [params.homeInfoParams]
     Title = "yiwuyimei"
     Content = "Your trusted exporter of quality Chinese products"
-    googleFonts = false  # 或空字符串 ""
+    googleFonts = false
 
-[permalinks]
-  products = "/products/:slug/"
+[params.assets]
+  customCSS = ["css/extra.css"]
 
 [[menu.main]]
   identifier = "products"
   name = "Products"
   url = "/products/"
   weight = 1
-
-[markup]
-  [markup.goldmark]
-    [markup.goldmark.renderer]
-      unsafe = true
-
-[params.assets]
-  customCSS = ["css/extra.css"]
 

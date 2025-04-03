@@ -3,31 +3,30 @@
 <title>{{ .Title }} | {{ .Site.Title }}</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+<!-- 网站图标 favicon -->
+<link rel="icon" href="/favicon.png" type="image/png" />
+
 <!-- 公共样式 -->
 <link rel="stylesheet" href="/css/extra.css" />
 <link rel="stylesheet" href="/css/footer.css" />
 <link rel="stylesheet" href="/css/product.css" />
 
-<!-- 网站图标 favicon（可选）-->
-<!-- <link rel="icon" href="/favicon.ico" type="image/x-icon" /> -->
-<!-- 或 PNG 格式 -->
-<link rel="icon" href="/favicon.png" type="image/png" />
-
-<!-- SEO 基础信息 -->
+<!-- ✅ SEO 基础信息 -->
 <meta name="description" content="Yiwu Yimei - Trusted exporter of fans, diffusers, humidifiers, and more. Best quality Chinese products for global buyers.">
 <meta name="keywords" content="Yiwu, Yimei, exporter, China, fans, humidifiers, diffusers, wholesale, factory">
 <meta name="author" content="Yiwu Yimei Technology Co. Ltd.">
 
-<!-- Open Graph（社交媒体分享用） -->
-<meta property="og:title" content="{{ .Title }} | {{ .Site.Title }}">
-<meta property="og:description" content="Explore Yiwu Yimei's best-selling and new arrival products. Trusted supplier from China.">
-<meta property="og:image" content="{{ .Params.cover.image | default "/images/og-default.png" }}">
-<meta property="og:type" content="website">
-<meta property="og:url" content="{{ .Permalink }}">
+<!-- ✅ Open Graph（社交媒体分享用） -->
+<meta property="og:site_name" content="Yiwu Yimei Products" />
+<meta property="og:title" content="{{ .Title }} | {{ .Site.Title }}" />
+<meta property="og:description" content="Explore Yiwu Yimei's best-selling and new arrival products. Trusted supplier from China." />
+<meta property="og:image" content="{{ with .Params.cover.image }}{{ . }}{{ else }}/images/og-default.png{{ end }}" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="{{ .Permalink }}" />
 
-<!-- Twitter 卡片 -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="{{ .Title }} | {{ .Site.Title }}">
-<meta name="twitter:description" content="Discover Yiwu Yimei's high-quality products and export services.">
-<meta name="twitter:image" content="{{ .Params.cover.image | default "/images/og-default.png" }}">
+<!-- ✅ Twitter 卡片 -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="{{ .Title }} | {{ .Site.Title }}" />
+<meta name="twitter:description" content="Discover Yiwu Yimei's high-quality products and export services." />
+<meta name="twitter:image" content="{{ with .Params.cover.image }}{{ . }}{{ else }}/images/og-default.png{{ end }}" />
 

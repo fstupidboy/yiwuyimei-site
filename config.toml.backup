@@ -1,0 +1,33 @@
+baseURL = "https://www.yiwuyimei.com/"
+languageCode = "en-us"
+title = "YiwuYimei Products"
+theme = "PaperMod"
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+  section = ["HTML", "RSS"]
+  page = ["HTML"]
+
+[params]
+  [params.homeInfoParams]
+    Title = "yiwuyimei"
+    Content = "Your trusted exporter of quality Chinese products"
+    googleFonts = false  # 或空字符串 ""
+
+[permalinks]
+  products = "/products/:slug/"
+
+[[menu.main]]
+  identifier = "products"
+  name = "Products"
+  url = "/products/"
+  weight = 1
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[params.assets]
+  customCSS = ["css/extra.css"]
+
