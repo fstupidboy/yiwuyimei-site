@@ -4,7 +4,6 @@
   {{ partial "head.html" . }}
 </head>
 <body>
-  <a href="/" class="home-circle-button" title="Back to Home">🏠</a>
   <div class="container">
     <!-- 全站导航栏 -->
     {{ partial "navbar.html" . }}
@@ -15,6 +14,10 @@
     <!-- 页脚 -->
     {{ partial "footer.html" . }}
   </div>
+  <!-- ✅ 移到这里 -->
+  <a href="/" class="home-circle-button" title="Back to Home">🏠</a>
+  <link rel="stylesheet" href="/css/navbar.css" />
+  <script src="/js/navbar.js" defer></script>
 </body>
 </html>
 

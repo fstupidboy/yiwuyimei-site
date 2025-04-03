@@ -1,3 +1,23 @@
+/* ✅ 全站统一字体样式 */
+h1, h2, h3, h4, h5, h6, p, a, li, span, div {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-weight: 300;
+  color: #55AEB7;
+}
+
+h2 {
+  color: #444444;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #2bbcc2;
+  background-color: #fff;
+}
+
+
 /* ========== 响应式设计基础布局 ========== */
 
 /* ✅ 桌面 + 移动通用：限制宽度容器 */
@@ -5,49 +25,6 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
-}
-
-/* ✅ 顶部导航栏 */
-.main-navbar {
-  background-color: #fff;
-  border-bottom: 1px solid #eee;
-  padding: 10px 30px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.site-title {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 300;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  font-size: 1.5rem;
-}
-
-/* ✅ 导航菜单 */
-.nav-menu {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  margin: 0;
-  padding: 0;
-}
-
-.nav-menu a {
-  text-decoration: none;
-  color: #444;
-  font-weight: 500;
-  padding: 6px 8px;
-  border-bottom: 2px solid transparent;
-  transition: all 0.3s ease;
-}
-
-.nav-menu a:hover {
-  color: #0077cc;
-  border-bottom: 2px solid #0077cc;
 }
 
 /* ✅ 主页布局 */
@@ -81,7 +58,6 @@
 .catalogue-menu a {
   text-decoration: none;
   color: #333;
-  font-weight: 400;
 }
 
 .catalogue-menu a:hover {
@@ -94,25 +70,12 @@
   padding: 20px;
 }
 
-/* ✅ 标题样式 */
-h1, h2, h3 {
-  font-family: "Futura", "Helvetica Neue", sans-serif;
-  font-weight: 400;
-  color: #444;
-  text-transform: uppercase;
-  margin: 1em 0 0.5em;
-}
-
-h1 { font-size: 2rem; }
-h2 { font-size: 1.5rem; color: #888; letter-spacing: 1px; }
-h3 { font-size: 1.2rem; }
 
 /* ✅ 产品缩略图 */
 .product-thumb {
   width: 150px;
   height: 150px;
   object-fit: cover;
-  border-radius: 6px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
   transition: transform 0.2s ease;
 }
@@ -153,9 +116,8 @@ h3 { font-size: 1.2rem; }
 .homepage-banner img {
   width: 100%;
   height: auto;
-  max-width: 1200px;
-  border-radius: 0;
-  margin-bottom: 24px;
+  display: block;
+  max-width: 100vw; /* 限制在视口宽度内 */
 }
 
 /* ✅ 回到首页按钮 */
@@ -195,10 +157,27 @@ h3 { font-size: 1.2rem; }
   .product-grid {
     grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
   }
+}
 
-  .nav-menu {
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 10px;
+@media (max-width: 768px) {
+  h1, h2, h3 {
+    font-size: 1.2rem;
+  }
+
+  .homepage-banner img {
+    max-width: 100%;
+  }
+
+  footer p {
+    font-size: 0.85rem;
+  }
+
+  .product-thumb {
+    width: 120px;
+    height: 120px;
+  }
+
+  .product-card p {
+    font-size: 0.85rem;
   }
 }

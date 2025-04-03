@@ -1,0 +1,58 @@
+{{ define "main" }}
+  <!-- banner -->
+  <div class="homepage-banner">
+    <img src="/images/banner.jpg" alt="YiWuYiMei Banner">
+  </div>
+
+  <div class="page-wrapper">
+    <!-- Sidebar -->
+    <aside class="catalogue-sidebar">
+      <h2>Categories</h2>
+      <ul class="catalogue-menu">
+        <li><a href="/products/fans/">Fans</a></li>
+        <li><a href="/products/shoes-dryers/">Shoes Dryers</a></li>
+        <li><a href="/products/scent-diffusers/">Scent Diffusers</a></li>
+        <li><a href="/products/monitor-lights/">Monitor Lights</a></li>
+        <li><a href="/products/humidifiers/">Humidifiers</a></li>
+        <li><a href="/products/mosquito-repellent/">Mosquito Repellent</a></li>
+        <li><a href="/products/others/">Others</a></li>
+      </ul>
+    </aside>
+
+    <!-- Main -->
+    <main class="main-content">
+      <div class="page-welcome">
+        <h2>Explore our latest products and best sellers!</h2>
+      </div>
+
+      <section>
+        <h2>New Arrivals</h2>
+        <div class="product-grid">
+          {{ range first 8 (where site.RegularPages "Params.section" "new") }}
+            <div class="product-card">
+              <a href="{{ .RelPermalink }}">
+                <img class="product-thumb" src="{{ .Params.cover.image }}" alt="{{ .Title }}">
+              </a>
+              <p>{{ .Title }}</p>
+            </div>
+          {{ end }}
+        </div>
+      </section>
+
+      <section>
+        <h2>Best Sellers</h2>
+        <div class="product-grid">
+          {{ range first 8 (where site.RegularPages "Params.section" "best") }}
+            <div class="product-card">
+              <a href="{{ .RelPermalink }}">
+                <img class="product-thumb" src="{{ .Params.cover.image }}" alt="{{ .Title }}">
+              </a>
+              <p>{{ .Title }}</p>
+            </div>
+          {{ end }}
+        </div>
+      </section>
+    </main>
+  </div>
+{{ end }}
+

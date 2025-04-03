@@ -1,0 +1,113 @@
+/* ======= 导航栏样式（桌面 + 移动）======= */
+
+.main-navbar {
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+  padding: 10px 30px;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between; /* LOGO 靠左，菜单靠右 */
+  align-items: center;
+  width: 100%;
+}
+
+.site-title {
+  font-family: "Futura", "Helvetica Neue", sans-serif;
+  font-size: 1.6rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #222;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-menu li {
+  position: relative;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  padding: 6px 8px;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.nav-menu a:hover {
+  color: #0077cc;
+  border-bottom: 2px solid #0077cc;
+}
+
+/* ========= 下拉菜单 ========= */
+.dropdown-menu {
+  display: none;
+  list-style: none;
+  position: absolute;
+  background: white;
+  top: 100%;
+  left: 0;
+  min-width: 160px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  padding: 10px 0;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 10px 20px;
+  color: #333;
+}
+
+.dropdown-menu a:hover {
+  background-color: #f0f0f0;
+}
+
+/* ========= 移动端菜单 ========= */
+@media (max-width: 768px) {
+  .navbar-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    padding-top: 10px;
+    display: none; /* 默认隐藏，点击汉堡菜单再显示 */
+  }
+
+  .nav-menu.open {
+    display: flex; /* 点击后显示 */
+    flex-direction: column;
+  }
+}
+
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+    margin-left: auto;
+  }
+}
+

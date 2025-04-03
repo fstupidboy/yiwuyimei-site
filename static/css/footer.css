@@ -1,14 +1,17 @@
+/* 让 html 和 body 撑满整个页面高度 */
 html, body {
   height: 100%;
   margin: 0;
   padding: 0;
 }
 
+/* 页面主容器，预留 footer 高度，防止被遮挡 */
 .page-wrapper {
-  min-height: calc(100vh - 100px); /* 100px 是 footer 的大致高度，可微调 */
-  padding-bottom: 40px;             /* 避免 footer 覆盖内容 */
+  min-height: calc(100vh - 100px);  /* 100px 是 footer 估算高度 */
+  padding-bottom: 60px;             /* 加强底部空间避免内容被遮挡 */
 }
 
+/* footer 基本样式 */
 .site-footer {
   background-color: #f8f8f8;
   color: #666;
@@ -17,5 +20,25 @@ html, body {
   padding: 20px 0;
   border-top: 1px solid #eee;
   width: 100%;
+  margin-top: auto;
+}
+
+/* footer 中的段落样式 */
+.site-footer p {
+  margin: 6px 0;
+  line-height: 1.5;
+}
+
+/* 响应式：手机端优化 */
+@media (max-width: 768px) {
+  .site-footer {
+    font-size: 0.8rem;
+    padding: 16px 10px;
+  }
+
+  .site-footer p {
+    font-size: 0.75rem;
+    line-height: 1.4;
+  }
 }
 
