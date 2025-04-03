@@ -1,0 +1,38 @@
+{{ define "main" }}
+
+  <!-- ✅ 横幅图（如果需要） -->
+  <div class="products-banner">
+    <img src="/images/products_1200.jpg" alt="YiWuYiMei Banner">
+  </div>
+
+  <main class="product-page">
+    <div class="content-container">
+      <div class="product-hero">
+        <div class="product-left">
+          {{ with .Params.cover.image }}
+            <img class="product-main-image" src="{{ . }}" alt="{{ $.Title }}">
+          {{ end }}
+        </div>
+        <div class="product-info">
+          <h2>{{ .Title }}</h2>
+          <div class="product-description">
+            {{ .Content }}
+          </div>
+          <div class="inquiry-button">
+            <a href="mailto:sales@yiwuyimei.com?subject=Inquiry about {{ .Title }}" class="btn-inquiry">Send Inquiry</a>
+          </div>
+        </div>
+      </div>
+
+      {{ with .Params.cover.gallery }}
+        <div class="product-gallery">
+          {{ range . }}
+            <img src="{{ . }}" class="gallery-image" alt="Product detail image">
+          {{ end }}
+        </div>
+      {{ end }}
+    </div>
+  </main>
+
+{{ end }}
+

@@ -1,0 +1,82 @@
+/* static/css/product.css */
+.product-page {
+  padding: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-bottom: 20px; /* 原来是 40px，改小点 */
+}
+
+/* 横向排列主图和描述 */
+.product-hero {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+
+.product-left {
+  flex: 0 0 auto;
+}
+
+.product-main-image {
+  width: 400px;
+  height: auto;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.product-info {
+  flex: 1;
+  min-width: 280px;
+  max-width: 700px;
+  /* 🔥 添加这两行确保内容竖排 + 间距美观 */
+  display: flex;
+  flex-direction: column;
+  gap: 4px;  /* 按钮和描述之间的距离 */
+}
+
+.product-info h2 {
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+.product-description {
+  white-space: pre-line;
+  font-size: 0.8rem;
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 8px;
+}
+
+.btn-inquiry {
+  display: inline-block;
+  background-color: #3b82f6;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 60;
+  transition: background-color 0.2s ease;
+}
+
+.btn-inquiry:hover {
+  background-color: #2563eb;
+}
+
+.product-gallery {
+  display: flex;
+  flex-direction: column; /* ❗ 关键：强制竖排 */
+  align-items: center;
+  gap: 0;
+  margin-top: 40px;
+  margin-bottom: 10px; /* ✅ 新增：减少到底部的空隙 */
+  justify-content: center;
+}
+
+.gallery-image {
+  width: 100%;
+  max-width: 800px;
+  border-radius: 0;
+  box-shadow: none;
+}
+

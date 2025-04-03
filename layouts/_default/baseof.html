@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {{ partial "head.html" . }}
+</head>
+<body>
+  <a href="/" class="home-circle-button" title="Back to Home">🏠</a>
+  <div class="container">
+    <!-- 全站导航栏 -->
+    {{ partial "navbar.html" . }}
+
+    <!-- 页面主要内容 -->
+    {{ block "main" . }}{{ end }}
+
+    <!-- 页脚 -->
+    {{ partial "footer.html" . }}
+  </div>
+</body>
+</html>
+

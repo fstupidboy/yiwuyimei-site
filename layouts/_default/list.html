@@ -1,0 +1,25 @@
+{{ define "main" }}
+
+<!-- ✅ 加载横幅图 -->
+{{ with .Params.banner }}
+  <div class="homepage-banner">
+    <img src="{{ . }}" alt="{{ $.Title }} Banner">
+  </div>
+{{ end }}
+
+<div class="catalogue-listing-page">
+  <h2 class="catalogue-title">{{ .Title }}</h2>
+  <div class="product-grid">
+    {{ range .Pages }}
+      <div class="product-card">
+        <a href="{{ .RelPermalink }}">
+          <img class="product-thumb" src="{{ .Params.cover.image }}" alt="{{ .Title }}">
+        </a>
+        <h3>{{ .Title }}</h3>
+      </div>
+    {{ end }}
+  </div>
+</div>
+
+{{ end }}
+

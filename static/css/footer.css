@@ -1,0 +1,21 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.page-wrapper {
+  min-height: calc(100vh - 100px); /* 100px 是 footer 的大致高度，可微调 */
+  padding-bottom: 40px;             /* 避免 footer 覆盖内容 */
+}
+
+.site-footer {
+  background-color: #f8f8f8;
+  color: #666;
+  text-align: center;
+  font-size: 0.9rem;
+  padding: 20px 0;
+  border-top: 1px solid #eee;
+  width: 100%;
+}
+
