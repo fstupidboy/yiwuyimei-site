@@ -9,7 +9,10 @@
     {{ partial "navbar.html" . }}
 
     <!-- 页面主要内容 -->
-    {{ block "main" . }}{{ end }}
+    {{ $content := .Content }}
+    {{ $content = replaceRE "<img(.*?)src=\"(.*?)\"" "<img$1loading=\"lazy\" src=\"$2\"" $content }}
+    {{ .Scratch.Set "content" $content }}
+    {{ .Scratch.Get "content" | safeHTML }}
 
     <!-- 页脚 -->
     {{ partial "footer.html" . }}
