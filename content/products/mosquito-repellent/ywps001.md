@@ -19,7 +19,7 @@ draft: false
 **Product weight:** 0.34kg
 **Rated power:** 2W
 **Battery capacity:** 1200 mAh
-**Product size:** 490 x 210mm
+**Product size:** 490 x 210 x 30mm
 **Package size:** 494 x 238 x 39mm
 **Charging power:** Type-C
 **Carton size:** 625 x 515 x 500mm
