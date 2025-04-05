@@ -24,4 +24,4 @@ draft: false
 **Charging power:** Type-C
 **Carton size:** 625 x 515 x 500mm
 **Carton Gross Weight:** 15.4kg
-**Super Design:** Dualsafety switch Lamp
+**Super Design:** Dualsafety Switch Lamp
