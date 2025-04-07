@@ -6,6 +6,15 @@
   padding-bottom: 20px; /* 原来是 40px，改小点 */
 }
 
+.product-slogan {
+    font-size: 1.5rem;
+    font-weight: 300;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #EC625F;
+}
+
 
 /* 横向排列主图和描述 */
 .product-hero {
