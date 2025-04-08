@@ -14,7 +14,7 @@
 }
 
 .site-title {
-  font-family: "Futura", "Helvetica Neue", sans-serif;
+  font-family: "Helvetica Neue", sans-serif;
   font-size: 1.6rem;
   font-weight: bold;
   text-transform: uppercase;
@@ -73,6 +73,14 @@
 
 .dropdown-menu a:hover {
   background-color: #f0f0f0;
+}
+
+/* 导航菜单下拉样式优化 */
+nav ul li ul li a {
+  font-weight: 100;         /* 细字体（可选值：100、200、300） */
+  letter-spacing: 0.5px;    /* 字母间距（越小越紧凑） */
+  line-height: 0.8;         /* 行高控制垂直间距 */
+  font-size: 12px;          /* 字体大小也可以略调小一点 */
 }
 
 /* ========= 移动端菜单 ========= */
