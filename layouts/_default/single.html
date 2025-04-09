@@ -9,6 +9,13 @@
       From concept to creation — custom-made, co-developed, and crafted just for you.
   </div>
 
+  <div class="back-button-container">
+    <a href="{{ .CurrentSection.Permalink }}" class="back-to-list">
+      <span class="circle-arrow"></span>
+      <span class="back-text">Back to {{ .CurrentSection.Title }}</span>
+    </a>
+  </div>
+
   <main class="product-page">
     <div class="content-container">
       <div class="product-hero">
@@ -37,6 +44,14 @@
       {{ end }}
     </div>
   </main>
+
+  <!-- ✅ 🔽 底部返回按钮 -->
+  <div class="back-button-container bottom-back">
+    <a href="{{ .CurrentSection.Permalink }}" class="back-to-list">
+      <span class="circle-arrow"></span>
+      <span class="back-text">Back to {{ .CurrentSection.Title }}</span>
+    </a>
+  </div>
 
 {{ end }}
 

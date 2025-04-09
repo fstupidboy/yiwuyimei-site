@@ -118,3 +118,52 @@
   max-width: 100vw; /* 限制在视口宽度内 */
 }
 
+.back-button-container {
+  margin: 1.5rem 2rem;
+}
+
+.back-to-list {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: #3a7c8b; /* 你喜欢的蓝绿色调 */
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.back-to-list:hover {
+  opacity: 0.8;
+}
+
+/* 圆形箭头 */
+.circle-arrow {
+  width: 32px;
+  height: 32px;
+  border: 1px solid #3a7c8b;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 用伪元素画箭头 */
+.circle-arrow::before {
+  content: '';
+  width: 10px;
+  height: 10px;
+  border-left: 1px solid #3a7c8b;
+  border-bottom: 1px solid #3a7c8b;
+  transform: rotate(45deg);
+  margin-left: 4px;  /* 💡 视觉居中关键！ */
+}
+
+.back-text {
+  text-decoration: none;
+}
+
+.bottom-back {
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+
