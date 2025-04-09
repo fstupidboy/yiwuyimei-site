@@ -45,16 +45,16 @@
           {{ end }}
         </div>
       {{ end }}
+        <div class="back-button-container bottom-back">
+          <a href="{{ .CurrentSection.Permalink }}" class="back-to-list">
+            <span class="circle-arrow"></span>
+            <span class="back-text">Back to {{ .CurrentSection.Title }}</span>
+          </a>
+        </div>
+        <hr class="back-divider">
     </div>
-  </main>
 
-  <!-- ✅ 🔽 底部返回按钮 -->
-  <div class="back-button-container bottom-back">
-    <a href="{{ .CurrentSection.Permalink }}" class="back-to-list">
-      <span class="circle-arrow"></span>
-      <span class="back-text">Back to {{ .CurrentSection.Title }}</span>
-    </a>
-  </div>
+  </main>
 
 {{ end }}
 

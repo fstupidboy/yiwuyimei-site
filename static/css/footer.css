@@ -29,6 +29,10 @@ html, body {
   line-height: 1.5;
 }
 
+footer {
+  padding-top: 2rem;
+}
+
 /* 响应式：手机端优化 */
 @media (max-width: 768px) {
   .site-footer {

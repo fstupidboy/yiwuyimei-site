@@ -208,3 +208,10 @@
   background-color: rgba(0, 0, 0, 0.08);
   margin: 1.5rem 0;  /* 上下留白 */
 }
+
+.back-button-container.bottom-back {
+  padding-left: 2rem;
+  margin-top: 3rem;
+  margin-bottom: 4rem; /* ⬅️ 留出和 footer 的缓冲空间 */
+}
+

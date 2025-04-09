@@ -33,6 +33,7 @@ body {
   gap: 30px;
   padding: 20px;
   flex-wrap: wrap;
+  margin-bottom: 2rem;
 }
 
 /* ✅ 侧边分类菜单 */

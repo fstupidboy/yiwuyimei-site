@@ -17,7 +17,7 @@ cover:
 draft: false
 ---
 **Housing Material:**	Plastic
-**Voltage (V):**	220V
+**Voltage (V):**	110V / 220V
 **Installation:**	Portable / Mini
 **Application:**	Hotel|Car|Outdoor|garage|RV|Commercial
 **Power source:** Electric
