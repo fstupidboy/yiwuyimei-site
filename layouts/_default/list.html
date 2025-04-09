@@ -7,8 +7,17 @@
   </div>
 {{ end }}
 
-<div class="catalogue-listing-page">
+  <!-- 🔙 返回首页按钮 -->
+  <div class="back-button-container">
+    <a href="/" class="back-to-list">
+      <span class="circle-arrow"></span>
+      <span class="back-text">Back to Home</span>
+    </a>
+
   <h2 class="catalogue-title">{{ .Title }}</h2>
+  </div>
+
+<div class="catalogue-listing-page">
   <div class="product-grid">
     {{ range .Pages }}
       <div class="product-card">

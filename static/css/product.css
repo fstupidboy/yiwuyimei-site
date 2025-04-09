@@ -167,3 +167,44 @@
   margin-bottom: 2rem;
 }
 
+.catalogue-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  position: relative;
+  margin: 2rem 0 1rem;
+}
+
+.back-to-list {
+  position: absolute;
+  padding-left: 1rem; /* ⬅️ 适当内缩 */
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: #3a7c8b;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-top: 0.5rem;
+}
+
+.catalogue-title {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #3a7c8b;
+  margin: 0;
+  padding-top: 0.2rem;
+}
+
+.back-button-container {
+  padding-left: 1rem;
+  margin-bottom: 1rem; /* ⬅️ 和分隔线拉开 */
+}
+
+.back-divider {
+  border: none;
+  height: 0px;
+  background-color: rgba(0, 0, 0, 0.08);
+  margin: 1.5rem 0;  /* 上下留白 */
+}
