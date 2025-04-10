@@ -176,27 +176,6 @@
   flex-wrap: nowrap;
 }
 
-/* 👇 在手机端变成上下排列 */
-@media (max-width: 768px) {
-  .catalogue-header {
-    flex-direction: column;
-    align-items: flex-start; /* 或 center，看你喜好 */
-    padding: 0 1rem;
-    gap: 1rem;
-  }
-
-  .back-to-list {
-    position: static;  /* ❗ 不要 absolute，否则还会重叠 */
-    margin-left: 0;
-    font-size: 0.95rem;
-  }
-
-  .catalogue-title {
-    text-align: left;
-    font-size: 1.5rem;
-  }
-}
-
 .back-to-list {
   position: absolute;
   padding-left: 1rem; /* ⬅️ 适当内缩 */
@@ -237,3 +216,23 @@
   margin-bottom: 4rem; /* ⬅️ 留出和 footer 的缓冲空间 */
 }
 
+/* 👇 在手机端变成上下排列 */
+@media (max-width: 768px) {
+  .catalogue-header {
+    flex-direction: column;
+    align-items: flex-start; /* 或 center，看你喜好 */
+    padding: 0 1rem;
+    gap: 1rem;
+  }
+
+  .back-to-list {
+    position: static;  /* ❗ 不要 absolute，否则还会重叠 */
+    margin-left: 0;
+    font-size: 0.95rem;
+  }
+
+  .catalogue-title {
+    text-align: left;
+    font-size: 1.5rem;
+  }
+}
