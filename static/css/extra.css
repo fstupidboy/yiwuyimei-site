@@ -1,7 +1,7 @@
 /* ✅ 全站统一字体样式 */
 h1, h2, h3, h4, h5, h6, p, a, li, span, div {
   font-family: "Helvetica Neue", Arial, sans-serif;
-  font-weight: 400;
+  font-weight: 300;
   color: #55AEB7;
 }
 
