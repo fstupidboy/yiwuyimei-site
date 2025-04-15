@@ -180,7 +180,7 @@
 
 .back-to-list {
   position: absolute;
-  padding-left: 0rem; /* ⬅️ 适当内缩 */
+  padding-left: 2rem; /* ⬅️ 适当内缩 */
   display: flex;
   align-items: center;
   gap: 0.5rem;
