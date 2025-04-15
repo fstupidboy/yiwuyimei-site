@@ -182,7 +182,7 @@
   position: absolute;
   padding-left: 1rem; /* ⬅️ 适当内缩 */
   display: flex;
-  align-items: center;
+ /* align-items: center; */
   gap: 0.5rem;
   text-decoration: none;
   color: #3a7c8b;
