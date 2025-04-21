@@ -1,5 +1,6 @@
 ---
 title: "YWYM Clothes Dryer YWAC001"
+product_type: "home gadget"
 date: 2025-04-01
 cover:
   image: "/images/products/others/ywac001.jpg"

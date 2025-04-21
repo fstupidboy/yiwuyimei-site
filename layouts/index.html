@@ -3,6 +3,12 @@
   <div class="homepage-banner">
     <img src="/images/banner.jpg" alt="YiWuYiMei Banner">
   </div>
+  <h1 class="homepage-heading">
+    YIWUYIMEI – China Wholesale Supplier of Fans, Diffusers, Humidifiers & More
+  </h1>
+  <p class="homepage-description">
+    We specialize in high-quality, cost-effective home appliances including portable fans, aroma diffusers, and humidifiers. Trusted by global buyers from the USA, Europe, Japan, and Korea for reliable China export solutions.
+  </p>
 <div class="page-wrapper">
   <!-- Sidebar on the left -->
   <aside class="catalogue-sidebar">
@@ -22,16 +28,16 @@
   <!-- Main content on the right -->
   <main class="main-content">
     <div class="page-welcome">
-      <h2>Explore our latest products and best sellers!</h2>
+      <h2>Discover High-Quality Wholesale Products from China</h2>
     </div>
 
     <section>
-      <h2>New Arrivals</h2>
+     <h2>New Arrivals – Latest Wholesale Home Appliances & Gadgets</h2>
       <div class="product-grid">
         {{ range first 8 (where site.RegularPages "Params.section" "new") }}
           <div class="product-card">
             <a href="{{ .RelPermalink }}">
-              <img class="product-thumb" src="{{ .Params.cover.image }}" alt="{{ .Title }}">
+              <img class="product-thumb" src="{{ .Params.cover.image }}" alt="{{ .Title }} - {{ .Params.product_type }} from YiwuYimei">
             </a>
             <p>{{ .Title }}</p>
           </div>
@@ -40,12 +46,12 @@
     </section>
 
     <section>
-      <h2>Best Sellers</h2>
+      <h2>Best Sellers – Trusted by Buyers Worldwide</h2>
       <div class="product-grid">
         {{ range first 8 (where site.RegularPages "Params.section" "best") }}
           <div class="product-card">
             <a href="{{ .RelPermalink }}">
-              <img class="product-thumb" src="{{ .Params.cover.image }}" alt="{{ .Title }}">
+              <img class="product-thumb" src="{{ .Params.cover.image }}" alt="{{ .Title }} - {{ .Params.product_type }} from YiwuYimei">
             </a>
             <p>{{ .Title }}</p>
           </div>
@@ -54,12 +60,12 @@
     </section>
 
     <section>
-      <h2>Unique Offerings</h2>
+      <h2>Unique China-Made Products for Niche Markets</h2>
       <div class="product-grid">
         {{ range first 8 (where site.RegularPages "Params.section" "unique") }}
           <div class="product-card">
             <a href="{{ .RelPermalink }}">
-              <img class="product-thumb" src="{{ .Params.cover.image }}" alt="{{ .Title }}">
+              <img class="product-thumb" src="{{ .Params.cover.image }}" alt="{{ .Title }} - {{ .Params.product_type }} from YiwuYimei">
             </a>
             <p>{{ .Title }}</p>
           </div>

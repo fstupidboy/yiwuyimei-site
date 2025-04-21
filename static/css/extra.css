@@ -182,3 +182,17 @@ body {
     font-size: 0.85rem;
   }
 }
+
+.homepage-heading {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-top: 1.5rem;
+  color: #222;
+}
+
+.homepage-description {
+  font-size: 1.1rem;
+  margin: 0.5rem 0 2rem;
+  color: #666;
+}
+

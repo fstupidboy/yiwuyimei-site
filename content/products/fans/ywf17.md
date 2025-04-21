@@ -1,5 +1,6 @@
 ---
 title: "Portable Camping Fan YWF017"
+product_type: "portable fan"
 date: 2025-04-01
 section: "best"
 cover:

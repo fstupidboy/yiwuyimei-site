@@ -7,22 +7,28 @@
   </div>
 {{ end }}
 
-  <!-- 🔙 返回首页按钮 -->
-  <div class="back-button-container">
-    <a href="/" class="back-to-list">
-      <span class="circle-arrow"></span>
-      <span class="back-text">Back to Home</span>
-    </a>
+<!-- 🔙 返回首页按钮 -->
+<div class="back-button-container">
+  <a href="/" class="back-to-list">
+    <span class="circle-arrow"></span>
+    <span class="back-text">Back to Home</span>
+  </a>
+</div>
 
-  <h2 class="catalogue-title">{{ .Title }}</h2>
-  </div>
+<!-- ✅ 加入 H1 标题 + 描述 -->
+<h1 class="catalogue-title">{{ .Title }} – Wholesale from China</h1>
+{{ with .Params.description }}
+  <p class="section-description">
+    {{ . }}
+  </p>
+{{ end }}
 
 <div class="catalogue-listing-page">
   <div class="product-grid">
     {{ range .Pages }}
       <div class="product-card">
         <a href="{{ .RelPermalink }}">
-          <img class="product-thumb" src="{{ .Params.cover.image }}" alt="{{ .Title }}">
+          <img class="product-thumb" src="{{ .Params.cover.image }}" alt="{{ .Title }} - {{ .Params.product_type }} from YiwuYimei">
         </a>
         <h3>{{ .Title }}</h3>
       </div>
