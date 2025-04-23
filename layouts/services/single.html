@@ -1,0 +1,19 @@
+{{ define "main" }}
+
+<!-- 🌟 Hero 区块 -->
+<section class="hero-section">
+  <div class="hero-container">
+    <h1 class="hero-title">{{ .Title }}</h1>
+    {{ with .Params.description }}
+      <p class="hero-subtitle">{{ . }}</p>
+    {{ end }}
+  </div>
+</section>
+
+<!-- 🌿 正文内容区域 -->
+<main class="service-content">
+  {{ .Content }}
+</main>
+
+{{ end }}
+

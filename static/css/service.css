@@ -1,0 +1,80 @@
+/* ========== Hero 区块 ========== */
+.hero-section {
+  background: linear-gradient(to right, #e6f0ff, #ffffff);
+  padding: 4rem 1rem 2rem;
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+.hero-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  color: #003366;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  color: #555;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* ========== 正文区块 ========== */
+.service-content {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  font-size: 1.1rem;
+  line-height: 1.75;
+  color: #222;
+  text-align: center !important;
+}
+
+/* 所有 .service-content 内的段落、标题等强制居中 */
+.service-content * {
+  text-align: center;
+}
+
+/* 列表整体居中 */
+.service-content ul {
+  display: inline-block;
+  margin: 1rem auto;
+  padding-left: 0;
+  list-style-position: inside;
+  text-align: left;
+}
+
+.service-content li {
+  margin-bottom: 0.5rem;
+}
+
+/* 标题样式 */
+.service-content h2 {
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  color: #0f172a;
+  border-bottom: 2px solid #94a3b8;
+  padding-bottom: 0.3rem;
+}
+
+/* ========== 移动端优化 ========== */
+@media (max-width: 600px) {
+  .hero-title {
+    font-size: 1.8rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .service-content {
+    font-size: 1rem;
+  }
+}
+

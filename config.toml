@@ -24,7 +24,7 @@ googleAnalytics = ""    # ✅ 可选：填你的 GA 追踪 ID
     googleFonts = false
 
 [params.assets]
-  customCSS = ["css/extra.css"]
+  customCSS = ["css/extra.css","css/service.css"]
 
 [[menu.main]]
   identifier = "products"
