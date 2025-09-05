@@ -1,12 +1,12 @@
-baseURL = "https://www.yiwuyimei.com/"
-languageCode = "en-us"
-title = "YiwuYimei Products"
+baseURL = "https://www.bafangcarton.cn/"
+languageCode = "zh-cn"
+title = "八方纸箱 - 专业包装解决方案"
 theme = "PaperMod"
-enableRobotsTXT = true  # ✅ 自动生成 robots.txt
-googleAnalytics = ""    # ✅ 可选：填你的 GA 追踪 ID
+enableRobotsTXT = true
+googleAnalytics = ""
 
 [outputs]
-  home = ["HTML", "RSS", "JSON", "SITEMAP"]  # ✅ 添加 sitemap 支持
+  home = ["HTML", "RSS", "JSON", "SITEMAP"]
   section = ["HTML", "RSS"]
   page = ["HTML"]
 
@@ -14,21 +14,45 @@ googleAnalytics = ""    # ✅ 可选：填你的 GA 追踪 ID
   products = "/products/:slug/"
 
 [params]
-  description = "YiwuYimei exports high-quality products from China to the world."
-  keywords = ["Yiwu export", "China products", "small appliances", "fans", "diffusers"]
-  images = ["/images/og-default.jpg"]  # ✅ 用于社交分享的默认预览图
+  description = "八方纸箱专业提供优质包装纸箱、纸盒定制服务，为客户提供完整的包装解决方案。"
+  keywords = ["纸箱", "包装", "纸盒", "定制包装", "工业包装", "物流包装"]
+  images = ["/images/og-default.jpg"]
 
   [params.homeInfoParams]
-    Title = "yiwuyimei"
-    Content = "Your trusted exporter of quality Chinese products"
+    Title = "八方纸箱"
+    Content = "专业包装解决方案提供商，为您的产品提供安全可靠的包装保护"
     googleFonts = false
 
 [params.assets]
-  customCSS = ["css/extra.css","css/service.css"]
+  customCSS = ["css/extra.css","css/service.css","css/packaging.css"]
+
+[[menu.main]]
+  identifier = "home"
+  name = "首页"
+  url = "/"
+  weight = 1
 
 [[menu.main]]
   identifier = "products"
-  name = "Products"
+  name = "产品中心"
   url = "/products/"
-  weight = 1
+  weight = 2
+
+[[menu.main]]
+  identifier = "services"
+  name = "服务项目"
+  url = "/services/"
+  weight = 3
+
+[[menu.main]]
+  identifier = "about"
+  name = "关于我们"
+  url = "/about/"
+  weight = 4
+
+[[menu.main]]
+  identifier = "contact"
+  name = "联系我们"
+  url = "/contact/"
+  weight = 5
 

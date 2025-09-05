@@ -1,79 +1,150 @@
-{{ define "main" }}
-  <!-- ✅ 横幅必须在 define 块里面 -->
-  <div class="homepage-banner">
-    <img src="/images/banner.jpg" alt="YiWuYiMei Banner">
-  </div>
-  <h1 class="homepage-heading">
-    YIWUYIMEI – China Wholesale Supplier of Fans, Diffusers, Humidifiers & More
-  </h1>
-  <p class="homepage-description">
-    We specialize in high-quality, cost-effective home appliances including portable fans, aroma diffusers, and humidifiers. Trusted by global buyers from the USA, Europe, Japan, and Korea for reliable China export solutions.
-  </p>
-<div class="page-wrapper">
-  <!-- Sidebar on the left -->
-  <aside class="catalogue-sidebar">
-    <h2>Categories</h2>
-    <ul class="catalogue-menu">
-      <li><a href="/products/fans/">Fans</a></li>
-      <li><a href="/products/shoes-dryers/">Shoes Dryers</a></li>
-      <li><a href="/products/scent-diffusers/">Scent Diffusers</a></li>
-      <li><a href="/products/monitor-lights/">Monitor Lights</a></li>
-      <li><a href="/products/humidifiers/">Humidifiers</a></li>
-      <li><a href="/products/mosquito-repellent/">Mosquito Repellent</a></li>
-      <li><a href="/products/mobile-accessories/">Mobile Accessories</a></li>
-      <li><a href="/products/others/">Others</a></li>
-    </ul>
-  </aside>
+{{- define "main" }}
 
-  <!-- Main content on the right -->
-  <main class="main-content">
-    <div class="page-welcome">
-      <h2>Discover High-Quality Wholesale Products from China</h2>
+<!-- 主横幅区域 -->
+<div class="home-banner">
+    <h1>八方纸箱包装有限公司</h1>
+    <p>专业提供优质包装纸箱、纸盒定制服务，为您的产品提供安全可靠的包装保护。多年行业经验，值得信赖的包装合作伙伴。</p>
+    <div style="margin-top: 2rem;">
+        <a href="/products/" class="btn-primary" style="margin-right: 1rem;">查看产品</a>
+        <a href="/contact/" class="btn-secondary">联系我们</a>
     </div>
-
-    <section>
-     <h2>New Arrivals – Latest Wholesale Home Appliances & Gadgets</h2>
-      <div class="product-grid">
-        {{ range first 8 (where site.RegularPages "Params.section" "new") }}
-          <div class="product-card">
-            <a href="{{ .RelPermalink }}">
-              <img class="product-thumb" src="{{ .Params.cover.image }}" alt="{{ .Title }} - {{ .Params.product_type }} from YiwuYimei">
-            </a>
-            <p>{{ .Title }}</p>
-          </div>
-        {{ end }}
-      </div>
-    </section>
-
-    <section>
-      <h2>Best Sellers – Trusted by Buyers Worldwide</h2>
-      <div class="product-grid">
-        {{ range first 8 (where site.RegularPages "Params.section" "best") }}
-          <div class="product-card">
-            <a href="{{ .RelPermalink }}">
-              <img class="product-thumb" src="{{ .Params.cover.image }}" alt="{{ .Title }} - {{ .Params.product_type }} from YiwuYimei">
-            </a>
-            <p>{{ .Title }}</p>
-          </div>
-        {{ end }}
-      </div>
-    </section>
-
-    <section>
-      <h2>Unique Products for Niche Markets</h2>
-      <div class="product-grid">
-        {{ range first 8 (where site.RegularPages "Params.section" "unique") }}
-          <div class="product-card">
-            <a href="{{ .RelPermalink }}">
-              <img class="product-thumb" src="{{ .Params.cover.image }}" alt="{{ .Title }} - {{ .Params.product_type }} from YiwuYimei">
-            </a>
-            <p>{{ .Title }}</p>
-          </div>
-        {{ end }}
-      </div>
-    </section>
-  </main>
 </div>
 
-{{ end }}
+<!-- 服务特色区域 -->
+<div class="features-section">
+    <div style="text-align: center; margin-bottom: 3rem;">
+        <h2 style="color: var(--primary-color); font-size: 2.2rem; margin-bottom: 1rem;">我们的优势</h2>
+        <p style="color: var(--text-light); font-size: 1.1rem;">为什么选择八方纸箱作为您的包装解决方案提供商</p>
+    </div>
+    
+    <div class="features-grid">
+        <div class="feature-item">
+            <div class="feature-icon">📦</div>
+            <h3>定制设计</h3>
+            <p>根据您的产品特性和品牌需求，提供专业的包装设计方案，确保产品安全且美观。</p>
+        </div>
+        
+        <div class="feature-item">
+            <div class="feature-icon">🌱</div>
+            <h3>环保材料</h3>
+            <p>采用可回收环保纸材，符合国际环保标准，为您的品牌形象加分。</p>
+        </div>
+        
+        <div class="feature-item">
+            <div class="feature-icon">⚡</div>
+            <h3>快速交付</h3>
+            <p>高效的生产流程和完善的供应链管理，确保按时交付您的订单。</p>
+        </div>
+        
+        <div class="feature-item">
+            <div class="feature-icon">💎</div>
+            <h3>品质保证</h3>
+            <p>严格的质量控制体系，从原材料采购到成品检验，层层把关确保品质。</p>
+        </div>
+        
+        <div class="feature-item">
+            <div class="feature-icon">🎯</div>
+            <h3>专业服务</h3>
+            <p>专业的客服团队提供一对一服务，从咨询到售后全程跟踪。</p>
+        </div>
+        
+        <div class="feature-item">
+            <div class="feature-icon">💰</div>
+            <h3>性价比高</h3>
+            <p>优化生产成本，提供具有竞争力的价格，让您的包装预算更有效。</p>
+        </div>
+    </div>
+</div>
+
+<!-- 主要产品展示 -->
+<div style="max-width: 1200px; margin: 0 auto; padding: 0 2rem;">
+    <div style="text-align: center; margin-bottom: 3rem;">
+        <h2 style="color: var(--primary-color); font-size: 2.2rem; margin-bottom: 1rem;">主要产品</h2>
+        <p style="color: var(--text-light); font-size: 1.1rem;">为不同行业提供专业的包装解决方案</p>
+    </div>
+    
+    <div class="product-grid">
+        <div class="product-card">
+            <div style="height: 200px; background: linear-gradient(45deg, #D2B48C, #F5DEB3); display: flex; align-items: center; justify-content: center; color: #8B4513; font-size: 1.2rem; font-weight: bold;">瓦楞纸箱</div>
+            <div class="product-card-content">
+                <h3>瓦楞纸箱</h3>
+                <p>各种规格的瓦楞纸箱，适用于物流运输、产品包装等多种用途。坚固耐用，保护性强。</p>
+            </div>
+        </div>
+        
+        <div class="product-card">
+            <div style="height: 200px; background: linear-gradient(45deg, #98FB98, #90EE90); display: flex; align-items: center; justify-content: center; color: #2C5530; font-size: 1.2rem; font-weight: bold;">定制包装盒</div>
+            <div class="product-card-content">
+                <h3>定制包装盒</h3>
+                <p>根据客户需求定制的精美包装盒，适用于礼品、电子产品、化妆品等高端产品包装。</p>
+            </div>
+        </div>
+        
+        <div class="product-card">
+            <div style="height: 200px; background: linear-gradient(45deg, #FFE4B5, #FFEFD5); display: flex; align-items: center; justify-content: center; color: #CD853F; font-size: 1.2rem; font-weight: bold;">食品包装盒</div>
+            <div class="product-card-content">
+                <h3>食品包装盒</h3>
+                <p>符合食品安全标准的包装盒，适用于糕点、快餐、外卖等食品行业包装需求。</p>
+            </div>
+        </div>
+        
+        <div class="product-card">
+            <div style="height: 200px; background: linear-gradient(45deg, #E6E6FA, #F0E68C); display: flex; align-items: center; justify-content: center; color: #4B0082; font-size: 1.2rem; font-weight: bold;">展示包装盒</div>
+            <div class="product-card-content">
+                <h3>展示包装盒</h3>
+                <p>具有展示功能的包装盒，适用于零售展示、促销活动等场景，美观实用。</p>
+            </div>
+        </div>
+        
+        <div class="product-card">
+            <div style="height: 200px; background: linear-gradient(45deg, #FF6B35, #FFA07A); display: flex; align-items: center; justify-content: center; color: white; font-size: 1.2rem; font-weight: bold;">电商包装盒</div>
+            <div class="product-card-content">
+                <h3>电商包装盒</h3>
+                <p>专为电商平台设计的包装盒，轻便耐用，方便物流配送，提升客户开箱体验。</p>
+            </div>
+        </div>
+        
+        <div class="product-card">
+            <div style="height: 200px; background: linear-gradient(45deg, #708090, #A9A9A9); display: flex; align-items: center; justify-content: center; color: white; font-size: 1.2rem; font-weight: bold;">工业包装箱</div>
+            <div class="product-card-content">
+                <h3>工业包装箱</h3>
+                <p>重型工业产品包装箱，承重能力强，适用于机械设备、汽车配件等重型产品运输。</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 联系信息区域 -->
+<div class="contact-info">
+    <h2>联系我们</h2>
+    <p style="margin-bottom: 2rem; font-size: 1.1rem;">专业的包装解决方案，就在八方纸箱</p>
+    
+    <div class="contact-details">
+        <div class="contact-item">
+            <h4>📞 联系电话</h4>
+            <p>400-888-8888<br>0755-88888888</p>
+        </div>
+        
+        <div class="contact-item">
+            <h4>📧 邮箱地址</h4>
+            <p>info@bafangcarton.cn<br>sales@bafangcarton.cn</p>
+        </div>
+        
+        <div class="contact-item">
+            <h4>📍 公司地址</h4>
+            <p>广东省深圳市龙华区<br>工业园区88号</p>
+        </div>
+        
+        <div class="contact-item">
+            <h4>⏰ 工作时间</h4>
+            <p>周一至周六<br>08:00 - 18:00</p>
+        </div>
+    </div>
+    
+    <div style="margin-top: 2rem;">
+        <a href="/contact/" class="btn-primary">获取报价</a>
+    </div>
+</div>
+
+{{- end }}
 

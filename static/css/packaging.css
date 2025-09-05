@@ -1,0 +1,232 @@
+/* 八方纸箱包装公司样式 */
+
+/* 主品牌颜色 */
+:root {
+  --primary-color: #2C5530;      /* 深绿色，环保包装理念 */
+  --secondary-color: #8B4513;    /* 棕色，纸箱颜色 */
+  --accent-color: #FF6B35;       /* 橙色，活力色彩 */
+  --text-dark: #333333;
+  --text-light: #666666;
+  --bg-light: #F8F9FA;
+}
+
+/* 导航栏样式 */
+.header nav {
+  background: var(--primary-color);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.header nav a {
+  color: white !important;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.header nav a:hover {
+  color: var(--accent-color) !important;
+}
+
+/* 品牌Logo样式 */
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: white !important;
+  text-decoration: none;
+}
+
+/* 首页横幅样式 */
+.home-banner {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  color: white;
+  padding: 4rem 2rem;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.home-banner h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.home-banner p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* 产品网格样式 */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+.product-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.product-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.product-card-content {
+  padding: 1.5rem;
+}
+
+.product-card h3 {
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+}
+
+.product-card p {
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+/* 服务特色区域 */
+.features-section {
+  background: var(--bg-light);
+  padding: 4rem 2rem;
+  margin: 3rem 0;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.feature-item {
+  text-align: center;
+  padding: 2rem;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.feature-icon {
+  font-size: 3rem;
+  color: var(--accent-color);
+  margin-bottom: 1rem;
+}
+
+.feature-item h3 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+/* 联系信息样式 */
+.contact-info {
+  background: var(--primary-color);
+  color: white;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.contact-info h2 {
+  margin-bottom: 2rem;
+}
+
+.contact-details {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.contact-item {
+  text-align: center;
+}
+
+.contact-item h4 {
+  color: var(--accent-color);
+  margin-bottom: 0.5rem;
+}
+
+/* 页面标题样式 */
+.page-title {
+  background: var(--primary-color);
+  color: white;
+  padding: 3rem 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.page-title h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .home-banner h1 {
+    font-size: 2rem;
+  }
+  
+  .home-banner p {
+    font-size: 1rem;
+  }
+  
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* 按钮样式 */
+.btn-primary {
+  background: var(--accent-color);
+  color: white;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+  transition: background 0.3s ease;
+  font-weight: 500;
+}
+
+.btn-primary:hover {
+  background: #E55A2B;
+  text-decoration: none;
+  color: white;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--primary-color);
+  padding: 12px 30px;
+  border: 2px solid var(--primary-color);
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.btn-secondary:hover {
+  background: var(--primary-color);
+  color: white;
+  text-decoration: none;
+}
