@@ -2,7 +2,6 @@
 title: "Potable Power Bank YWPB002"
 product_type: "mobile accessory"
 date: 2025-04-22
-section: "unique"
 cover:
   image: "/images/products/mobile-accessories/ywpb002.png"
   gallery:
