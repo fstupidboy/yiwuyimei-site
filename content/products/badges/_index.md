@@ -1,6 +1,6 @@
 ---
 title: "Badges"
 product_type: "badges"
-banner: "/images/catalogue/badges.png"
+banner: "/images/catalogue/badges-banner.png"
 ---
 
