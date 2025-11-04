@@ -43,8 +43,8 @@
 
       {{ with .Params.cover.gallery }}
         <div class="product-gallery">
-          {{ range . }}
-               <img src="{{ . }}" class="gallery-image" alt="{{ $.Title }} detail view">
+          {{ range $idx, $img := . }}
+               <img src="{{ $img }}" class="gallery-image" alt="{{ $.Title }} – {{ $.Params.product_type }} detail {{ add $idx 1 }}">
           {{ end }}
         </div>
       {{ end }}

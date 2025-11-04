@@ -133,4 +133,31 @@
   ]
 }
 </script>
+{{ else if and (eq .Section "posts") .IsPage }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": {{ printf "%q" .Title }},
+  "description": {{ printf "%q" $desc }},
+  "datePublished": {{ printf "%q" (.PublishDate | default .Date | time.Format "2006-01-02T15:04:05Z07:00") }},
+  "dateModified": {{ printf "%q" (.Lastmod | time.Format "2006-01-02T15:04:05Z07:00") }},
+  "mainEntityOfPage": {"@type":"WebPage","@id": {{ printf "%q" .Permalink }}},
+  "author": {"@type":"Organization","name":"YiwuYimei"},
+  "publisher": {"@type":"Organization","name":"YiwuYimei","logo":{"@type":"ImageObject","url":"/favicon.png"}},
+  "image": {{ printf "%q" $ogImage }}
+}
+</script>
+{{ else if and (eq .Section "services") .IsPage }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": {{ printf "%q" .Title }},
+  "description": {{ printf "%q" $desc }},
+  "provider": {"@type":"Organization","name":"YiwuYimei","url": {{ printf "%q" .Site.BaseURL }}},
+  "areaServed": "Worldwide",
+  "serviceType": {{ printf "%q" .Title }}
+}
+</script>
 {{ end }}
