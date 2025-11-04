@@ -5,3 +5,14 @@
 [build.environment]
   HUGO_VERSION = "0.145.0"
 
+## Redirect legacy or stray checkout URLs to home
+[[redirects]]
+  from = "/checkout"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/checkout/*"
+  to = "/"
+  status = 301
+
