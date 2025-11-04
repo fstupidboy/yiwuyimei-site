@@ -4,6 +4,7 @@ title = "YiwuYimei Products"
 theme = "PaperMod"
 enableRobotsTXT = true  # ✅ 自动生成 robots.txt
 googleAnalytics = ""    # ✅ 可选：填你的 GA 追踪 ID
+ignoreLogs = ["warning-goldmark-raw-html"]
 
 [outputs]
   home = ["HTML", "RSS", "JSON", "SITEMAP"]  # ✅ 添加 sitemap 支持

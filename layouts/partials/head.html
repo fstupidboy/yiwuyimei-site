@@ -110,7 +110,10 @@
   "sameAs": []
 }
 </script>
-{{ else if eq .Section "products" }}
+{{ else if and (eq .Section "products") .IsPage }}
+{{/* Compute a safe SKU even if .File is nil (e.g., head used on virtual pages) */}}
+{{ $sku := (urlize .Title) }}
+{{ with .File }}{{ $sku = .BaseFileName }}{{ end }}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -119,7 +122,7 @@
   "description": {{ printf "%q" $desc }},
   "category": {{ printf "%q" (default "" .Params.product_type) }},
   "brand": { "@type": "Brand", "name": "YiwuYimei" },
-  "sku": {{ printf "%q" .File.BaseFileName }},
+  "sku": {{ printf "%q" $sku }},
   "url": {{ printf "%q" .Permalink }},
   "image": [
     {{- $imgs := slice -}}
