@@ -17,7 +17,7 @@ ignoreLogs = ["warning-goldmark-raw-html"]
 [params]
   description = "YiwuYimei exports high-quality products from China to the world."
   keywords = ["Yiwu export", "China products", "small appliances", "fans", "diffusers"]
-  images = ["/images/og-default.png"]  # ✅ 用于社交分享的默认预览图
+  ogImages = ["/images/og-default.png"]  # ✅ 用于社交分享的默认预览图
 
   [params.homeInfoParams]
     Title = "yiwuyimei"
@@ -26,6 +26,9 @@ ignoreLogs = ["warning-goldmark-raw-html"]
 
 [params.assets]
   customCSS = ["css/extra.css","css/service.css"]
+
+[params.images]
+  useCloudflare = false  # Set to true after enabling Cloudflare Image Resizing
 
 [[menu.main]]
   identifier = "products"

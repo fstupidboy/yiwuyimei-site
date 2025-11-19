@@ -1,0 +1,79 @@
+{{/*
+  Cloudflare Pages responsive image helper using Image Resizing via cdn-cgi/image.
+  Usage:
+    {{ partial "responsive-img-cf.html" (dict
+        "src" "/images/products/foo.jpg"
+        "alt" "Product alt"
+        "class" "product-main-image"
+        "hero" true
+        "sizes" "(max-width: 768px) 100vw, 900px"
+        "widths" (slice 360 640 900 1280)
+    ) }}
+
+  Notes:
+  - Requires Cloudflare Image Resizing (cdn-cgi/image). If unavailable, falls back to the original src.
+*/}}
+
+{{ $src := index . "src" }}
+{{ $alt := or (index . "alt") "" }}
+{{ $class := or (index . "class") "" }}
+{{ $hero := or (index . "hero") false }}
+{{ $sizes := index . "sizes" }}
+{{ if not $sizes }}
+  {{ if $hero }}
+    {{ $sizes = "100vw" }}
+  {{ else }}
+    {{ $sizes = "(max-width: 768px) 50vw, 33vw" }}
+  {{ end }}
+{{ end }}
+{{ $widths := index . "widths" }}
+{{ if not $widths }}
+  {{ $widths = (slice 360 640 900 1280) }}
+{{ end }}
+
+{{ $loading := cond $hero "eager" "lazy" }}
+{{ $priority := cond $hero "high" "low" }}
+{{ $fit := "cover" }}
+{{ $quality := 75 }}
+
+{{/* Normalize to root-absolute path if local */}}
+{{ $isExternal := or (hasPrefix $src "http://") (hasPrefix $src "https://") }}
+{{ $path := $src }}
+{{ if not $isExternal }}
+  {{ if not (hasPrefix $src "/") }}
+    {{ $path = (printf "/%s" $src) }}
+  {{ end }}
+{{ end }}
+
+{{ $useCF := false }}
+{{ with site.Params.images }}
+  {{ $flag := index . "useCloudflare" }}
+  {{ if $flag }}{{ $useCF = $flag }}{{ end }}
+{{ end }}
+{{ if $useCF }}
+  {{/* Build srcset using cf image resizing (format=auto picks webp/avif when supported) */}}
+  {{ $srcset := slice }}
+  {{ range $w := $widths }}
+    {{ $url := printf "/cdn-cgi/image/width=%d,quality=%d,format=auto,fit=%s/%s %dw" $w $quality $fit ($path | urlquery) $w }}
+    {{ $srcset = $srcset | append $url }}
+  {{ end }}
+  <img
+    src="/cdn-cgi/image/width=900,quality={{ $quality }},format=auto,fit={{ $fit }}/{{ $path | urlquery }}"
+    srcset="{{ delimit $srcset ", " }}"
+    sizes="{{ $sizes }}"
+    alt="{{ $alt }}"
+    class="{{ $class }}"
+    loading="{{ $loading }}"
+    decoding="async"
+    fetchpriority="{{ $priority }}"
+  />
+{{ else }}
+  <img
+    src="{{ $path }}"
+    alt="{{ $alt }}"
+    class="{{ $class }}"
+    loading="{{ $loading }}"
+    decoding="async"
+    fetchpriority="{{ $priority }}"
+  />
+{{ end }}

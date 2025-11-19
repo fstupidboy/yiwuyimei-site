@@ -18,7 +18,7 @@
   {{ end }}
 {{ end }}
 {{ if eq $ogImage "" }}
-  {{ with $site.Params.images }}
+  {{ with $site.Params.ogImages }}
     {{ $first := index . 0 }}
     {{ if $first }}{{ $ogImage = $first }}{{ end }}
   {{ end }}

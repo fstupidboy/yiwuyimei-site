@@ -2,7 +2,14 @@
 
   <!-- ✅ 横幅图（如果需要） -->
   <div class="products-banner">
-    <img src="/images/products_1200.jpg" alt="YiWuYiMei Banner">
+    {{ partial "responsive-img-cf.html" (dict 
+      "src" "/images/products_1200.jpg"
+      "alt" "YiWuYiMei Banner"
+      "class" "banner-image"
+      "hero" true
+      "sizes" "100vw"
+      "widths" (slice 640 900 1280 1600)
+    ) }}
   </div>
   
   <div class="product-slogan">
@@ -22,11 +29,17 @@
   <main class="product-page">
     <div class="content-container">
 	<div class="product-hero">
-	  <div class="product-left">
-	    {{ with .Params.cover.image }}
-	      <img class="product-main-image" src="{{ . }}" alt="{{ $.Title }} - {{ $.Params.product_type }} from YiwuYimei">
-	    {{ end }}
-	  </div>
+      <div class="product-left">
+        {{ with .Params.cover.image }}
+          {{ partial "responsive-img-cf.html" (dict 
+            "src" . 
+            "alt" (printf "%s - %s from YiwuYimei" $.Title $.Params.product_type)
+            "class" "product-main-image"
+            "hero" true
+            "sizes" "(max-width: 768px) 100vw, 900px"
+          ) }}
+        {{ end }}
+      </div>
 	  <div class="product-info">
 	    <h1>{{ .Title }}</h1>
 	    <p class="product-keywords">
@@ -44,7 +57,12 @@
       {{ with .Params.cover.gallery }}
         <div class="product-gallery">
           {{ range $idx, $img := . }}
-               <img src="{{ $img }}" class="gallery-image" alt="{{ $.Title }} – {{ $.Params.product_type }} detail {{ add $idx 1 }}">
+               {{ partial "responsive-img-cf.html" (dict 
+                  "src" $img 
+                  "alt" (printf "%s – %s detail %d" $.Title $.Params.product_type (add $idx 1))
+                  "class" "gallery-image"
+                  "sizes" "(max-width: 768px) 50vw, 400px"
+               ) }}
           {{ end }}
         </div>
       {{ end }}

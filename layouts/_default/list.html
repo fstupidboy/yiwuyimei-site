@@ -3,7 +3,14 @@
 <!-- ✅ 加载横幅图 -->
 {{ with .Params.banner }}
   <div class="homepage-banner">
-    <img src="{{ . }}" alt="{{ $.Title }} Banner">
+    {{ partial "responsive-img-cf.html" (dict 
+      "src" .
+      "alt" (printf "%s Banner" $.Title)
+      "class" "homepage-banner-img"
+      "hero" true
+      "sizes" "100vw"
+      "widths" (slice 640 900 1280 1600)
+    ) }}
   </div>
 {{ end }}
 
@@ -28,7 +35,13 @@
     {{ range .Pages }}
       <div class="product-card">
         <a href="{{ .RelPermalink }}">
-          <img class="product-thumb" src="{{ .Params.cover.image }}" alt="{{ .Title }} - {{ .Params.product_type }} from YiwuYimei">
+          {{ partial "responsive-img-cf.html" (dict 
+            "src" .Params.cover.image 
+            "alt" (printf "%s - %s from YiwuYimei" .Title .Params.product_type)
+            "class" "product-thumb"
+            "sizes" "(max-width: 768px) 50vw, 240px"
+            "widths" (slice 240 360 480 640)
+          ) }}
         </a>
         <h3>{{ .Title }}</h3>
       </div>
