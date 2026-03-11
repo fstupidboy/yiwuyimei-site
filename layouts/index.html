@@ -1,106 +1,141 @@
 {{ define "main" }}
-  <!-- ✅ 横幅必须在 define 块里面 -->
-  <div class="homepage-banner">
-    {{ partial "responsive-img-cf.html" (dict 
-      "src" "/images/banner.jpg"
-      "alt" "YiWuYiMei Banner"
-      "class" "homepage-banner-img"
-      "hero" true
-      "sizes" "100vw"
-      "widths" (slice 640 900 1280 1600 1920)
-    ) }}
-  </div>
-  <h1 class="homepage-heading">
-    YIWUYIMEI – China Wholesale Supplier of Fans, Diffusers, Humidifiers & More
-  </h1>
-  <p class="homepage-description">
-    We specialize in high-quality, cost-effective home appliances and gift items including portable fans, aroma diffusers, humidifiers, drinkware, ornaments, toys, cut and sew etc. We are trusted by global buyers from the USA, Europe, Japan, and Korea for reliable China export solutions.
-  </p>
-<div class="page-wrapper">
-  <!-- Sidebar on the left -->
-  <aside class="catalogue-sidebar">
-    <h2>Categories</h2>
-    <ul class="catalogue-menu">
-      <li><a href="/products/fans/">Fans</a></li>
-      <li><a href="/products/shoes-dryers/">Shoes Dryers</a></li>
-      <li><a href="/products/scent-diffusers/">Scent Diffusers</a></li>
-      <li><a href="/products/badges/">Badges</a></li>
-      <li><a href="/products/monitor-lights/">Monitor Lights</a></li>
-      <li><a href="/products/humidifiers/">Humidifiers</a></li>
-      <li><a href="/products/mosquito-repellent/">Mosquito Repellent</a></li>
-      <li><a href="/products/water-bottles/">Water Bottles</a></li>
-      <li><a href="/products/mobile-accessories/">Mobile Accessories</a></li>
-      <li><a href="/products/others/">Gift Items</a></li>
-    </ul>
-  </aside>
-
-  <!-- Main content on the right -->
-  <main class="main-content">
-    <div class="page-welcome">
-      <h2>Discover High-Quality Wholesale Products from China</h2>
+<div class="homepage-container">
+  <!-- Hero Section -->
+  <section class="home-hero-section">
+    <div class="home-hero-background">
+       {{ partial "responsive-img-cf.html" (dict 
+          "src" "/images/banner.jpg" 
+          "alt" "YiwuYimei Premium Collection" 
+          "class" "home-hero-bg-img"
+          "hero" true
+          "sizes" "100vw"
+          "widths" (slice 640 900 1280 1600 1920)
+        ) }}
     </div>
+    <div class="home-hero-overlay"></div>
+    <div class="home-hero-content">
+      <h1 class="home-hero-title">Elevate Your Lifestyle with Exquisite Design</h1>
+      <p class="home-hero-subtitle">Premium Home Appliances & Curated Gifts from YiwuYimei</p>
+      <a href="/products/" class="cta-button">Explore Collection</a>
+    </div>
+  </section>
 
-    <section>
-     <h2>New Arrivals – Latest Wholesale Home Appliances & Gadgets</h2>
-      <div class="product-grid">
-        {{ range first 8 (where site.RegularPages "Params.section" "new") }}
-          <div class="product-card">
-            <a href="{{ .RelPermalink }}">
-              {{ partial "responsive-img-cf.html" (dict 
-                "src" .Params.cover.image 
-                "alt" (printf "%s - %s from YiwuYimei" .Title .Params.product_type)
-                "class" "product-thumb"
-                "sizes" "(max-width: 768px) 50vw, 240px"
-                "widths" (slice 240 360 480 640)
-              ) }}
-            </a>
-            <p>{{ .Title }}</p>
-          </div>
-        {{ end }}
-      </div>
-    </section>
+  <!-- Categories & Products Layout -->
+  <div class="content-wrapper">
+    <!-- Sidebar -->
+    <aside class="sidebar-categories">
+      <h3 class="sidebar-title">Collections</h3>
+      <ul class="category-list">
+        <li><a href="/products/fans/">Fans</a></li>
+        <li><a href="/products/scent-diffusers/">Scent Diffusers</a></li>
+        <li><a href="/products/humidifiers/">Humidifiers</a></li>
+        <li><a href="/products/monitor-lights/">Monitor Lights</a></li>
+        <li><a href="/products/shoes-dryers/">Shoes Dryers</a></li>
+        <li><a href="/products/badges/">Badges</a></li>
+        <li><a href="/products/mosquito-repellent/">Mosquito Repellent</a></li>
+        <li><a href="/products/water-bottles/">Water Bottles</a></li>
+        <li><a href="/products/mobile-accessories/">Mobile Accessories</a></li>
+        <li><a href="/products/others/">Curated Gifts</a></li>
+      </ul>
+    </aside>
 
-    <section>
-      <h2>Best Sellers – Trusted by Buyers Worldwide</h2>
-      <div class="product-grid">
-        {{ range first 8 (where site.RegularPages "Params.section" "best") }}
-          <div class="product-card">
-            <a href="{{ .RelPermalink }}">
-              {{ partial "responsive-img-cf.html" (dict 
-                "src" .Params.cover.image 
-                "alt" (printf "%s - %s from YiwuYimei" .Title .Params.product_type)
-                "class" "product-thumb"
-                "sizes" "(max-width: 768px) 50vw, 240px"
-                "widths" (slice 240 360 480 640)
-              ) }}
-            </a>
-            <p>{{ .Title }}</p>
-          </div>
-        {{ end }}
-      </div>
-    </section>
+    <!-- Main Content -->
+    <main class="main-products">
+      
+      <!-- Introduction -->
+      <section class="intro-section">
+        <h2>Refined Quality, Global Reach</h2>
+        <p>From minimal aesthetics to functional innovation, we bring you the finest selection of home essentials.</p>
+      </section>
 
-    <section>
-      <h2>Unique Products for Niche Markets</h2>
-      <div class="product-grid">
-        {{ range first 8 (where site.RegularPages "Params.section" "unique") }}
-          <div class="product-card">
-            <a href="{{ .RelPermalink }}">
-              {{ partial "responsive-img-cf.html" (dict 
-                "src" .Params.cover.image 
-                "alt" (printf "%s - %s from YiwuYimei" .Title .Params.product_type)
-                "class" "product-thumb"
-                "sizes" "(max-width: 768px) 50vw, 240px"
-                "widths" (slice 240 360 480 640)
-              ) }}
-            </a>
-            <p>{{ .Title }}</p>
-          </div>
-        {{ end }}
-      </div>
-    </section>
-  </main>
+      <!-- New Arrivals -->
+      <section class="product-section">
+        <div class="section-header">
+          <h3>New Arrivals</h3>
+          <a href="/products/" class="view-all">View All →</a>
+        </div>
+        <div class="product-grid">
+          {{ range first 4 (where site.RegularPages "Params.section" "new") }}
+            <div class="product-card">
+              <a href="{{ .RelPermalink }}" class="card-link">
+                <div class="img-container">
+                  {{ partial "responsive-img-cf.html" (dict 
+                    "src" .Params.cover.image 
+                    "alt" .Title 
+                    "class" "product-img"
+                    "sizes" "(max-width: 768px) 100vw, 300px"
+                    "widths" (slice 300 450 600)
+                  ) }}
+                </div>
+                <div class="card-info">
+                  <h4>{{ .Title }}</h4>
+                  <span class="view-details">View Details</span>
+                </div>
+              </a>
+            </div>
+          {{ end }}
+        </div>
+      </section>
+
+      <!-- Best Sellers -->
+      <section class="product-section">
+        <div class="section-header">
+          <h3>Best Sellers</h3>
+          <a href="/products/" class="view-all">View All →</a>
+        </div>
+        <div class="product-grid">
+          {{ range first 4 (where site.RegularPages "Params.section" "best") }}
+            <div class="product-card">
+              <a href="{{ .RelPermalink }}" class="card-link">
+                <div class="img-container">
+                  {{ partial "responsive-img-cf.html" (dict 
+                    "src" .Params.cover.image 
+                    "alt" .Title 
+                    "class" "product-img"
+                    "sizes" "(max-width: 768px) 100vw, 300px"
+                    "widths" (slice 300 450 600)
+                  ) }}
+                </div>
+                <div class="card-info">
+                   <h4>{{ .Title }}</h4>
+                   <span class="view-details">View Details</span>
+                </div>
+              </a>
+            </div>
+          {{ end }}
+        </div>
+      </section>
+
+      <!-- Unique -->
+      <section class="product-section">
+        <div class="section-header">
+           <h3>Unique Finds</h3>
+           <a href="/products/" class="view-all">View All →</a>
+        </div>
+        <div class="product-grid">
+          {{ range first 4 (where site.RegularPages "Params.section" "unique") }}
+            <div class="product-card">
+              <a href="{{ .RelPermalink }}" class="card-link">
+                <div class="img-container">
+                  {{ partial "responsive-img-cf.html" (dict 
+                    "src" .Params.cover.image 
+                    "alt" .Title 
+                    "class" "product-img"
+                    "sizes" "(max-width: 768px) 100vw, 300px"
+                    "widths" (slice 300 450 600)
+                  ) }}
+                </div>
+                <div class="card-info">
+                   <h4>{{ .Title }}</h4>
+                   <span class="view-details">View Details</span>
+                </div>
+              </a>
+            </div>
+          {{ end }}
+        </div>
+      </section>
+
+    </main>
+  </div>
 </div>
-
 {{ end }}
-

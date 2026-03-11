@@ -20,7 +20,7 @@ cover:
     - "/images/products/badges/Key Chain/Couple Key Chain-7.jpg"
     - "/images/products/badges/Key Chain/Couple Key Chain-8.jpg"
     - "/images/products/badges/Key Chain/Customized PU Key Chains.jpg"
-    - "/images/products/badges/Key Chain/Cute Metal Key Ring.png"
+    - "/images/products/badges/Key Chain/Cute Metal Key Ring.webp"
 draft: false
 ---
 **Product name:** Key Chain

@@ -3,12 +3,12 @@ title: "Water Bottle YWYM-036P"
 product_type: "water bottle"
 date: 2025-04-01
 cover:
-  image: "/images/products/water-bottles/YWYM-036P.png"
+  image: "/images/products/water-bottles/YWYM-036P.webp"
   gallery:
-    - "/images/products/water-bottles/YWYM-036P/图片2.png"
-    - "/images/products/water-bottles/YWYM-036P/图片3.png"
-    - "/images/products/water-bottles/YWYM-036P/图片4.png"
-    - "/images/products/water-bottles/YWYM-036P/图片5.png"
+    - "/images/products/water-bottles/YWYM-036P/图片2.webp"
+    - "/images/products/water-bottles/YWYM-036P/图片3.webp"
+    - "/images/products/water-bottles/YWYM-036P/图片4.webp"
+    - "/images/products/water-bottles/YWYM-036P/图片5.webp"
 draft: false
 ---
 **Materiall:** inside pp,outside 201

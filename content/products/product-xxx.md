@@ -4,7 +4,7 @@ date: 2025-03-31T20:00:00
 draft: false
 ---
 
-![Product Image](/images/products/test001/test.png)
+![Product Image](/images/products/test001/test.webp)
 
 High-speed USB adapter for Apple devices. Compact and reliable.
 

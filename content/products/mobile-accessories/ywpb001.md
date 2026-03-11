@@ -4,7 +4,7 @@ product_type: "mobile accessory"
 date: 2025-04-22
 section: "unique"
 cover:
-  image: "/images/products/mobile-accessories/ywpb001.png"
+  image: "/images/products/mobile-accessories/ywpb001.webp"
   gallery:
     - "/images/products/mobile-accessories/ywpb001/slice_1.jpg"
     - "/images/products/mobile-accessories/ywpb001/slice_2.jpg"

@@ -3,12 +3,12 @@ title: "Water Bottle YWYM-16VE"
 product_type: "water bottle"
 date: 2025-04-01
 cover:
-  image: "/images/products/water-bottles/YWYM-16VE.png"
+  image: "/images/products/water-bottles/YWYM-16VE.webp"
   gallery:
-    - "/images/products/water-bottles/YWYM-16VE/图片2.png"
-    - "/images/products/water-bottles/YWYM-16VE/图片3.png"
-    - "/images/products/water-bottles/YWYM-16VE/图片4.png"
-    - "/images/products/water-bottles/YWYM-16VE/图片5.png"
+    - "/images/products/water-bottles/YWYM-16VE/图片2.webp"
+    - "/images/products/water-bottles/YWYM-16VE/图片3.webp"
+    - "/images/products/water-bottles/YWYM-16VE/图片4.webp"
+    - "/images/products/water-bottles/YWYM-16VE/图片5.webp"
 draft: false
 ---
 **Material:** inside 304,outside 201

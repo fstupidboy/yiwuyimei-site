@@ -4,7 +4,7 @@ product_type: "mosquito repeller"
 date: 2025-04-01
 section: "new"
 cover:
-  image: "/images/products/mosquito-repellent/ywps001.png"
+  image: "/images/products/mosquito-repellent/ywps001.webp"
   gallery:
     - "/images/products/mosquito-repellent/ywps001/01.jpg"
     - "/images/products/mosquito-repellent/ywps001/03.jpg"

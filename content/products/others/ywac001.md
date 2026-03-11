@@ -5,15 +5,15 @@ date: 2025-04-01
 cover:
   image: "/images/products/others/ywac001.jpg"
   gallery:
-    - "/images/products/others/ywac001/1.png"
-    - "/images/products/others/ywac001/3.png"
-    - "/images/products/others/ywac001/4.png"
-    - "/images/products/others/ywac001/7.png"
-    - "/images/products/others/ywac001/8.png"
-    - "/images/products/others/ywac001/9.png"
-    - "/images/products/others/ywac001/11.png"
-    - "/images/products/others/ywac001/12.png"
-    - "/images/products/others/ywac001/14.png"
+    - "/images/products/others/ywac001/1.webp"
+    - "/images/products/others/ywac001/3.webp"
+    - "/images/products/others/ywac001/4.webp"
+    - "/images/products/others/ywac001/7.webp"
+    - "/images/products/others/ywac001/8.webp"
+    - "/images/products/others/ywac001/9.webp"
+    - "/images/products/others/ywac001/11.webp"
+    - "/images/products/others/ywac001/12.webp"
+    - "/images/products/others/ywac001/14.webp"
     - "/images/products/others/ywac001/15.jpg"
 draft: false
 ---

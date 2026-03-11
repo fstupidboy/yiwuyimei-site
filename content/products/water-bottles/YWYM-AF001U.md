@@ -3,10 +3,10 @@ title: "Water Bottle YWYM-AF001U"
 product_type: "water bottle"
 date: 2025-04-01
 cover:
-  image: "/images/products/water-bottles/YWYM-AF001U.png"
+  image: "/images/products/water-bottles/YWYM-AF001U.webp"
   gallery:
-    - "/images/products/water-bottles/YWYM-AF001U/图片2.png"
-    - "/images/products/water-bottles/YWYM-AF001U/图片3.png"
+    - "/images/products/water-bottles/YWYM-AF001U/图片2.webp"
+    - "/images/products/water-bottles/YWYM-AF001U/图片3.webp"
 draft: false
 ---
 **Materiall:** Inside 304.Outside 201

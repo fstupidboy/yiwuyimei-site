@@ -23,7 +23,7 @@
     {{ if $first }}{{ $ogImage = $first }}{{ end }}
   {{ end }}
 {{ end }}
-{{ if eq $ogImage "" }}{{ $ogImage = "/images/og-default.png" }}{{ end }}
+{{ if eq $ogImage "" }}{{ $ogImage = "/images/og-default.webp" }}{{ end }}
 
 {{ $ogType := "website" }}
 {{ if .IsHome }}
