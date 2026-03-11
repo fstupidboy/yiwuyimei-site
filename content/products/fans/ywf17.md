@@ -4,6 +4,7 @@ product_type: "portable fan"
 date: 2025-04-01
 section: "best"
 cover:
+  long_image: true
   image: "/images/products/fans/ywf17.jpg"
   gallery:
     - "/images/products/fans/ywf17/1.jpg"

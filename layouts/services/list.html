@@ -1,0 +1,114 @@
+{{ define "main" }}
+
+<!-- Banner -->
+{{ with .Params.banner }}
+  <section class="hero-banner" style="height: 300px;">
+    {{ partial "responsive-img-cf.html" (dict 
+      "src" .
+      "alt" (printf "%s" $.Title)
+      "class" ""
+      "hero" true
+      "sizes" "100vw"
+      "widths" (slice 640 900 1280 1600)
+    ) }}
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>{{ $.Title }}</h1>
+      <p>End-to-end export solutions for your business</p>
+    </div>
+  </section>
+{{ else }}
+  <section class="hero-banner" style="height: 300px; background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);">
+    <div class="hero-content">
+      <div class="hero-badge">What We Offer</div>
+      <h1>{{ .Title }}</h1>
+      <p>End-to-end export solutions for your business</p>
+    </div>
+  </section>
+{{ end }}
+
+<!-- Breadcrumb -->
+<div class="container">
+  <nav class="breadcrumb" style="padding: 1.5rem 0; font-size: 0.9rem;">
+    <a href="/" style="color: var(--color-text-muted);">Home</a>
+    <span style="color: var(--color-text-muted); margin: 0 0.5rem;">/</span>
+    <span style="color: var(--color-primary); font-weight: 500;">{{ .Title }}</span>
+  </nav>
+</div>
+
+<!-- Services Grid -->
+<div class="container" style="padding-bottom: 4rem;">
+  <div class="section-header">
+    <h2>Our Services</h2>
+    <p class="section-subtitle">
+      {{ .Params.description }}
+    </p>
+  </div>
+  
+  <div class="services-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 2rem; margin-bottom: 3rem;">
+    {{ range .Pages }}
+      <div class="service-card animate-fade-in-up" style="background: white; border-radius: var(--border-radius); padding: 2.5rem; box-shadow: var(--shadow-sm); transition: all 0.3s ease; text-align: center;">
+        <a href="{{ .RelPermalink }}" style="text-decoration: none; color: inherit;">
+          <!-- Service Icon -->
+          <div class="service-icon" style="width: 80px; height: 80px; margin: 0 auto 1.5rem; background: linear-gradient(135deg, var(--color-bg-alt) 0%, #e8e7e5 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2.5rem;">
+            {{ if eq .Title "Product Development" }}💡{{ end }}
+            {{ if eq .Title "Quality Control" }}✓{{ end }}
+            {{ if eq .Title "Logistics Services" }}🚢{{ end }}
+          </div>
+          <h3 class="service-title" style="font-size: 1.25rem; font-weight: 600; color: var(--color-primary); margin-bottom: 1rem;">{{ .Title }}</h3>
+          <p class="service-description" style="color: var(--color-text-muted); font-size: 0.95rem; line-height: 1.6; margin: 0;">
+            {{ .Params.description }}
+          </p>
+          <div class="service-link" style="margin-top: 1.5rem; color: var(--color-accent); font-weight: 500; display: inline-flex; align-items: center; gap: 0.5rem;">
+            Learn More 
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </div>
+        </a>
+      </div>
+    {{ end }}
+  </div>
+  
+  <!-- Back to Home -->
+  <div style="text-align: center;">
+    <a href="/" class="btn btn-outline">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 0.5rem;">
+        <path d="M19 12H5M12 19l-7-7 7-7"/>
+      </svg>
+      Back to Home
+    </a>
+  </div>
+</div>
+
+<style>
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-hover);
+}
+
+.service-card:hover .service-icon {
+  background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-light) 100%) !important;
+  transform: scale(1.1);
+}
+
+.service-icon {
+  transition: all 0.3s ease;
+}
+
+.service-card:hover .service-link {
+  color: var(--color-primary);
+}
+
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr !important;
+  }
+  
+  .service-card {
+    padding: 2rem 1.5rem !important;
+  }
+}
+</style>
+
+{{ end }}
