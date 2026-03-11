@@ -1,53 +1,105 @@
 {{ define "main" }}
 
-<!-- ✅ 加载横幅图 -->
+{{ if eq .Title "Products" }}
+  <!-- Redirect to home page products section -->
+  <meta http-equiv="refresh" content="0; url=/#products">
+  <script>window.location.href = "/#products";</script>
+  <div style="text-align: center; padding: 5rem 2rem;">
+    <h1>Redirecting...</h1>
+    <p>If you are not redirected, <a href="/#products">click here</a>.</p>
+  </div>
+{{ else }}
+
+<!-- Banner -->
 {{ with .Params.banner }}
-  <div class="homepage-banner">
+  <section class="hero-banner" style="height: 300px;">
     {{ partial "responsive-img-cf.html" (dict 
       "src" .
-      "alt" (printf "%s Banner" $.Title)
-      "class" "homepage-banner-img"
+      "alt" (printf "%s Category" $.Title)
+      "class" ""
       "hero" true
       "sizes" "100vw"
       "widths" (slice 640 900 1280 1600)
     ) }}
-  </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>{{ $.Title }}</h1>
+      <p>Premium wholesale products from China</p>
+    </div>
+  </section>
 {{ end }}
 
-<!-- 🔙 返回首页按钮 -->
-<div class="back-button-container">
-  <a href="/" class="back-to-list">
-    <span class="circle-arrow"></span>
-    <span class="back-text">Back to Home</span>
-  </a>
+<!-- Breadcrumb -->
+<div class="container">
+  <nav class="breadcrumb" style="padding: 1.5rem 0; font-size: 0.9rem;">
+    <a href="/" style="color: var(--color-text-muted);">Home</a>
+    <span style="color: var(--color-text-muted); margin: 0 0.5rem;">/</span>
+    <span style="color: var(--color-primary); font-weight: 500;">{{ .Title }}</span>
+  </nav>
 </div>
 
-<!-- ✅ 加入 H1 标题 + 描述 -->
-<h1 class="catalogue-title">{{ .Title }} – Wholesale from China</h1>
-{{ with .Params.description }}
-  <p class="section-description">
-    {{ . }}
-  </p>
-{{ end }}
-
-<div class="catalogue-listing-page">
-  <div class="product-grid">
+<!-- Product Grid -->
+<div class="container" style="padding-bottom: 4rem;">
+  <div class="section-header">
+    <h2>{{ .Title }} Collection</h2>
+    <p class="section-subtitle">
+      {{ with .Params.description }}{{ . }}{{ else }}Browse our selection of high-quality {{ .Title | lower }} for wholesale export{{ end }}
+    </p>
+  </div>
+  
+  <div class="product-grid" style="margin-bottom: 3rem;">
     {{ range .Pages }}
-      <div class="product-card">
+      {{ $coverImage := "" }}
+      {{ $productType := "" }}
+      
+      <!-- Try to get cover image -->
+      {{ if .Params.cover }}
+        {{ if .Params.cover.image }}
+          {{ $coverImage = .Params.cover.image }}
+        {{ end }}
+      {{ end }}
+      
+      <!-- If no cover image, try banner -->
+      {{ if not $coverImage }}
+        {{ if .Params.banner }}
+          {{ $coverImage = .Params.banner }}
+        {{ end }}
+      {{ end }}
+      
+      {{ if .Params.product_type }}
+        {{ $productType = .Params.product_type }}
+      {{ end }}
+      
+      <div class="product-card animate-fade-in-up">
         <a href="{{ .RelPermalink }}">
-          {{ partial "responsive-img-cf.html" (dict 
-            "src" .Params.cover.image 
-            "alt" (printf "%s - %s from YiwuYimei" .Title .Params.product_type)
-            "class" "product-thumb"
-            "sizes" "(max-width: 768px) 50vw, 240px"
-            "widths" (slice 240 360 480 640)
-          ) }}
+          <div class="product-card-image" style="position: relative; background: linear-gradient(135deg, var(--color-bg-alt) 0%, #e8e7e5 100%);">
+            {{ if $coverImage }}
+              <img src="{{ $coverImage }}" alt="{{ .Title }}{{ if $productType }} - {{ $productType }}{{ end }}" style="width: 100%; aspect-ratio: 1; object-fit: cover; display: block;">
+            {{ else }}
+              <div style="width: 100%; aspect-ratio: 1; display: flex; align-items: center; justify-content: center; font-size: 3rem;">
+                📦
+              </div>
+            {{ end }}
+          </div>
+          <div class="product-card-content">
+            <div class="product-card-category">{{ $productType }}</div>
+            <h3 class="product-card-title">{{ .Title }}</h3>
+          </div>
         </a>
-        <h3>{{ .Title }}</h3>
       </div>
     {{ end }}
   </div>
+  
+  <!-- Back to Home -->
+  <div style="text-align: center;">
+    <a href="/" class="btn btn-outline">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 0.5rem;">
+        <path d="M19 12H5M12 19l-7-7 7-7"/>
+      </svg>
+      Back to Home
+    </a>
+  </div>
 </div>
 
 {{ end }}
-
+{{ end }}

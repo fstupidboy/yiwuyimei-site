@@ -1,49 +1,153 @@
-/* ✅ 全站统一字体样式 */
-h1, h2, h3, h4, h5, h6, p, a, li, span, div {
-  font-family: "Helvetica Neue", Arial, sans-serif;
-  font-weight: 300;
-  color: #55AEB7;
+/* ========================================
+   EXTRA STYLES - Compatibility & Overrides
+   ======================================== */
+
+/* Homepage Banner (fallback) */
+.homepage-banner {
+  text-align: center;
+  margin: 0;
 }
 
-h2 {
-  color: #444444;
+.homepage-banner img {
+  width: 100%;
+  height: auto;
+  display: block;
+  max-width: 100vw;
 }
 
-body {
-  font-family: Arial, sans-serif;
-  font-size: 20px;
-  line-height: 1.6;
-  color: #2bbcc2;
-  background-color: #fff;
+/* Homepage heading/description (legacy support) */
+.homepage-heading {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-top: 2rem;
+  color: var(--color-primary, #1e3a5f);
+  text-align: center;
 }
 
-
-/* ========== 响应式设计基础布局 ========== */
-
-/* ✅ 桌面 + 移动通用：限制宽度容器 */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
+.homepage-description {
+  font-size: 1.1rem;
+  margin: 0.5rem 0 2rem;
+  color: var(--color-text-muted, #718096);
+  text-align: center;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-/* ✅ 主页布局 */
-.page-wrapper {
+/* Back button circle (legacy) */
+.home-circle-button {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 56px;
+  height: 56px;
+  background: linear-gradient(135deg, var(--color-accent, #4ecdc4) 0%, var(--color-accent-light, #6fdfd7) 100%);
+  color: white;
+  text-align: center;
+  line-height: 56px;
+  border-radius: 50%;
+  text-decoration: none;
+  box-shadow: 0 4px 20px rgba(78, 205, 196, 0.4);
+  z-index: 999;
   display: flex;
-  gap: 30px;
-  padding: 20px;
-  flex-wrap: wrap;
-  margin-bottom: 2rem;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
 }
 
-/* ✅ 侧边分类菜单 */
+.home-circle-button:hover {
+  transform: scale(1.1) translateY(-3px);
+  box-shadow: 0 8px 30px rgba(78, 205, 196, 0.5);
+  color: white;
+}
+
+.home-circle-button svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* Page welcome section */
+.page-welcome {
+  background: linear-gradient(135deg, var(--color-bg-card, #ffffff) 0%, var(--color-bg-alt, #f5f4f2) 100%);
+  border-radius: 16px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  border: 1px solid rgba(30, 58, 95, 0.06);
+}
+
+.page-welcome h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  background: linear-gradient(135deg, var(--color-primary, #1e3a5f) 0%, var(--color-accent, #4ecdc4) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Legacy product grid support */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Legacy product card support */
+.product-card {
+  background: var(--color-bg-card, #ffffff);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(30, 58, 95, 0.06);
+  transition: all 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px rgba(30, 58, 95, 0.12);
+}
+
+.product-card a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.product-card p {
+  max-width: 100%;
+  margin: 1rem;
+  white-space: normal;
+  word-break: break-word;
+  line-height: 1.4;
+  font-weight: 500;
+  color: var(--color-text, #2d3748);
+}
+
+/* Legacy product thumb support */
+.product-thumb {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-thumb {
+  transform: scale(1.05);
+}
+
+/* Legacy sidebar support */
 .catalogue-sidebar {
-  flex: 1 1 220px;
-  background: #fafafa;
-  border-right: 1px solid #eee;
-  padding: 20px;
-  border-radius: 8px;
-  font-size: 0.95rem;
+  background: var(--color-bg-card, #ffffff);
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(30, 58, 95, 0.06);
+}
+
+.catalogue-sidebar h2 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-primary, #1e3a5f);
+  margin-bottom: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid var(--color-bg-alt, #f5f4f2);
 }
 
 .catalogue-menu {
@@ -53,146 +157,262 @@ body {
 }
 
 .catalogue-menu li {
-  margin-bottom: 10px;
+  margin-bottom: 0.5rem;
 }
 
 .catalogue-menu a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  color: var(--color-text-light, #4a5568);
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
   text-decoration: none;
-  color: #333;
 }
 
 .catalogue-menu a:hover {
-  color: #0077cc;
+  background: var(--color-bg-alt, #f5f4f2);
+  color: var(--color-primary, #1e3a5f);
 }
 
-/* ✅ 内容主区域 */
-.main-content {
-  flex: 3 1 700px;
-  padding: 20px;
+/* Legacy back button support */
+.back-button-container {
+  margin: 1.5rem 0;
 }
 
-
-/* ✅ 产品缩略图 */
-.product-thumb {
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  transition: transform 0.2s ease;
-}
-
-.product-thumb:hover {
-  transform: scale(1.03);
-}
-
-/* ✅ 产品网格 */
-.product-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 20px;
-  justify-items: center;
-}
-
-/* ✅ 产品卡片 */
-.product-card {
-  display: flex;
-  flex-direction: column;
+.back-to-list {
+  display: inline-flex;
   align-items: center;
-  text-align: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: var(--color-primary, #1e3a5f);
+  font-size: 1rem;
+  font-weight: 500;
+  transition: opacity 0.2s ease;
 }
 
-.product-card p {
-  max-width: 160px;
-  margin: 10px auto 0;
-  white-space: normal;
-  word-break: break-word;
-  line-height: 1.4;
+.back-to-list:hover {
+  opacity: 0.8;
+  color: var(--color-accent, #4ecdc4);
 }
 
-/* ✅ 横幅图片 */
-.homepage-banner {
-  text-align: center;
-  margin: 20px 0;
+.circle-arrow {
+  width: 32px;
+  height: 32px;
+  border: 2px solid var(--color-primary, #1e3a5f);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  aspect-ratio: 1 / 1;
+  transition: all 0.2s ease;
 }
-.homepage-banner img {
+
+.circle-arrow::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-left: 2px solid var(--color-primary, #1e3a5f);
+  border-bottom: 2px solid var(--color-primary, #1e3a5f);
+  transform: rotate(45deg);
+  margin-left: 3px;
+}
+
+.back-to-list:hover .circle-arrow {
+  border-color: var(--color-accent, #4ecdc4);
+  background: var(--color-accent, #4ecdc4);
+}
+
+.back-to-list:hover .circle-arrow::before {
+  border-color: white;
+}
+
+/* Legacy catalogue listing */
+.catalogue-listing-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.catalogue-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-primary, #1e3a5f);
+  margin: 2rem 0 1rem;
+}
+
+.section-description {
+  text-align: center;
+  color: var(--color-text-muted, #718096);
+  max-width: 600px;
+  margin: 0 auto 2rem;
+}
+
+/* Legacy products page */
+.products-banner {
+  text-align: center;
+  margin: 0;
+}
+
+.products-banner img {
   width: 100%;
   height: auto;
   display: block;
-  max-width: 100vw; /* 限制在视口宽度内 */
+  max-width: 100vw;
 }
 
-/* ✅ 回到首页按钮 */
-.home-circle-button {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  width: 50px;
-  height: 50px;
-  background-color: #0077cc;
-  color: white;
-  font-size: 24px;
+.product-slogan {
+  font-size: 1.25rem;
+  font-weight: 500;
   text-align: center;
-  line-height: 50px;
-  border-radius: 50%;
-  text-decoration: none;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-  z-index: 999;
-}
-.home-circle-button:hover {
-  background-color: #005fa3;
-  transform: scale(1.05);
+  margin: 2rem 0;
+  color: var(--color-warm, #d4a574);
+  font-style: italic;
 }
 
-/* ✅ 移动端适配 */
+/* Product page legacy styles */
+.product-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.product-hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+  margin-bottom: 3rem;
+}
+
+.product-left {
+  border-radius: 16px;
+  overflow: hidden;
+  background: var(--color-bg-alt, #f5f4f2);
+}
+
+.product-main-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.product-info h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--color-primary, #1e3a5f);
+}
+
+.product-keywords {
+  color: var(--color-text-muted, #718096);
+  margin-bottom: 1.5rem;
+}
+
+.product-description {
+  white-space: pre-line;
+  font-size: 0.95rem;
+  color: var(--color-text-light, #4a5568);
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.btn-inquiry {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: linear-gradient(135deg, var(--color-accent, #4ecdc4) 0%, var(--color-accent-light, #6fdfd7) 100%);
+  color: white;
+  padding: 0.875rem 1.75rem;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 8px;
+  box-shadow: 0 4px 14px rgba(78, 205, 196, 0.3);
+  transition: all 0.2s ease;
+}
+
+.btn-inquiry:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(78, 205, 196, 0.4);
+  color: white;
+}
+
+.product-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.gallery-image {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(30, 58, 95, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.gallery-image:hover {
+  transform: scale(1.02);
+}
+
+/* Responsive adjustments */
 @media (max-width: 768px) {
   .page-wrapper {
     flex-direction: column;
-    padding: 10px;
+    padding: 1rem;
   }
-
-  .main-content, .catalogue-sidebar {
+  
+  .catalogue-sidebar {
+    flex: 1 1 100%;
+    max-width: 100%;
+    position: static;
+  }
+  
+  .main-content {
     flex: 1 1 100%;
     max-width: 100%;
   }
-
+  
   .product-grid {
-    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  
+  .product-hero {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .product-gallery {
+    grid-template-columns: 1fr;
+  }
+  
+  .homepage-heading {
+    font-size: 1.5rem;
+  }
+  
+  .catalogue-title {
+    font-size: 1.5rem;
+  }
+  
+  .home-circle-button {
+    width: 48px;
+    height: 48px;
+    bottom: 20px;
+    right: 20px;
   }
 }
 
-@media (max-width: 768px) {
-  h1, h2, h3 {
-    font-size: 1.2rem;
+@media (max-width: 480px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
-
-  .homepage-banner img {
-    max-width: 100%;
-  }
-
-  footer p {
-    font-size: 0.85rem;
-  }
-
-  .product-thumb {
-    width: 120px;
-    height: 120px;
-  }
-
+  
   .product-card p {
     font-size: 0.85rem;
   }
 }
-
-.homepage-heading {
-  font-size: 1.8rem;
-  font-weight: 700;
-  margin-top: 1.5rem;
-  color: #222;
-}
-
-.homepage-description {
-  font-size: 1.1rem;
-  margin: 0.5rem 0 2rem;
-  color: #666;
-}
-

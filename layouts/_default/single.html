@@ -1,81 +1,232 @@
 {{ define "main" }}
 
-  <!-- ✅ 横幅图（如果需要） -->
-  <div class="products-banner">
-    {{ partial "responsive-img-cf.html" (dict 
-      "src" "/images/products_1200.jpg"
-      "alt" "YiWuYiMei Banner"
-      "class" "banner-image"
-      "hero" true
-      "sizes" "100vw"
-      "widths" (slice 640 900 1280 1600)
-    ) }}
+<!-- Product Header Banner -->
+<section class="hero-banner" style="height: 250px;">
+  {{ partial "responsive-img-cf.html" (dict 
+    "src" "/images/products_1200.jpg"
+    "alt" "YiwuYimei Products"
+    "class" ""
+    "hero" true
+    "sizes" "100vw"
+    "widths" (slice 640 900 1280 1600)
+  ) }}
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-badge">Product Details</div>
+    <h1>{{ .Title }}</h1>
   </div>
-  
-  <div class="product-slogan">
-      From concept to creation — custom-made, co-developed, and crafted just for you.
-  </div>
+</section>
 
-  <div class="back-button-container">
-    <a href="{{ .CurrentSection.Permalink }}" class="back-to-list">
-      <span class="circle-arrow"></span>
-      <span class="back-text">Back to {{ .CurrentSection.Title }}</span>
-    </a>
+<div class="container">
+  <!-- Breadcrumb -->
+  <nav class="breadcrumb" style="padding: 1.5rem 0; font-size: 0.9rem;">
+    <a href="/" style="color: var(--color-text-muted);">Home</a>
+    <span style="color: var(--color-text-muted); margin: 0 0.5rem;">/</span>
+    <a href="{{ .CurrentSection.Permalink }}" style="color: var(--color-text-muted);">{{ .CurrentSection.Title }}</a>
+    <span style="color: var(--color-text-muted); margin: 0 0.5rem;">/</span>
+    <span style="color: var(--color-primary); font-weight: 500;">{{ .Title }}</span>
+  </nav>
 
-  </div>
-
-  <hr class="back-divider">
-
-  <main class="product-page">
-    <div class="content-container">
-	<div class="product-hero">
-      <div class="product-left">
-        {{ with .Params.cover.image }}
-          {{ partial "responsive-img-cf.html" (dict 
-            "src" . 
-            "alt" (printf "%s - %s from YiwuYimei" $.Title $.Params.product_type)
-            "class" "product-main-image"
-            "hero" true
-            "sizes" "(max-width: 768px) 100vw, 900px"
-          ) }}
+  <!-- Product Main Info -->
+  <div class="product-detail" style="background: white; border-radius: var(--border-radius); padding: 2.5rem; box-shadow: var(--shadow-sm); margin-bottom: 3rem;">
+    <div class="product-hero" style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start;">
+      
+      <!-- Product Image -->
+      <div class="product-image" style="border-radius: var(--border-radius-sm); overflow: hidden; background: var(--color-bg-alt);">
+        {{ $coverImage := "" }}
+        {{ if .Params.cover }}
+          {{ if .Params.cover.image }}
+            {{ $coverImage = .Params.cover.image }}
+          {{ end }}
+        {{ end }}
+        {{ if $coverImage }}
+          <img src="{{ $coverImage }}" alt="{{ .Title }}" style="width: 100%; height: auto; display: block;">
+        {{ else }}
+          <div style="padding: 2rem; text-align: center; color: var(--color-text-muted);">No image available</div>
         {{ end }}
       </div>
-	  <div class="product-info">
-	    <h1>{{ .Title }}</h1>
-	    <p class="product-keywords">
-	      High-quality {{ .Params.product_type }} available for wholesale export from Shenzhen, China.
-	    </p>
-	    <div class="product-description">
-	      {{ .Content }}
-	    </div>
-	    <div class="inquiry-button">
-	      <a href="mailto:sales@yiwuyimei.com?subject=Inquiry about {{ .Title }}" class="btn-inquiry">Send Inquiry</a>
-	    </div>
-	  </div>
-	</div>
-
-      {{ with .Params.cover.gallery }}
-        <div class="product-gallery">
-          {{ range $idx, $img := . }}
-               {{ partial "responsive-img-cf.html" (dict 
-                  "src" $img 
-                  "alt" (printf "%s – %s detail %d" $.Title $.Params.product_type (add $idx 1))
-                  "class" "gallery-image"
-                  "sizes" "(max-width: 768px) 50vw, 400px"
-               ) }}
+      
+      <!-- Product Info -->
+      <div class="product-info">
+        <div style="font-size: 0.875rem; font-weight: 600; color: var(--color-accent); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 0.5rem;">
+          {{ .Params.product_type }}
+        </div>
+        <h1 style="font-size: 2rem; margin-bottom: 1rem;">{{ .Title }}</h1>
+        <p style="color: var(--color-text-muted); margin-bottom: 1.5rem;">
+          High-quality {{ .Params.product_type }} available for wholesale export. Trusted by buyers from USA, Europe, Japan, and Korea.
+        </p>
+        
+        <!-- Product Specs (if available in content) -->
+        <div class="product-content" style="margin-bottom: 2rem; padding: 1.5rem; background: var(--color-bg); border-radius: var(--border-radius-sm);">
+          {{ .Content }}
+        </div>
+        
+        <!-- CTA Buttons -->
+        <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+          <a href="mailto:sales@yiwuyimei.com?subject=Inquiry about {{ .Title }}" class="btn btn-primary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 0.5rem;">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,13 2,6"/>
+            </svg>
+            Send Inquiry
+          </a>
+          <a href="{{ .CurrentSection.Permalink }}" class="btn btn-outline">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 0.5rem;">
+              <path d="M19 12H5M12 19l-7-7 7-7"/>
+            </svg>
+            Back to {{ .CurrentSection.Title }}
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Product Gallery -->
+  {{ $gallery := "" }}
+  {{ if .Params.cover }}
+    {{ if .Params.cover.gallery }}
+      {{ $gallery = .Params.cover.gallery }}
+    {{ end }}
+  {{ end }}
+  {{ if $gallery }}
+    {{ $isLongImage := false }}
+    {{ if .Params.cover.long_image }}
+      {{ $isLongImage = true }}
+    {{ end }}
+    {{ range $gallery }}
+      {{ if or (in . "详情页") (in . "slice") }}
+        {{ $isLongImage = true }}
+      {{ end }}
+    {{ end }}
+    
+    <div class="product-gallery-section" style="margin-bottom: 3rem;">
+      <h2 style="text-align: center; margin-bottom: 2rem;">
+        <span style="color: var(--color-accent);">✦</span>
+        Product Gallery
+      </h2>
+      {{ if $isLongImage }}
+        <!-- Full-width single column layout for long images -->
+        <div class="gallery-fullwidth" style="display: flex; flex-direction: column; gap: 0; max-width: 900px; margin: 0 auto;">
+          {{ range $idx, $img := $gallery }}
+            <div class="gallery-item-full" style="border-radius: 0; overflow: hidden; box-shadow: none;">
+              <img src="{{ $img }}" alt="{{ $.Title }} – detail {{ add $idx 1 }}" style="width: 100%; height: auto; display: block;">
+            </div>
+          {{ end }}
+        </div>
+      {{ else }}
+        <!-- Grid layout for regular images -->
+        <div class="gallery-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5rem;">
+          {{ range $idx, $img := $gallery }}
+            <div class="gallery-item" style="border-radius: var(--border-radius-sm); overflow: hidden; box-shadow: var(--shadow-sm); transition: transform var(--transition-fast);">
+              <img src="{{ $img }}" alt="{{ $.Title }} – detail {{ add $idx 1 }}" style="width: 100%; height: auto; display: block;">
+            </div>
           {{ end }}
         </div>
       {{ end }}
-        <div class="back-button-container bottom-back">
-          <a href="{{ .CurrentSection.Permalink }}" class="back-to-list">
-            <span class="circle-arrow"></span>
-            <span class="back-text">Back to {{ .CurrentSection.Title }}</span>
-          </a>
-        </div>
-        <hr class="back-divider">
     </div>
+  {{ end }}
+  
+  <!-- Trust Section -->
+  <div class="trust-section" style="background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%); border-radius: var(--border-radius); padding: 3rem; text-align: center; color: white; margin-bottom: 3rem;">
+    <h2 style="color: white; margin-bottom: 1rem;">Why Choose YIWUYIMEI?</h2>
+    <p style="color: rgba(255,255,255,0.8); max-width: 600px; margin: 0 auto 2rem;">
+      From concept to creation — custom-made, co-developed, and crafted just for you.
+    </p>
+    <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap;">
+      <div style="text-align: center;">
+        <div style="font-size: 2rem; margin-bottom: 0.5rem;">🏭</div>
+        <div style="font-weight: 600;">Factory Direct</div>
+      </div>
+      <div style="text-align: center;">
+        <div style="font-size: 2rem; margin-bottom: 0.5rem;">✓</div>
+        <div style="font-weight: 600;">Quality Control</div>
+      </div>
+      <div style="text-align: center;">
+        <div style="font-size: 2rem; margin-bottom: 0.5rem;">🚢</div>
+        <div style="font-weight: 600;">Global Shipping</div>
+      </div>
+      <div style="text-align: center;">
+        <div style="font-size: 2rem; margin-bottom: 0.5rem;">🤝</div>
+        <div style="font-weight: 600;">OEM/ODM</div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Back Navigation -->
+  <div style="text-align: center; margin-bottom: 4rem;">
+    <a href="{{ .CurrentSection.Permalink }}" class="btn btn-outline">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 0.5rem;">
+        <path d="M19 12H5M12 19l-7-7 7-7"/>
+      </svg>
+      Back to {{ .CurrentSection.Title }}
+    </a>
+  </div>
+</div>
 
-  </main>
+<style>
+/* Product detail specific styles */
+.product-content h3 {
+  font-size: 1.1rem;
+  color: var(--color-primary);
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.product-content ul {
+  margin: 0;
+  padding-left: 1.5rem;
+}
+
+.product-content li {
+  margin-bottom: 0.5rem;
+  color: var(--color-text-light);
+}
+
+.product-content strong {
+  color: var(--color-primary);
+}
+
+.gallery-item:hover {
+  transform: scale(1.02);
+  box-shadow: var(--shadow-md);
+}
+
+.gallery-item img {
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+/* Full-width gallery styles */
+.gallery-fullwidth {
+  animation: fadeInUp 0.6s ease;
+}
+
+.gallery-item-full {
+  background: white;
+}
+
+.gallery-item-full img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .product-hero {
+    grid-template-columns: 1fr !important;
+  }
+  
+  .product-detail {
+    padding: 1.5rem !important;
+  }
+  
+  .gallery-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+</style>
 
 {{ end }}
-

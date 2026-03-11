@@ -25,7 +25,7 @@ ignoreLogs = ["warning-goldmark-raw-html"]
     googleFonts = false
 
 [params.assets]
-  customCSS = ["css/extra.css","css/service.css"]
+  customCSS = ["css/modern-theme.css","css/extra.css","css/service.css"]
 
 [params.images]
   useCloudflare = false  # Set to true after enabling Cloudflare Image Resizing

@@ -4,22 +4,58 @@
   {{ partial "head.html" . }}
 </head>
 <body>
-  <div class="container">
-    <!-- 全站导航栏 -->
-    {{ partial "navbar.html" . }}
+  <!-- Navigation -->
+  {{ partial "navbar.html" . }}
 
-    <!-- 页面主要内容 -->
-    {{ block "main" . }}{{ end }}
+  <!-- Main Content -->
+  {{ block "main" . }}{{ end }}
 
-    <!-- 页脚 -->
-    {{ partial "footer.html" . }}
-  </div>
-  <!-- ✅ 移到这里 -->
-  <a href="/" class="home-circle-button" title="Back to Home">🏠</a>
-  <link rel="stylesheet" href="/css/navbar.css" />
+  <!-- Footer -->
+  {{ partial "footer.html" . }}
+
+  <!-- Home Button -->
+  <a href="/" class="home-circle-button" title="Back to Home">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6c0-1.1.9-2 2-2z"></path>
+      <polyline points="9 22 9 12 15 12 15 22"></polyline>
+    </svg>
+  </a>
+
+  <!-- Scripts -->
   <script src="/js/navbar.js" defer></script>
-  <link rel="stylesheet" href="/css/products.css" />
-  <link rel="stylesheet" href="/css/contact.css" />
+  <script>
+    // Add scroll effect to navbar
+    window.addEventListener('scroll', function() {
+      const navbar = document.querySelector('.navbar');
+      if (window.scrollY > 10) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+
+    // Intersection Observer for fade-in animations
+    const observerOptions = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.product-card').forEach(card => {
+      card.style.opacity = '0';
+      card.style.transform = 'translateY(30px)';
+      card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+      observer.observe(card);
+    });
+  </script>
 </body>
 </html>
-

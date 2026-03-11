@@ -3,6 +3,7 @@ title: "Potable Power Bank YWPB003"
 product_type: "mobile accessory"
 date: 2025-04-22
 cover:
+  long_image: true
   image: "/images/products/mobile-accessories/ywpb003.png"
   gallery:
     - "/images/products/mobile-accessories/ywpb003/1.jpg"

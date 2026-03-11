@@ -1,30 +1,56 @@
 {{ define "main" }}
-  <!-- ✅ 横幅必须在 define 块里面 -->
-  <div class="homepage-banner">
-    {{ partial "responsive-img-cf.html" (dict 
-      "src" "/images/banner.jpg"
-      "alt" "YiWuYiMei Banner"
-      "class" "homepage-banner-img"
-      "hero" true
-      "sizes" "100vw"
-      "widths" (slice 640 900 1280 1600 1920)
-    ) }}
+
+<!-- Hero Banner -->
+<section class="hero-banner">
+  {{ partial "responsive-img-cf.html" (dict 
+    "src" "/images/banner.jpg"
+    "alt" "YiWuYiMei - Quality Products from China"
+    "class" "hero-banner-img"
+    "hero" true
+    "sizes" "100vw"
+    "widths" (slice 640 900 1280 1600 1920)
+  ) }}
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-badge">Trusted by Global Buyers</div>
+    <h1>YIWUYIMEI</h1>
+    <p>Premium Wholesale Products from China — Fans, Diffusers, Humidifiers & More</p>
+    <a href="#products" class="btn btn-accent">Explore Products</a>
   </div>
-  <h1 class="homepage-heading">
-    YIWUYIMEI – China Wholesale Supplier of Fans, Diffusers, Humidifiers & More
-  </h1>
-  <p class="homepage-description">
-    We specialize in high-quality, cost-effective home appliances and gift items including portable fans, aroma diffusers, humidifiers, drinkware, ornaments, toys, cut and sew etc. We are trusted by global buyers from the USA, Europe, Japan, and Korea for reliable China export solutions.
-  </p>
-<div class="page-wrapper">
-  <!-- Sidebar on the left -->
+</section>
+
+<!-- Trust Badges -->
+<section class="container">
+  <div class="trust-badges">
+    <div class="trust-badge">
+      <div class="trust-badge-icon">🌍</div>
+      <span class="trust-badge-label">Global Shipping</span>
+    </div>
+    <div class="trust-badge">
+      <div class="trust-badge-icon">✓</div>
+      <span class="trust-badge-label">Quality Certified</span>
+    </div>
+    <div class="trust-badge">
+      <div class="trust-badge-icon">🏭</div>
+      <span class="trust-badge-label">Factory Direct</span>
+    </div>
+    <div class="trust-badge">
+      <div class="trust-badge-icon">🤝</div>
+      <span class="trust-badge-label">B2B Specialist</span>
+    </div>
+  </div>
+</section>
+
+<!-- Main Content -->
+<div class="page-wrapper" id="products">
+  <!-- Sidebar -->
   <aside class="catalogue-sidebar">
     <h2>Categories</h2>
     <ul class="catalogue-menu">
-      <li><a href="/products/fans/">Fans</a></li>
+      <li><a href="/products/fans/">Portable Fans</a></li>
       <li><a href="/products/shoes-dryers/">Shoes Dryers</a></li>
       <li><a href="/products/scent-diffusers/">Scent Diffusers</a></li>
-      <li><a href="/products/badges/">Badges</a></li>
+      <li><a href="/products/badges/">Custom Badges</a></li>
       <li><a href="/products/monitor-lights/">Monitor Lights</a></li>
       <li><a href="/products/humidifiers/">Humidifiers</a></li>
       <li><a href="/products/mosquito-repellent/">Mosquito Repellent</a></li>
@@ -34,73 +60,106 @@
     </ul>
   </aside>
 
-  <!-- Main content on the right -->
+  <!-- Main Content -->
   <main class="main-content">
-    <div class="page-welcome">
-      <h2>Discover High-Quality Wholesale Products from China</h2>
-    </div>
+    
+    <!-- Welcome Section -->
+    <section class="welcome-section">
+      <h2>Your Trusted Export Partner</h2>
+      <p>We specialize in high-quality, cost-effective home appliances and lifestyle products. Trusted by buyers from the USA, Europe, Japan, and Korea for reliable China export solutions.</p>
+    </section>
 
-    <section>
-     <h2>New Arrivals – Latest Wholesale Home Appliances & Gadgets</h2>
+    <!-- New Arrivals -->
+    <section class="product-section">
+      <h2>
+        <span style="color: var(--color-accent);">✦</span>
+        New Arrivals
+      </h2>
       <div class="product-grid">
         {{ range first 8 (where site.RegularPages "Params.section" "new") }}
-          <div class="product-card">
+          <div class="product-card animate-fade-in-up">
             <a href="{{ .RelPermalink }}">
-              {{ partial "responsive-img-cf.html" (dict 
-                "src" .Params.cover.image 
-                "alt" (printf "%s - %s from YiwuYimei" .Title .Params.product_type)
-                "class" "product-thumb"
-                "sizes" "(max-width: 768px) 50vw, 240px"
-                "widths" (slice 240 360 480 640)
-              ) }}
+              <div class="product-card-image">
+                {{ partial "responsive-img-cf.html" (dict 
+                  "src" .Params.cover.image 
+                  "alt" (printf "%s - %s from YiwuYimei" .Title .Params.product_type)
+                  "class" ""
+                  "sizes" "(max-width: 768px) 50vw, 240px"
+                  "widths" (slice 240 360 480 640)
+                ) }}
+                <span class="product-card-badge">New</span>
+              </div>
+              <div class="product-card-content">
+                <div class="product-card-category">{{ .Params.product_type }}</div>
+                <h3 class="product-card-title">{{ .Title }}</h3>
+              </div>
             </a>
-            <p>{{ .Title }}</p>
           </div>
         {{ end }}
       </div>
     </section>
 
-    <section>
-      <h2>Best Sellers – Trusted by Buyers Worldwide</h2>
+    <!-- Best Sellers -->
+    <section class="product-section">
+      <h2>
+        <span style="color: var(--color-warm);">★</span>
+        Best Sellers
+      </h2>
       <div class="product-grid">
         {{ range first 8 (where site.RegularPages "Params.section" "best") }}
-          <div class="product-card">
+          <div class="product-card animate-fade-in-up">
             <a href="{{ .RelPermalink }}">
-              {{ partial "responsive-img-cf.html" (dict 
-                "src" .Params.cover.image 
-                "alt" (printf "%s - %s from YiwuYimei" .Title .Params.product_type)
-                "class" "product-thumb"
-                "sizes" "(max-width: 768px) 50vw, 240px"
-                "widths" (slice 240 360 480 640)
-              ) }}
+              <div class="product-card-image">
+                {{ partial "responsive-img-cf.html" (dict 
+                  "src" .Params.cover.image 
+                  "alt" (printf "%s - %s from YiwuYimei" .Title .Params.product_type)
+                  "class" ""
+                  "sizes" "(max-width: 768px) 50vw, 240px"
+                  "widths" (slice 240 360 480 640)
+                ) }}
+                <span class="product-card-badge bestseller">Best Seller</span>
+              </div>
+              <div class="product-card-content">
+                <div class="product-card-category">{{ .Params.product_type }}</div>
+                <h3 class="product-card-title">{{ .Title }}</h3>
+              </div>
             </a>
-            <p>{{ .Title }}</p>
           </div>
         {{ end }}
       </div>
     </section>
 
-    <section>
-      <h2>Unique Products for Niche Markets</h2>
+    <!-- Unique Products -->
+    <section class="product-section">
+      <h2>
+        <span style="color: var(--color-primary);">◆</span>
+        Unique Products
+      </h2>
       <div class="product-grid">
         {{ range first 8 (where site.RegularPages "Params.section" "unique") }}
-          <div class="product-card">
+          <div class="product-card animate-fade-in-up">
             <a href="{{ .RelPermalink }}">
-              {{ partial "responsive-img-cf.html" (dict 
-                "src" .Params.cover.image 
-                "alt" (printf "%s - %s from YiwuYimei" .Title .Params.product_type)
-                "class" "product-thumb"
-                "sizes" "(max-width: 768px) 50vw, 240px"
-                "widths" (slice 240 360 480 640)
-              ) }}
+              <div class="product-card-image">
+                {{ partial "responsive-img-cf.html" (dict 
+                  "src" .Params.cover.image 
+                  "alt" (printf "%s - %s from YiwuYimei" .Title .Params.product_type)
+                  "class" ""
+                  "sizes" "(max-width: 768px) 50vw, 240px"
+                  "widths" (slice 240 360 480 640)
+                ) }}
+                <span class="product-card-badge unique">Unique</span>
+              </div>
+              <div class="product-card-content">
+                <div class="product-card-category">{{ .Params.product_type }}</div>
+                <h3 class="product-card-title">{{ .Title }}</h3>
+              </div>
             </a>
-            <p>{{ .Title }}</p>
           </div>
         {{ end }}
       </div>
     </section>
+
   </main>
 </div>
 
 {{ end }}
-
