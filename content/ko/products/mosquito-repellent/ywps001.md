@@ -16,13 +16,13 @@ draft: false
 ---
 **재질:** ABS
 **전압:** DC 5V
-**Color:** White
+**색상:** White
 **제품 무게:** 0.34kg
 **Rated power:** 2W
 **Battery capacity:** 1200 mAh
 **제품 크기:** 490 x 210 x 30mm
 **Package size:** 494 x 238 x 39mm
 **Charging power:** Type-C
-**Carton size:** 625 x 515 x 500mm
+**카톤 크기:** 625 x 515 x 500mm
 **Carton Gross 무게:** 15.4kg
 **Super Design:** Dualsafety Switch Lamp

@@ -16,5 +16,5 @@ draft: false
 **QTY/CTN (pcs):** 24
 **G.W/N.W (kg):** 10.96/9.96
 **Packing Size (cm):** 46.9*31.6*24.5
-**Package:** 24
-**Color:** Customize
+**パッケージ:** 24
+**色:** Customize

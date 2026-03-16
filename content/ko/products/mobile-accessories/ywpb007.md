@@ -22,11 +22,11 @@ draft: false
 **Housing 재질:** 플라스틱
 **Surface Treatment:** Glossy UV
 **Output Specifications**
-**Type-C Main Port:** 5V/3A, 9V/2.22A, 12V/1.67A
-**Type-C Secondary Port:** 5V/3A, 9V/2A, 12V/1.5A
+**Type-C Main 항구:** 5V/3A, 9V/2.22A, 12V/1.67A
+**Type-C Secondary 항구:** 5V/3A, 9V/2A, 12V/1.5A
 **L-Type Type-C Port 1:** 10V/2.25A, 5V/3A, 9V/2A, 12V/1.5A
 **L-Type Type-C Port 2:** 10V/2.25A, 5V/3A, 9V/2A, 12V/1.5A
-**L-Type Lightning Port:** 5V/2.4A
+**L-Type Lightning 항구:** 5V/2.4A
 **Battery Information**
 **Cell 타입:** 115252 × 2
 **용량:** 10,000mAh

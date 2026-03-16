@@ -18,5 +18,5 @@ draft: false
 **G.W/N.W (kg):** 7.8/5.8
 **Packing Size (cm):** 46.3*36*25.2
 
-**Package:** 24
-**Color:** Customize
+**パッケージ:** 24
+**色:** Customize

@@ -16,5 +16,5 @@ draft: false
 **Products Size (cm):** 7x7.8x18.1
 **QTY/CTN (pcs):** 24
 **G.W/N.W(kg):** 7.26/5.76
-**Package:** 24
-**Color:** customize
+**패키지:** 24
+**색상:** customize
