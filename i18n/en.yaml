@@ -45,3 +45,10 @@ what_we_offer: "What We Offer"
 services_subtitle: "End-to-end export solutions for your business"
 our_services: "Our Services"
 learn_more: "Learn More"
+
+# Product List Page
+collection: "Collection"
+redirecting: "Redirecting..."
+redirect_text: 'If you are not redirected, <a href="/#products">click here</a>.'
+products_subtitle: "Premium wholesale products from China"
+browse_products: "Browse our selection of high-quality products for wholesale export"

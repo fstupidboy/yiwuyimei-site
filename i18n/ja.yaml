@@ -45,3 +45,10 @@ what_we_offer: "提供サービス"
 services_subtitle: "あなたのビジネスのためのエンドツーエンド輸出ソリューション"
 our_services: "私たちのサービス"
 learn_more: "詳しく見る"
+
+# Product List Page
+collection: "コレクション"
+redirecting: "リダイレクト中..."
+redirect_text: 'リダイレクトされない場合は、<a href="/#products">ここをクリック</a>してください。'
+products_subtitle: "中国からのプレミアム卸売製品"
+browse_products: "卸売輸出向け高品質製品のセレクションをご覧ください"

@@ -49,3 +49,10 @@ learn_more: "Lue Lisää"
 # Contact Page
 address: "Osoite"
 email: "Sähköposti"
+
+# Product List Page
+collection: "Kokoelma"
+redirecting: "Uudelleenohjataan..."
+redirect_text: 'Jos et ohjaudu uudelleen, <a href="/#products">klikkaa tästä</a>.'
+products_subtitle: "Premium-tukkutuotteet Kiinasta"
+browse_products: "Selaa valikoimaamme korkealaatuisia tuotteita tukkuvientiin"

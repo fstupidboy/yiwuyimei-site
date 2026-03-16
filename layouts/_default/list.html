@@ -1,12 +1,12 @@
 {{ define "main" }}
 
-{{ if eq .Title "Products" }}
+{{ if eq .Title (T "products") }}
   <!-- Redirect to home page products section -->
   <meta http-equiv="refresh" content="0; url=/#products">
   <script>window.location.href = "/#products";</script>
   <div style="text-align: center; padding: 5rem 2rem;">
-    <h1>Redirecting...</h1>
-    <p>If you are not redirected, <a href="/#products">click here</a>.</p>
+    <h1>{{ T "redirecting" }}</h1>
+    <p>{{ T "redirect_text" | safeHTML }}</p>
   </div>
 {{ else }}
 
@@ -24,7 +24,7 @@
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <h1>{{ $.Title }}</h1>
-      <p>Premium wholesale products from China</p>
+      <p>{{ T "products_subtitle" }}</p>
     </div>
   </section>
 {{ end }}
@@ -32,7 +32,7 @@
 <!-- Breadcrumb -->
 <div class="container">
   <nav class="breadcrumb" style="padding: 1.5rem 0; font-size: 0.9rem;">
-    <a href="/" style="color: var(--color-text-muted);">Home</a>
+    <a href="{{ "/" | relLangURL }}" style="color: var(--color-text-muted);">{{ T "home" }}</a>
     <span style="color: var(--color-text-muted); margin: 0 0.5rem;">/</span>
     <span style="color: var(--color-primary); font-weight: 500;">{{ .Title }}</span>
   </nav>
@@ -41,9 +41,9 @@
 <!-- Product Grid -->
 <div class="container" style="padding-bottom: 4rem;">
   <div class="section-header">
-    <h2>{{ .Title }} Collection</h2>
+    <h2>{{ .Title }} {{ T "collection" }}</h2>
     <p class="section-subtitle">
-      {{ with .Params.description }}{{ . }}{{ else }}Browse our selection of high-quality {{ .Title | lower }} for wholesale export{{ end }}
+      {{ with .Params.description }}{{ . }}{{ else }}{{ T "browse_products" }}{{ end }}
     </p>
   </div>
   

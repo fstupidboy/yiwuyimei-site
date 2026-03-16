@@ -45,3 +45,10 @@ what_we_offer: "제공 서비스"
 services_subtitle: "귀하의 비즈니스를 위한 원스톱 수출 솔루션"
 our_services: "우리의 서비스"
 learn_more: "더 알아보기"
+
+# Product List Page
+collection: "컬렉션"
+redirecting: "리디렉션 중..."
+redirect_text: '리디렉션되지 않으면 <a href="/#products">여기를 클릭하세요</a>.'
+products_subtitle: "중국 프리미엄 도매 제품"
+browse_products: "도매 수출용 고품질 제품을 둘러보세요"

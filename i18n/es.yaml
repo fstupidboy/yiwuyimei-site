@@ -49,3 +49,10 @@ learn_more: "Más Información"
 # Contact Page
 address: "Dirección"
 email: "Correo Electrónico"
+
+# Product List Page
+collection: "Colección"
+redirecting: "Redirigiendo..."
+redirect_text: 'Si no es redirigido, <a href="/#products">haga clic aquí</a>.'
+products_subtitle: "Productos premium al por mayor desde China"
+browse_products: "Explore nuestra selección de productos de alta calidad para exportación al por mayor"

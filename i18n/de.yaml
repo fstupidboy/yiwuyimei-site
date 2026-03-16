@@ -49,3 +49,10 @@ learn_more: "Mehr Erfahren"
 # Contact Page
 address: "Adresse"
 email: "E-Mail"
+
+# Product List Page
+collection: "Kollektion"
+redirecting: "Weiterleitung..."
+redirect_text: 'Wenn Sie nicht weitergeleitet werden, <a href="/#products">klicken Sie hier</a>.'
+products_subtitle: "Premium Großhandelsprodukte aus China"
+browse_products: "Durchsuchen Sie unsere Auswahl an hochwertigen Produkten für den Großhandelsexport"

@@ -49,3 +49,10 @@ learn_more: "Tuilleadh Eolais"
 # Contact Page
 address: "Seoladh"
 email: "Ríomhphost"
+
+# Product List Page
+collection: "Bailiúchán"
+redirecting: "Ag atreorú..."
+redirect_text: 'Mura n-atreorítear thú, <a href="/#products">cliceáil anseo</a>.'
+products_subtitle: "Táirgí mórdhíola premium ón tSín"
+browse_products: "Brabhsáil ár rogha táirgí ardchaighdeáin le hiompórtáil mórdhíola"
