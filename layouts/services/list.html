@@ -51,9 +51,9 @@
         <a href="{{ .RelPermalink }}" style="text-decoration: none; color: inherit;">
           <!-- Service Icon -->
           <div class="service-icon" style="width: 80px; height: 80px; margin: 0 auto 1.5rem; background: linear-gradient(135deg, var(--color-bg-alt) 0%, #e8e7e5 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2.5rem;">
-            {{ if or (eq .Title "Product Development") (eq .Title "제품 개발") (eq .Title "製品開発") (eq .Title "Desarrollo de Productos") }}💡{{ end }}
-            {{ if or (eq .Title "Quality Control") (eq .Title "품질 관리") (eq .Title "品質管理") (eq .Title "Control de Calidad") }}✓{{ end }}
-            {{ if or (eq .Title "Logistics Services") (eq .Title "물류 서비스") (eq .Title "物流サービス") (eq .Title "Servicios de Logística") }}🚢{{ end }}
+            {{ if or (eq .Title "Product Development") (eq .Title "제품 개발") (eq .Title "製品開発") (eq .Title "Desarrollo de Productos") (eq .Title "Produktentwicklung") (eq .Title "Développement de Produits") (eq .Title "Sviluppo Prodotti") (eq .Title "Rozwój Produktów") (eq .Title "Tuotekehitys") (eq .Title "Forbairt Táirgí") }}💡{{ end }}
+            {{ if or (eq .Title "Quality Control") (eq .Title "품질 관리") (eq .Title "品質管理") (eq .Title "Control de Calidad") (eq .Title "Qualitätskontrolle") (eq .Title "Contrôle Qualité") (eq .Title "Controllo Qualità") (eq .Title "Kontrola Jakości") (eq .Title "Laadunvalvonta") (eq .Title "Rialú Cáilíochta") }}✓{{ end }}
+            {{ if or (eq .Title "Logistics Services") (eq .Title "물류 서비스") (eq .Title "物流サービス") (eq .Title "Servicios de Logística") (eq .Title "Logistikdienstleistungen") (eq .Title "Services Logistiques") (eq .Title "Servizi Logistici") (eq .Title "Usługi Logistyczne") (eq .Title "Logistiikkapalvelut") (eq .Title "Seirmeanna Loighistic") }}🚢{{ end }}
           </div>
           <h3 class="service-title" style="font-size: 1.25rem; font-weight: 600; color: var(--color-primary); margin-bottom: 1rem;">{{ .Title }}</h3>
           <p class="service-description" style="color: var(--color-text-muted); font-size: 0.95rem; line-height: 1.6; margin: 0;">
