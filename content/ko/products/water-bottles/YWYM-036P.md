@@ -1,6 +1,6 @@
 ---
-title: "Water Bottle YWYM-036P"
-product_type: "water bottle"
+title: "물병 YWYM-036P"
+product_type: "물병"
 date: 2025-04-01
 cover:
   image: "/images/products/water-bottles/YWYM-036P.webp"

@@ -1,5 +1,5 @@
 ---
-title: "Potable Power Bank YWPB006"
+title: "Potable モバイルバッテリー YWPB006"
 product_type: "mobile accessory"
 date: 2025-04-24
 cover:

@@ -1,6 +1,6 @@
 ---
-title: "YWYM Clothes Dryer YWAC001"
-product_type: "home gadget"
+title: "YWYM 의류 건조기 YWAC001"
+product_type: "홈 가젯"
 date: 2025-04-01
 cover:
   image: "/images/products/others/ywac001.jpg"

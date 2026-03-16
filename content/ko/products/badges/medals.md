@@ -1,6 +1,6 @@
 ---
-title: "Medals"
-product_type: "badges"
+title: "메달s"
+product_type: "배지"
 date: 2026-03-10
 section: "new"
 cover:

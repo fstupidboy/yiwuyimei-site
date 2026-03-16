@@ -1,6 +1,6 @@
 ---
-title: "gift items"
-product_type: "home gadget"
+title: "その他"
+product_type: "ホームガジェット"
 banner: "/images/catalogue/others-banner.webp"
 ---
 

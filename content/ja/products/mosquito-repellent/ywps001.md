@@ -1,5 +1,5 @@
 ---
-title: "YWYM Mosquito Repellent YWPS001"
+title: "YWYM 蚊取り器 YWPS001"
 product_type: "mosquito repeller"
 date: 2025-04-01
 section: "new"

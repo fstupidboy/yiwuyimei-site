@@ -1,6 +1,6 @@
 ---
-title: "Medals"
-product_type: "badges"
+title: "メダルs"
+product_type: "バッジ"
 date: 2026-03-10
 section: "new"
 cover:

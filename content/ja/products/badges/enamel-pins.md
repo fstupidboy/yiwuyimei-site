@@ -1,6 +1,6 @@
 ---
-title: "Enamel Pins"
-product_type: "badges"
+title: "エナメルピンs"
+product_type: "バッジ"
 date: 2026-03-10
 section: "normal"
 cover:

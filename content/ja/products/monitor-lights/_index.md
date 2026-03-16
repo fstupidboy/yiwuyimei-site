@@ -1,6 +1,6 @@
 ---
-title: "Computer Light Bar"
-product_type: "monitor light"
+title: "モニターライト"
+product_type: "モニターライト"
 banner: "/images/catalogue/light-banner.webp"
 ---
 

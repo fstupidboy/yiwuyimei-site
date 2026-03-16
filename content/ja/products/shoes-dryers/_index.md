@@ -1,6 +1,6 @@
 ---
-title: "Shoes Dryers"
-product_type: "shoe dryer"
+title: "シューズドライヤー"
+product_type: "シューズドライヤー"
 banner: "/images/catalogue/shoes-dryers-banner.webp"
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: "Portable Camping Fan YWF017"
-product_type: "portable fan"
+title: "휴 대용 Camping 선풍기 YWF017"
+product_type: "선풍기"
 date: 2025-04-01
 section: "best"
 cover:

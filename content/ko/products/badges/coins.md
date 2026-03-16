@@ -1,6 +1,6 @@
 ---
-title: "Coins"
-product_type: "badges"
+title: "코인s"
+product_type: "배지"
 date: 2026-03-10
 section: "normal"
 cover:

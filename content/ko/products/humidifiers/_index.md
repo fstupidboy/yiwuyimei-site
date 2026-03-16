@@ -1,6 +1,6 @@
 ---
-title: "Humidifiers"
-product_type: "humidifier"
-banner: "/images/catalogue/humidifiers-banner.webp"
+title: "가습기"
+product_type: "가습기"
+banner: "/images/catalogue/가습기s-banner.webp"
 ---
 
