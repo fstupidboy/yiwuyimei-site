@@ -14,15 +14,15 @@
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <h1>{{ $.Title }}</h1>
-      <p>End-to-end export solutions for your business</p>
+      <p>{{ T "services_subtitle" }}</p>
     </div>
   </section>
 {{ else }}
   <section class="hero-banner" style="height: 300px; background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);">
     <div class="hero-content">
-      <div class="hero-badge">What We Offer</div>
+      <div class="hero-badge">{{ T "what_we_offer" }}</div>
       <h1>{{ .Title }}</h1>
-      <p>End-to-end export solutions for your business</p>
+      <p>{{ T "services_subtitle" }}</p>
     </div>
   </section>
 {{ end }}
@@ -30,7 +30,7 @@
 <!-- Breadcrumb -->
 <div class="container">
   <nav class="breadcrumb" style="padding: 1.5rem 0; font-size: 0.9rem;">
-    <a href="/" style="color: var(--color-text-muted);">Home</a>
+    <a href="{{ "/" | relLangURL }}" style="color: var(--color-text-muted);">{{ T "home" }}</a>
     <span style="color: var(--color-text-muted); margin: 0 0.5rem;">/</span>
     <span style="color: var(--color-primary); font-weight: 500;">{{ .Title }}</span>
   </nav>
@@ -39,7 +39,7 @@
 <!-- Services Grid -->
 <div class="container" style="padding-bottom: 4rem;">
   <div class="section-header">
-    <h2>Our Services</h2>
+    <h2>{{ T "our_services" }}</h2>
     <p class="section-subtitle">
       {{ .Params.description }}
     </p>
@@ -60,7 +60,7 @@
             {{ .Params.description }}
           </p>
           <div class="service-link" style="margin-top: 1.5rem; color: var(--color-accent); font-weight: 500; display: inline-flex; align-items: center; gap: 0.5rem;">
-            Learn More 
+            {{ T "learn_more" }} 
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M5 12h14M12 5l7 7-7 7"/>
             </svg>
@@ -70,7 +70,7 @@
     {{ end }}
   </div>
   
-  <!-- Back to Home -->
+  <!-- {{ T "back_to_home" }} -->
   <div style="text-align: center;">
     <a href="/" class="btn btn-outline">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 0.5rem;">
