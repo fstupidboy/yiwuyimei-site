@@ -1,4 +1,6 @@
 baseURL = "https://www.yiwuyimei.com/"
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = false
 languageCode = "en-us"
 title = "YiwuYimei Products"
 theme = "PaperMod"
@@ -14,30 +16,117 @@ ignoreLogs = ["warning-goldmark-raw-html"]
 [permalinks]
   products = "/products/:slug/"
 
-[params]
-  description = "YiwuYimei exports high-quality products from China to the world."
-  keywords = ["Yiwu export", "China products", "small appliances", "fans", "diffusers"]
-  ogImages = ["/images/og-default.png"]  # ✅ 用于社交分享的默认预览图
+# 多语言配置
+[languages]
+  [languages.en]
+    languageName = "English"
+    weight = 1
+    title = "YiwuYimei Products"
+    [languages.en.params]
+      description = "YiwuYimei exports high-quality products from China to the world."
+      keywords = ["Yiwu export", "China products", "small appliances", "fans", "diffusers"]
+      welcomeTitle = "Your Trusted Export Partner"
+      welcomeText = "We specialize in high-quality, cost-effective home appliances and lifestyle products. Trusted by buyers from the USA, Europe, Japan, and Korea for reliable China export solutions."
+      newArrivalsTitle = "New Arrivals"
+      bestSellersTitle = "Best Sellers"
+      uniqueProductsTitle = "Unique Products"
+      exploreProducts = "Explore Products"
+      categoriesTitle = "Categories"
+      backToHome = "Back to Home"
+      globalShipping = "Global Shipping"
+      qualityCertified = "Quality Certified"
+      factoryDirect = "Factory Direct"
+      b2bSpecialist = "B2B Specialist"
+      premiumWholesale = "Premium Wholesale Products from China — Fans, Diffusers, Humidifiers & More"
+      trustedBy = "Trusted by Global Buyers"
+    [[languages.en.menu.main]]
+      identifier = "products"
+      name = "Products"
+      url = "/products/"
+      weight = 1
+    [[languages.en.menu.main]]
+      identifier = "home"
+      name = "Home"
+      url = "/"
+      weight = 0
 
+  [languages.ko]
+    languageName = "한국어"
+    weight = 2
+    title = "YiwuYimei 제품"
+    [languages.ko.params]
+      description = "YiwuYimei는 중국에서 고품질 제품을 전 세계로 수출합니다."
+      keywords = ["이우 수출", "중국 제품", "소형 가전", "선풍기", "디퓨저"]
+      welcomeTitle = "신뢰할 수 있는 수출 파트너"
+      welcomeText = "고품질의 가성비 좋은 가전제품과 라이프스타일 제품을 전문으로 합니다. 미국, 유럽, 일본, 한국의 바이어들이 신뢰하는 중국 수출 솔루션을 제공합니다."
+      newArrivalsTitle = "신제품"
+      bestSellersTitle = "베스트셀러"
+      uniqueProductsTitle = "특별한 제품"
+      exploreProducts = "제품 둘러보기"
+      categoriesTitle = "카테고리"
+      backToHome = "홈으로 돌아가기"
+      globalShipping = "글로벌 배송"
+      qualityCertified = "품질 인증"
+      factoryDirect = "공장 직접"
+      b2bSpecialist = "B2B 전문"
+      premiumWholesale = "중국 프리미엄 도매 제품 — 선풍기, 디퓨저, 가습기 등"
+      trustedBy = "글로벌 바이어가 신뢰하는 브랜드"
+    [[languages.ko.menu.main]]
+      identifier = "products"
+      name = "제품"
+      url = "/ko/products/"
+      weight = 1
+    [[languages.ko.menu.main]]
+      identifier = "home"
+      name = "홈"
+      url = "/ko/"
+      weight = 0
+
+  [languages.ja]
+    languageName = "日本語"
+    weight = 3
+    title = "YiwuYimei 製品"
+    [languages.ja.params]
+      description = "YiwuYimeiは中国から高品質な製品を世界中に輸出しています。"
+      keywords = ["義烏輸出", "中国製品", "小型家電", "扇風機", "ディフューザー"]
+      welcomeTitle = "信頼できる輸出パートナー"
+      welcomeText = "高品質でコストパフォーマンスに優れた家電製品とライフスタイル製品を専門に取り扱っています。アメリカ、ヨーロッパ、日本、韓国のバイヤーから信頼される中国輸出ソリューションを提供します。"
+      newArrivalsTitle = "新着商品"
+      bestSellersTitle = "ベストセラー"
+      uniqueProductsTitle = "ユニークな製品"
+      exploreProducts = "製品を探す"
+      categoriesTitle = "カテゴリー"
+      backToHome = "ホームに戻る"
+      globalShipping = "グローバル配送"
+      qualityCertified = "品質認証"
+      factoryDirect = "工場直送"
+      b2bSpecialist = "B2B専門"
+      premiumWholesale = "中国プレミアム卸売製品 — 扇風機、ディフューザー、加湿器など"
+      trustedBy = "グローバルバイヤーが信頼するブランド"
+    [[languages.ja.menu.main]]
+      identifier = "products"
+      name = "製品"
+      url = "/ja/products/"
+      weight = 1
+    [[languages.ja.menu.main]]
+      identifier = "home"
+      name = "ホーム"
+      url = "/ja/"
+      weight = 0
+
+[params]
   [params.homeInfoParams]
     Title = "yiwuyimei"
     Content = "Your trusted exporter of quality Chinese products"
     googleFonts = false
 
 [params.assets]
-  customCSS = ["css/modern-theme.css","css/extra.css","css/service.css"]
+  customCSS = ["css/modern-theme.css","css/extra.css","css/service.css","css/i18n.css"]
 
 [params.images]
   useCloudflare = false  # Set to true after enabling Cloudflare Image Resizing
-
-[[menu.main]]
-  identifier = "products"
-  name = "Products"
-  url = "/products/"
-  weight = 1
 
 [sitemap]
   changefreq = "weekly"
   priority = 0.5
   filename = "sitemap.xml"
-

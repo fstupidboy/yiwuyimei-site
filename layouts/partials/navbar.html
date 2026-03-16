@@ -1,6 +1,6 @@
 <nav class="navbar">
   <div class="container">
-    <a href="/" class="navbar-brand">YIWU<span>YIMEI</span></a>
+    <a href="{{ "/" | relLangURL }}" class="navbar-brand">YIWU<span>YIMEI</span></a>
 
     <!-- Hamburger Menu Button -->
     <button class="hamburger" id="hamburger-btn" aria-label="Menu" style="display: none;">
@@ -12,25 +12,44 @@
     </button>
 
     <ul class="navbar-nav" id="nav-menu">
-      <li><a href="/">Home</a></li>
+      <li><a href="{{ "/" | relLangURL }}">{{ T "home" }}</a></li>
       <li class="dropdown">
-        <a href="/#products">Products ▾</a>
+        <a href="{{ "/#products" | relLangURL }}">{{ T "products" }} ▾</a>
         <ul class="dropdown-menu">
-          <li><a href="/products/fans/">Portable Fans</a></li>
-          <li><a href="/products/shoes-dryers/">Shoes Dryers</a></li>
-          <li><a href="/products/scent-diffusers/">Scent Diffusers</a></li>
-          <li><a href="/products/badges/">Custom Badges</a></li>
-          <li><a href="/products/monitor-lights/">Monitor Lights</a></li>
-          <li><a href="/products/humidifiers/">Humidifiers</a></li>
-          <li><a href="/products/mosquito-repellent/">Mosquito Repellent</a></li>
-          <li><a href="/products/water-bottles/">Water Bottles</a></li>
-          <li><a href="/products/mobile-accessories/">Mobile Accessories</a></li>
-          <li><a href="/products/others/">Gift Items</a></li>
+          <li><a href="{{ "/products/fans/" | relLangURL }}">{{ T "fans" }}</a></li>
+          <li><a href="{{ "/products/shoes-dryers/" | relLangURL }}">{{ T "shoes_dryers" }}</a></li>
+          <li><a href="{{ "/products/scent-diffusers/" | relLangURL }}">{{ T "scent_diffusers" }}</a></li>
+          <li><a href="{{ "/products/badges/" | relLangURL }}">{{ T "badges" }}</a></li>
+          <li><a href="{{ "/products/monitor-lights/" | relLangURL }}">{{ T "monitor_lights" }}</a></li>
+          <li><a href="{{ "/products/humidifiers/" | relLangURL }}">{{ T "humidifiers" }}</a></li>
+          <li><a href="{{ "/products/mosquito-repellent/" | relLangURL }}">{{ T "mosquito_repellent" }}</a></li>
+          <li><a href="{{ "/products/water-bottles/" | relLangURL }}">{{ T "water_bottles" }}</a></li>
+          <li><a href="{{ "/products/mobile-accessories/" | relLangURL }}">{{ T "mobile_accessories" }}</a></li>
+          <li><a href="{{ "/products/others/" | relLangURL }}">{{ T "gift_items" }}</a></li>
         </ul>
       </li>
-      <li><a href="/services/">Services</a></li>
-      <li><a href="/contact/">Contact</a></li>
+      <li><a href="{{ "/services/" | relLangURL }}">{{ T "services" }}</a></li>
+      <li><a href="{{ "/contact/" | relLangURL }}">{{ T "contact" }}</a></li>
     </ul>
+
+    <!-- Language Switcher -->
+    <div class="language-switcher">
+      {{ range .Site.Languages }}
+        {{ if eq .Lang $.Site.Language.Lang }}
+          <a href="#" class="active" title="{{ .LanguageName }}">{{ .Lang | upper }}</a>
+        {{ else }}
+          {{ if $.Page.IsTranslated }}
+            {{ range $.Page.Translations }}
+              {{ if eq .Lang $.Lang }}
+                <a href="{{ .RelPermalink }}" title="{{ .LanguageName }}">{{ .Lang | upper }}</a>
+              {{ end }}
+            {{ end }}
+          {{ else }}
+            <a href="{{ .Lang | printf "/%s/" }}" title="{{ .LanguageName }}">{{ .Lang | upper }}</a>
+          {{ end }}
+        {{ end }}
+      {{ end }}
+    </div>
   </div>
 </nav>
 
@@ -79,6 +98,44 @@
 .dropdown-menu a:hover {
   background: var(--color-bg-alt);
   color: var(--color-primary);
+}
+
+/* Language Switcher */
+.language-switcher {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  margin-left: 1.5rem;
+  padding-left: 1.5rem;
+  border-left: 1px solid var(--color-border);
+}
+
+.language-switcher a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 32px;
+  height: 28px;
+  padding: 0 0.5rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  border: 1px solid transparent;
+  color: var(--color-text-muted);
+  background: transparent;
+}
+
+.language-switcher a:hover {
+  color: var(--color-primary);
+  background: var(--color-bg-alt);
+}
+
+.language-switcher a.active {
+  color: white;
+  background: var(--color-primary);
+  border-color: var(--color-primary);
 }
 
 /* Mobile responsive */
@@ -136,6 +193,15 @@
   
   .dropdown.active .dropdown-menu {
     display: block;
+  }
+  
+  .language-switcher {
+    margin-left: 0;
+    margin-top: 1rem;
+    padding: 1rem 0 0 0;
+    border-left: none;
+    border-top: 1px solid var(--color-border);
+    justify-content: center;
   }
 }
 </style>

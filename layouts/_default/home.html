@@ -12,10 +12,10 @@
   ) }}
   <div class="hero-overlay"></div>
   <div class="hero-content">
-    <div class="hero-badge">Trusted by Global Buyers</div>
+    <div class="hero-badge">{{ T "trusted_by" }}</div>
     <h1>YIWUYIMEI</h1>
-    <p>Premium Wholesale Products from China — Fans, Diffusers, Humidifiers & More</p>
-    <a href="#products" class="btn btn-accent">Explore Products</a>
+    <p>{{ .Site.Params.premiumWholesale | default (T "premium_wholesale") }}</p>
+    <a href="#products" class="btn btn-accent">{{ T "explore_products" }}</a>
   </div>
 </section>
 
@@ -24,19 +24,19 @@
   <div class="trust-badges">
     <div class="trust-badge">
       <div class="trust-badge-icon">🌍</div>
-      <span class="trust-badge-label">Global Shipping</span>
+      <span class="trust-badge-label">{{ T "global_shipping" }}</span>
     </div>
     <div class="trust-badge">
       <div class="trust-badge-icon">✓</div>
-      <span class="trust-badge-label">Quality Certified</span>
+      <span class="trust-badge-label">{{ T "quality_certified" }}</span>
     </div>
     <div class="trust-badge">
       <div class="trust-badge-icon">🏭</div>
-      <span class="trust-badge-label">Factory Direct</span>
+      <span class="trust-badge-label">{{ T "factory_direct" }}</span>
     </div>
     <div class="trust-badge">
       <div class="trust-badge-icon">🤝</div>
-      <span class="trust-badge-label">B2B Specialist</span>
+      <span class="trust-badge-label">{{ T "b2b_specialist" }}</span>
     </div>
   </div>
 </section>
@@ -45,18 +45,18 @@
 <div class="page-wrapper" id="products">
   <!-- Sidebar -->
   <aside class="catalogue-sidebar">
-    <h2>Categories</h2>
+    <h2>{{ T "categories" }}</h2>
     <ul class="catalogue-menu">
-      <li><a href="/products/fans/">Portable Fans</a></li>
-      <li><a href="/products/shoes-dryers/">Shoes Dryers</a></li>
-      <li><a href="/products/scent-diffusers/">Scent Diffusers</a></li>
-      <li><a href="/products/badges/">Custom Badges</a></li>
-      <li><a href="/products/monitor-lights/">Monitor Lights</a></li>
-      <li><a href="/products/humidifiers/">Humidifiers</a></li>
-      <li><a href="/products/mosquito-repellent/">Mosquito Repellent</a></li>
-      <li><a href="/products/water-bottles/">Water Bottles</a></li>
-      <li><a href="/products/mobile-accessories/">Mobile Accessories</a></li>
-      <li><a href="/products/others/">Gift Items</a></li>
+      <li><a href="{{ "/products/fans/" | relLangURL }}">{{ T "fans" }}</a></li>
+      <li><a href="{{ "/products/shoes-dryers/" | relLangURL }}">{{ T "shoes_dryers" }}</a></li>
+      <li><a href="{{ "/products/scent-diffusers/" | relLangURL }}">{{ T "scent_diffusers" }}</a></li>
+      <li><a href="{{ "/products/badges/" | relLangURL }}">{{ T "badges" }}</a></li>
+      <li><a href="{{ "/products/monitor-lights/" | relLangURL }}">{{ T "monitor_lights" }}</a></li>
+      <li><a href="{{ "/products/humidifiers/" | relLangURL }}">{{ T "humidifiers" }}</a></li>
+      <li><a href="{{ "/products/mosquito-repellent/" | relLangURL }}">{{ T "mosquito_repellent" }}</a></li>
+      <li><a href="{{ "/products/water-bottles/" | relLangURL }}">{{ T "water_bottles" }}</a></li>
+      <li><a href="{{ "/products/mobile-accessories/" | relLangURL }}">{{ T "mobile_accessories" }}</a></li>
+      <li><a href="{{ "/products/others/" | relLangURL }}">{{ T "gift_items" }}</a></li>
     </ul>
   </aside>
 
@@ -65,15 +65,15 @@
     
     <!-- Welcome Section -->
     <section class="welcome-section">
-      <h2>Your Trusted Export Partner</h2>
-      <p>We specialize in high-quality, cost-effective home appliances and lifestyle products. Trusted by buyers from the USA, Europe, Japan, and Korea for reliable China export solutions.</p>
+      <h2>{{ T "welcome_title" }}</h2>
+      <p>{{ T "welcome_text" }}</p>
     </section>
 
     <!-- New Arrivals -->
     <section class="product-section">
       <h2>
         <span style="color: var(--color-accent);">✦</span>
-        New Arrivals
+        {{ T "new_arrivals" }}
       </h2>
       <div class="product-grid">
         {{ range first 8 (where site.RegularPages "Params.section" "new").ByDate.Reverse }}
@@ -103,7 +103,7 @@
     <section class="product-section">
       <h2>
         <span style="color: var(--color-warm);">★</span>
-        Best Sellers
+        {{ T "best_sellers" }}
       </h2>
       <div class="product-grid">
         {{ range first 8 (where site.RegularPages "Params.section" "best").ByDate.Reverse }}
@@ -133,7 +133,7 @@
     <section class="product-section">
       <h2>
         <span style="color: var(--color-primary);">◆</span>
-        Unique Products
+        {{ T "unique_products" }}
       </h2>
       <div class="product-grid">
         {{ range first 8 (where site.RegularPages "Params.section" "unique").ByDate.Reverse }}
