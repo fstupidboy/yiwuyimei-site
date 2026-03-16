@@ -133,3 +133,29 @@ ignoreLogs = ["warning-goldmark-raw-html"]
   changefreq = "weekly"
   priority = 0.5
   filename = "sitemap.xml"
+
+  [languages.es]
+    contentDir = "content/es"
+    languageName = "Español"
+    weight = 4
+    title = "YiwuYimei Productos"
+    [languages.es.params]
+      subtitle = "Su Socio de Exportación de Confianza"
+      description = "Especializados en electrodomésticos y productos de estilo de vida de alta calidad y rentables."
+      keywords = "exportación China,exportación Yiwu,productos mayorista,electrodomésticos,difusores de aroma,ventiladores,humidificadores,fábrica China,comercio internacional,B2B"
+    [[languages.es.menu.main]]
+      name = "Inicio"
+      url = "/"
+      weight = 10
+    [[languages.es.menu.main]]
+      name = "Productos"
+      url = "/#products"
+      weight = 20
+    [[languages.es.menu.main]]
+      name = "Servicios"
+      url = "/services/"
+      weight = 30
+    [[languages.es.menu.main]]
+      name = "Contacto"
+      url = "/contact/"
+      weight = 40
