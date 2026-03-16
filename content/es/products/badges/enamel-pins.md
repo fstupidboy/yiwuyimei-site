@@ -1,6 +1,6 @@
 ---
-title: "YWYM Pin de Esmaltes"
-product_type: "insignia"
+title: "Enamel Pins"
+product_type: "badges"
 date: 2026-03-10
 section: "normal"
 cover:
@@ -12,7 +12,7 @@ cover:
     - "/images/products/badges/Enamel Pins/Enamel Pins-4.jpg"
 draft: false
 ---
-**Product name:** Enamel Pins
-**Product type:** Badges
+**Nombre del Producto:** Enamel Pins
+**Tipo de Producto:** Insignias
 
 More product details coming soon.

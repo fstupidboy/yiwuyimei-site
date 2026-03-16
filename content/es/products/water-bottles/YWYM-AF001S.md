@@ -1,6 +1,6 @@
 ---
-title: "YWYM Botella de Agua YWYM-AF001S"
-product_type: "botella de agua"
+title: "Water Bottle YWYM-AF001S"
+product_type: "water bottle"
 date: 2025-04-01
 cover:
   image: "/images/products/water-bottles/YWYM-AF001S.webp"
@@ -10,13 +10,13 @@ cover:
     - "/images/products/water-bottles/YWYM-AF001S/图片4.webp"
 draft: false
 ---
-**Materiall:** Inside 304 Outside 201
+**Materiall:** Interior 304 exterior 201
 **Capacidad:** 17oz
-**Surface Finish:** Base On Client Request
+**Acabado Superficial:** Según Solicitud del Cliente
 **Products Size(cm):** 8.5 × 22.7
 **QTY/CTN(pcs):** 24
-**G.W/N.W (kg):** 7.8/5.8
-**Packing Size (cm):** 46.3*36*25.2
+**Peso Bruto/Neto (kg):** 7.8/ 5.8
+**Tamaño de Embalaje (cm):** 46.3*36*25.2
 
 **Paquete:** 24
-**Color:** Customize
+**Color:** personalizado

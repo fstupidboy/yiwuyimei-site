@@ -1,5 +1,5 @@
 ---
-title: "YWYM Potable Batería Externa YWPB001"
+title: "Potable Power Bank YWPB001"
 product_type: "mobile accessory"
 date: 2025-04-22
 section: "unique"
@@ -23,7 +23,7 @@ draft: false
 |-----------------------|---------------------------------------------|
 | Brand                 | YIWUYIMEI                                   |
 | Product Name          | AC Plug Power Bank                          |
-| Modol                 | YWPB001                                     |
+| Model                 | YWPB001                                     |
 | Colors                | White / Pink / Purple                       |
 | Battery Type          | Lithium Battery                             |
 | Battery Capacity      | 5000mAh                                     |
@@ -31,7 +31,7 @@ draft: false
 | Dimensions            | 114 x 37 x 27.8 mm                          |
 | Weight                | 149g                                        |
 
-### Adapter Modo
+### Adapter Mode
 
 | Port                  | Output                                       |
 |-----------------------|----------------------------------------------|
@@ -40,11 +40,10 @@ draft: false
 | Lightning Output      | 5V/3A, 9V/2.22A, 12V/1.67A                    |
 | Type-C + Lightning    | Total Output: 5V/3A                          |
 
-### Power Bank Modo
+### Power Bank Mode
 
 | Port                  | Output                                       |
 |-----------------------|----------------------------------------------|
 | Type-C Output         | 5V/3A, 9V/2A, 12V/1.5A, SCP 5V/4.5A           |
 | Lightning Output      | 5V/3A, 9V/2.22A, 12V/1.67A                    |
 | Type-C + Lightning    | Total Output: 5V/3A                          |
-

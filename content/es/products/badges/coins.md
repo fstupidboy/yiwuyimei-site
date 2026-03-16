@@ -1,6 +1,6 @@
 ---
-title: "YWYM Monedas"
-product_type: "insignia"
+title: "Coins"
+product_type: "badges"
 date: 2026-03-10
 section: "normal"
 cover:
@@ -14,7 +14,7 @@ cover:
     - "/images/products/badges/coins/Coins-6.jpg"
 draft: false
 ---
-**Product name:** Custom Coins
-**Product type:** Badges
+**Nombre del Producto:** Custom Coins
+**Tipo de Producto:** Insignias
 
 More product details coming soon.

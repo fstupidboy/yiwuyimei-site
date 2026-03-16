@@ -1,5 +1,5 @@
 ---
-title: "YWYM Secadora de Ropa YWAC001"
+title: "YWYM Clothes Dryer YWAC001"
 product_type: "home gadget"
 date: 2025-04-01
 cover:
@@ -17,12 +17,12 @@ cover:
     - "/images/products/others/ywac001/15.jpg"
 draft: false
 ---
-**Housing Material:**	Plástico
-**Voltage (V):**	110V / 220V
-**Installation:**	Portable / Mini
-**Application:**	Hotel|Car|Outdoor|garage|RV|Commercial
+**Housing Material:** Plástico
+**Voltage (V):** 110V/ 220V
+**Installation:** Portátil/ Mini
+**Aplicación:** Hotel | Car | Outdoor | garage | RV | Commercial
 **Power source:** Electric
-**App-controlled:**	NO
-**Brand:**	OEM/ODM
-**Modol number:**	YWAC001
-**Dimensiones:** l x w x h (inches)	6.3 x 3.15 x 3.15in
+**App-controlled:** NO
+**Brand:** OEM/ ODM
+**Model number:** YWAC001
+**Dimensions:** l x w x h (inches)	6.3 x 3.15 x 3.15in

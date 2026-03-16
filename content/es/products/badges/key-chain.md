@@ -1,6 +1,6 @@
 ---
-title: "YWYM Llavero"
-product_type: "insignia"
+title: "Key Chain"
+product_type: "badges"
 date: 2026-03-10
 section: "normal"
 cover:
@@ -23,7 +23,7 @@ cover:
     - "/images/products/badges/Key Chain/Cute Metal Key Ring.webp"
 draft: false
 ---
-**Product name:** Key Chain
-**Product type:** Badges
+**Nombre del Producto:** Key Chain
+**Tipo de Producto:** Insignias
 
 More product details coming soon.

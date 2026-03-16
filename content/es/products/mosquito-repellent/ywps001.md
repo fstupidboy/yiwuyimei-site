@@ -1,5 +1,5 @@
 ---
-title: "YWYM Repelente de Mosquitos YWPS001"
+title: "YWYM Mosquito Repellent YWPS001"
 product_type: "mosquito repeller"
 date: 2025-04-01
 section: "new"
@@ -16,13 +16,13 @@ draft: false
 ---
 **Material:** ABS
 **Voltaje:** DC 5V
-**Color:** White
-**Product weight:** 0.34kg
-**Rated power:** 2W
-**Battery capacity:** 1200 mAh
+**Color:** Blanco
+**Peso del Producto:** 0.34kg
+**Potencia Nominal:** 2W
+**Capacidad de Batería:** 1200 mAh
 **Tamaño del Producto:** 490 x 210 x 30mm
-**Package size:** 494 x 238 x 39mm
-**Charging power:** Type-C
-**Tamaño de la Caja:** 625 x 515 x 500mm
-**Carton Peso Bruto:** 15.4kg
+**Tamaño del Paquete:** 494 x 238 x 39mm
+**Potencia de Carga:** Tipo-C
+**Tamaño del Cartón:** 625 x 515 x 500mm
+**Peso Bruto del Cartón:** 15.4kg
 **Super Design:** Dualsafety Switch Lamp

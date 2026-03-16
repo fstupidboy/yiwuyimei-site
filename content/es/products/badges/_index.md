@@ -1,6 +1,5 @@
 ---
-title: "Insignias y Medallas"
+title: "Badges"
 product_type: "badges"
 banner: "/images/catalogue/badges-banner.webp"
 ---
-

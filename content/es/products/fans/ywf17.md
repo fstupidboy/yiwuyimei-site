@@ -1,6 +1,6 @@
 ---
-title: "YWYM Portable Camping Ventilador YWF017"
-product_type: "ventilador"
+title: "Portable Camping Fan YWF017"
+product_type: "portable fan"
 date: 2025-04-01
 section: "best"
 cover:
@@ -23,12 +23,12 @@ cover:
     - "/images/products/fans/ywf17/14.jpg"
 draft: false
 ---
-**Product name:** Portable Camping Fan
+**Nombre del Producto:** Ventilador de Camping Portátil
 **Tamaño del Producto:** 200 x 200 x 88.5mm
 **Using power:** 5W
 **Refrigeration function:** Night Light
-**Battery capacity:** 3600mAh
-**Working voltage:** DC 5V/2A
-**Working gear:** Fan 4rd gear
-**Material:** ABS+PP+steel+semiconductor
-**Product Certificación:** CE/FCC/ROHS
+**Capacidad de Batería:** 3600mAh
+**Voltaje de Trabajo:** DC 5V/ 2A
+**Velocidad de Trabajo:** Ventilador 4ta velocidad
+**Material:** ABS+PP+acero+semiconductor
+**Certificación del Producto:** CE/ FCC/ RoHS

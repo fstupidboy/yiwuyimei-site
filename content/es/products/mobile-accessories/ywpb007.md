@@ -1,5 +1,5 @@
 ---
-title: "YWYM Potable Batería Externa YWPB007"
+title: "Potable Power Bank YWPB007"
 product_type: "mobile accessory"
 date: 2025-04-24
 section: "new"
@@ -22,14 +22,14 @@ draft: false
 **Housing Material:** Plástico
 **Surface Treatment:** Glossy UV
 **Output Specifications**
-**Type-C Main Puerto:** 5V/3A, 9V/2.22A, 12V/1.67A
-**Type-C Secondary Puerto:** 5V/3A, 9V/2A, 12V/1.5A
-**L-Type Type-C Port 1:** 10V/2.25A, 5V/3A, 9V/2A, 12V/1.5A
-**L-Type Type-C Port 2:** 10V/2.25A, 5V/3A, 9V/2A, 12V/1.5A
-**L-Type Lightning Puerto:** 5V/2.4A
+**Type-C Main Port:** 5V/ 3A, 9V/ 2.22A, 12V/ 1.67A
+**Type-C Secondary Port:** 5V/ 3A, 9V/ 2A, 12V/ 1.5A
+**L-Type Type-C Port 1:** 10V/ 2.25A, 5V/ 3A, 9V/ 2A, 12V/ 1.5A
+**L-Type Type-C Port 2:** 10V/ 2.25A, 5V/ 3A, 9V/ 2A, 12V/ 1.5A
+**L-Type Lightning Port:** 5V/ 2.4A
 **Battery Information**
 **Cell Type:** 115252 × 2
-**Capacidad:** 10,000mAh
+**Capacidad:** 10, 000mAh
 **Product Dimensions**
 **Tamaño:** 76 × 59.8 × 28 mm
 **Configuration**

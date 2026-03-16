@@ -1,5 +1,5 @@
 ---
-title: "YWYM Potable Batería Externa YWPB003"
+title: "Potable Power Bank YWPB003"
 product_type: "mobile accessory"
 date: 2025-04-22
 cover:
@@ -17,9 +17,9 @@ cover:
 draft: false
 ---
 **Brand:** YIWUYIMEI
-**Color:** White / Pink / Purple
-**Battery:** Lithium Battery
+**Color:** Blanco/ Rosa/ Morado
+**Battery:** Batería de Litio
 **Capacidad de Batería:** 10000mAh
 **Energy Conversion Rate:** ≥75%
-**Product Dimensiones:** 80 x 60 x 18 mm
-**Product Peso:** 200g
+**Product Dimensions:** 80 x 60 x 18 mm
+**Peso del Producto:** 200g

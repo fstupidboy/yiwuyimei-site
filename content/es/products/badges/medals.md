@@ -1,6 +1,6 @@
 ---
-title: "YWYM Medallas"
-product_type: "insignia"
+title: "Medals"
+product_type: "badges"
 date: 2026-03-10
 section: "new"
 cover:
@@ -12,7 +12,7 @@ cover:
     - "/images/products/badges/Medals/Medals-4.webp"
 draft: false
 ---
-**Product name:** Custom Medals
-**Product type:** Badges
+**Nombre del Producto:** Custom Medals
+**Tipo de Producto:** Insignias
 
 More product details coming soon.

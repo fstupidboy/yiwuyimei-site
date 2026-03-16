@@ -1,6 +1,6 @@
 ---
-title: "YWYM Cordóns"
-product_type: "insignia"
+title: "Lanyards"
+product_type: "badges"
 date: 2026-03-10
 section: "normal"
 cover:
@@ -12,7 +12,7 @@ cover:
     - "/images/products/badges/lanyards/Lanyards-2.jpg"
 draft: false
 ---
-**Product name:** Lanyards
-**Product type:** Badges
+**Nombre del Producto:** Lanyards
+**Tipo de Producto:** Insignias
 
 More product details coming soon.
