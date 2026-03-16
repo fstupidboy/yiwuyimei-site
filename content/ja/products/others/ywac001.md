@@ -17,12 +17,12 @@ cover:
     - "/images/products/others/ywac001/15.jpg"
 draft: false
 ---
-**Housing Material:**	Plastic
+**Housing 材質:**	プラスチック
 **Voltage (V):**	110V / 220V
 **Installation:**	Portable / Mini
 **Application:**	Hotel|Car|Outdoor|garage|RV|Commercial
 **Power source:** Electric
 **App-controlled:**	NO
 **Brand:**	OEM/ODM
-**Model number:**	YWAC001
-**Dimensions:** l x w x h (inches)	6.3 x 3.15 x 3.15in
+**モードl number:**	YWAC001
+**サイズ:** l x w x h (inches)	6.3 x 3.15 x 3.15in

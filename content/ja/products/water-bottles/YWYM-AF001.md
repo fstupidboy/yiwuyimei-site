@@ -10,8 +10,8 @@ cover:
     - "/images/products/water-bottles/YWYM-AF001/图片4.webp"
 draft: false
 ---
-**Material:** 304
-**Capacity:** 12oz
+**材質:** 304
+**容量:** 12oz
 **Surface Finish:** Base on Client Request
 **Products Size (cm):** 7x7.8x18.1
 **QTY/CTN (pcs):** 24

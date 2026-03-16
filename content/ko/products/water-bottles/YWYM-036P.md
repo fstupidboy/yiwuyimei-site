@@ -11,8 +11,8 @@ cover:
     - "/images/products/water-bottles/YWYM-036P/图片5.webp"
 draft: false
 ---
-**Materiall:** inside pp,outside 201
-**Capacity:** 16oz
+**Materiall:** 납작 pp,외부 201
+**용량:** 16oz
 **Surface Finish:** Base on Client Request
 **Products Size (cm):** 8.1×21
 **QTY/CTN (pcs):** 24

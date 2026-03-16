@@ -11,8 +11,8 @@ cover:
     - "/images/products/water-bottles/YWYM-16VE/图片5.webp"
 draft: false
 ---
-**Material:** inside 304,outside 201
-**Capacity:** 15OZ
+**材質:** 内側 304,外側 201
+**容量:** 15OZ
 **Surface Finish:** Base on Client Request
 **Products Size (cm):** 3.5 × 7.2 × 23.5
 **QTY/CTN (pcs):** 24

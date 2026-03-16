@@ -20,31 +20,4 @@ cover:
 draft: false
 ---
 | Specification         | Details                                     |
-|-----------------------|---------------------------------------------|
-| Brand                 | YIWUYIMEI                                   |
-| Product Name          | AC Plug Power Bank                          |
-| Model                 | YWPB001                                     |
-| Colors                | White / Pink / Purple                       |
-| Battery Type          | Lithium Battery                             |
-| Battery Capacity      | 5000mAh                                     |
-| Energy Conversion Rate| ≥75%                                        |
-| Dimensions            | 114 x 37 x 27.8 mm                          |
-| Weight                | 149g                                        |
-
-### Adapter Mode
-
-| Port                  | Output                                       |
-|-----------------------|----------------------------------------------|
-| Input                 | AC 100-240V / 0.5A 50/60Hz 20W               |
-| Type-C Output         | 5V/3A, 9V/2A, 12V/1.5A                        |
-| Lightning Output      | 5V/3A, 9V/2.22A, 12V/1.67A                    |
-| Type-C + Lightning    | Total Output: 5V/3A                          |
-
-### Power Bank Mode
-
-| Port                  | Output                                       |
-|-----------------------|----------------------------------------------|
-| Type-C Output         | 5V/3A, 9V/2A, 12V/1.5A, SCP 5V/4.5A           |
-| Lightning Output      | 5V/3A, 9V/2.22A, 12V/1.67A                    |
-| Type-C + Lightning    | Total Output: 5V/3A                          |
-
+|

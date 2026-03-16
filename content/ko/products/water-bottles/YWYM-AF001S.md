@@ -11,7 +11,7 @@ cover:
 draft: false
 ---
 **Materiall:** Inside 304 Outside 201
-**Capacity:** 17oz
+**용량:** 17oz
 **Surface Finish:** Base On Client Request
 **Products Size(cm):** 8.5 × 22.7
 **QTY/CTN(pcs):** 24

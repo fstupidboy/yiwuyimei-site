@@ -10,7 +10,7 @@ cover:
 draft: false
 ---
 **Materiall:** Inside 304.Outside 201
-**Capacity:** 18oz
+**容量:** 18oz
 **Surface Finish:** Base On Client Request
 **Products Size (cm):** 7.4×23
 **QTY/CTN (pcs):** 24

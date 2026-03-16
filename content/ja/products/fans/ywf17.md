@@ -24,11 +24,11 @@ cover:
 draft: false
 ---
 **Product name:** Portable Camping Fan
-**Product size:** 200 x 200 x 88.5mm
+**製品サイズ:** 200 x 200 x 88.5mm
 **Using power:** 5W
 **Refrigeration function:** Night Light
 **Battery capacity:** 3600mAh
 **Working voltage:** DC 5V/2A
 **Working gear:** Fan 4rd gear
-**Material:** ABS+PP+steel+semiconductor
-**Product Certification:** CE/FCC/ROHS
+**材質:** ABS+PP+steel+semiconductor
+**Product 認証:** CE/FCC/ROHS

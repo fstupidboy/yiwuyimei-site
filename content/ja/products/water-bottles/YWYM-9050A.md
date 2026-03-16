@@ -11,8 +11,8 @@ cover:
     - "/images/products/water-bottles/YWYM-9050A/图片5.webp"
 draft: false
 ---
-**Material:** inside 304 outside 201
-**Capacity:** 17OZ
+**材質:** 内側 304 外側 201
+**容量:** 17OZ
 **Surface Finish:** Base on Client Request
 **Products Size (cm):** 4.2 × 7.1 × 25.8
 **QTY/CTN (pcs):** 24

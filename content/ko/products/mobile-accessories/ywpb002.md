@@ -18,8 +18,8 @@ draft: false
 ---
 **Brand:** YIWUYIMEI
 **Color:** White / Pink / Purple
-**Battery:** Lithium Battery
-**Battery Capacity:** 5000mAh
+**배터리:** Lithium Battery
+**Battery 용량:** 5000mAh
 **Energy Conversion Rate:** ≥75%
-**Product Dimensions:** 80 x 60 x 11 mm
-**Product Weight:** 149g
+**Product 크기:** 80 x 60 x 11 mm
+**Product 무게:** 149g
