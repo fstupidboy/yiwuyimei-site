@@ -35,17 +35,24 @@
     <!-- Language Switcher -->
     <div class="language-switcher">
       {{ range .Site.Languages }}
-        {{ if eq .Lang $.Site.Language.Lang }}
-          <a href="#" class="active" title="{{ .LanguageName }}">{{ .Lang | upper }}</a>
+        {{ $lang := .Lang }}
+        {{ $langName := .LanguageName }}
+        {{ if eq $lang $.Site.Language.Lang }}
+          <span class="active" title="{{ $langName }}">{{ $lang | upper }}</span>
         {{ else }}
-          {{ if $.Page.IsTranslated }}
-            {{ range $.Page.Translations }}
-              {{ if eq .Lang $.Lang }}
-                <a href="{{ .RelPermalink }}" title="{{ .LanguageName }}">{{ .Lang | upper }}</a>
-              {{ end }}
+          {{ $translated := false }}
+          {{ range $.Page.Translations }}
+            {{ if eq .Lang $lang }}
+              <a href="{{ .RelPermalink }}" title="{{ $langName }}">{{ $lang | upper }}</a>
+              {{ $translated = true }}
             {{ end }}
-          {{ else }}
-            <a href="{{ .Lang | printf "/%s/" }}" title="{{ .LanguageName }}">{{ .Lang | upper }}</a>
+          {{ end }}
+          {{ if not $translated }}
+            {{ if eq $lang "en" }}
+              <a href="{{ $.Page.RelPermalink | strings.TrimPrefix (printf "/%s" $.Site.Language.Lang) | strings.TrimPrefix "/" | printf "/%s" }}" title="{{ $langName }}">{{ $lang | upper }}</a>
+            {{ else }}
+              <a href="{{ $.Page.RelPermalink | printf "/%s%s" $lang }}" title="{{ $langName }}">{{ $lang | upper }}</a>
+            {{ end }}
           {{ end }}
         {{ end }}
       {{ end }}
@@ -110,7 +117,8 @@
   border-left: 1px solid var(--color-border);
 }
 
-.language-switcher a {
+.language-switcher a,
+.language-switcher span {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -125,6 +133,7 @@
   border: 1px solid transparent;
   color: var(--color-text-muted);
   background: transparent;
+  cursor: pointer;
 }
 
 .language-switcher a:hover {
@@ -132,7 +141,8 @@
   background: var(--color-bg-alt);
 }
 
-.language-switcher a.active {
+.language-switcher a.active,
+.language-switcher span.active {
   color: white;
   background: var(--color-primary);
   border-color: var(--color-primary);
