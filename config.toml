@@ -159,3 +159,165 @@ ignoreLogs = ["warning-goldmark-raw-html"]
       name = "Contacto"
       url = "/contact/"
       weight = 40
+
+  # German
+  [languages.de]
+    contentDir = "content/de"
+    languageName = "Deutsch"
+    weight = 5
+    title = "YiwuYimei Produkte"
+    [languages.de.params]
+      subtitle = "Ihr vertrauenswürdiger Exportpartner"
+      description = "Spezialisiert auf hochwertige und kostengünstige Haushaltsgeräte und Lifestyle-Produkte."
+      keywords = "China Export,Yiwu Export,Großhandel,Haushaltsgeräte,Aroma-Diffusoren,Ventilatoren,Luftbefeuchter,China Fabrik,Internationaler Handel,B2B"
+    [[languages.de.menu.main]]
+      name = "Startseite"
+      url = "/"
+      weight = 10
+    [[languages.de.menu.main]]
+      name = "Produkte"
+      url = "/#products"
+      weight = 20
+    [[languages.de.menu.main]]
+      name = "Dienstleistungen"
+      url = "/services/"
+      weight = 30
+    [[languages.de.menu.main]]
+      name = "Kontakt"
+      url = "/contact/"
+      weight = 40
+
+  # French
+  [languages.fr]
+    contentDir = "content/fr"
+    languageName = "Français"
+    weight = 6
+    title = "YiwuYimei Produits"
+    [languages.fr.params]
+      subtitle = "Votre Partenaire d'Exportation de Confiance"
+      description = "Spécialisé dans les appareils électroménagers et produits lifestyle de haute qualité et abordables."
+      keywords = "export Chine,export Yiwu,gros,appareils électroménagers,diffuseurs d'arôme,ventilateurs,humidificateurs,usine Chine,commerce international,B2B"
+    [[languages.fr.menu.main]]
+      name = "Accueil"
+      url = "/"
+      weight = 10
+    [[languages.fr.menu.main]]
+      name = "Produits"
+      url = "/#products"
+      weight = 20
+    [[languages.fr.menu.main]]
+      name = "Services"
+      url = "/services/"
+      weight = 30
+    [[languages.fr.menu.main]]
+      name = "Contact"
+      url = "/contact/"
+      weight = 40
+
+  # Italian
+  [languages.it]
+    contentDir = "content/it"
+    languageName = "Italiano"
+    weight = 7
+    title = "YiwuYimei Prodotti"
+    [languages.it.params]
+      subtitle = "Il Vostro Partner di Esportazione Affidabile"
+      description = "Specializzati in elettrodomestici e prodotti lifestyle di alta qualità e convenienti."
+      keywords = "export Cina,export Yiwu,ingrosso,elettrodomestici,diffusori di aromi,ventilatori,umidificatori,fabbrica Cina,commercio internazionale,B2B"
+    [[languages.it.menu.main]]
+      name = "Home"
+      url = "/"
+      weight = 10
+    [[languages.it.menu.main]]
+      name = "Prodotti"
+      url = "/#products"
+      weight = 20
+    [[languages.it.menu.main]]
+      name = "Servizi"
+      url = "/services/"
+      weight = 30
+    [[languages.it.menu.main]]
+      name = "Contatti"
+      url = "/contact/"
+      weight = 40
+
+  # Polish
+  [languages.pl]
+    contentDir = "content/pl"
+    languageName = "Polski"
+    weight = 8
+    title = "YiwuYimei Produkty"
+    [languages.pl.params]
+      subtitle = "Twój Zaufany Partner Eksportowy"
+      description = "Specjalizujemy się w wysokiej jakości i opłacalnych urządzeniach gospodarstwa domowego oraz produktach lifestyle."
+      keywords = "eksport Chiny,eksport Yiwu,hurt,urządzenia domowe,dyfuzory zapachowe,wentylatory,nawilżacze,fabryka Chiny,handel międzynarodowy,B2B"
+    [[languages.pl.menu.main]]
+      name = "Strona Główna"
+      url = "/"
+      weight = 10
+    [[languages.pl.menu.main]]
+      name = "Produkty"
+      url = "/#products"
+      weight = 20
+    [[languages.pl.menu.main]]
+      name = "Usługi"
+      url = "/services/"
+      weight = 30
+    [[languages.pl.menu.main]]
+      name = "Kontakt"
+      url = "/contact/"
+      weight = 40
+
+  # Finnish
+  [languages.fi]
+    contentDir = "content/fi"
+    languageName = "Suomi"
+    weight = 9
+    title = "YiwuYimei Tuotteet"
+    [languages.fi.params]
+      subtitle = "Luotettava Vientikumppanisi"
+      description = "Erikoistunut korkealaatuisiin ja kustannustehokkaisiin kodinkoneisiin ja lifestyle-tuotteisiin."
+      keywords = "Kiina vienti,Yiwu vienti,tukku,kodinkoneet,aromadiffuusorit,tuulettimet,kostutin,Kiina tehdas,kansainvälinen kauppa,B2B"
+    [[languages.fi.menu.main]]
+      name = "Etusivu"
+      url = "/"
+      weight = 10
+    [[languages.fi.menu.main]]
+      name = "Tuotteet"
+      url = "/#products"
+      weight = 20
+    [[languages.fi.menu.main]]
+      name = "Palvelut"
+      url = "/services/"
+      weight = 30
+    [[languages.fi.menu.main]]
+      name = "Yhteystiedot"
+      url = "/contact/"
+      weight = 40
+
+  # Irish
+  [languages.ga]
+    contentDir = "content/ga"
+    languageName = "Gaeilge"
+    weight = 10
+    title = "YiwuYimei Táirgí"
+    [languages.ga.params]
+      subtitle = "Do Chomhpháirtí Iompórtála Iontaofa"
+      description = "Speisialtóireacht i gcruthaitheacha ardchaighdeáin agus táirgí stíl mhaireachtála."
+      keywords = "onnmhairí Síne,onnmhairí Yiwu,mórdhíol,cruthaitheacha tí,diffusers cumhra,gaoithe,umidifiers monarcha Síne,tráchtáil idirnáisiúnta,B2B"
+    [[languages.ga.menu.main]]
+      name = "Baile"
+      url = "/"
+      weight = 10
+    [[languages.ga.menu.main]]
+      name = "Táirgí"
+      url = "/#products"
+      weight = 20
+    [[languages.ga.menu.main]]
+      name = "Seirmeanna"
+      url = "/services/"
+      weight = 30
+    [[languages.ga.menu.main]]
+      name = "Teagmháil"
+      url = "/contact/"
+      weight = 40
