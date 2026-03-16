@@ -12,7 +12,7 @@
   ) }}
   <div class="hero-overlay"></div>
   <div class="hero-content">
-    <div class="hero-badge">Product Details</div>
+    <div class="hero-badge">{{ T "product_details" }}</div>
     <h1>{{ .Title }}</h1>
   </div>
 </section>
@@ -20,7 +20,7 @@
 <div class="container">
   <!-- Breadcrumb -->
   <nav class="breadcrumb" style="padding: 1.5rem 0; font-size: 0.9rem;">
-    <a href="/" style="color: var(--color-text-muted);">Home</a>
+    <a href="{{ "/" | relLangURL }}" style="color: var(--color-text-muted);">{{ T "home" }}</a>
     <span style="color: var(--color-text-muted); margin: 0 0.5rem;">/</span>
     <a href="{{ .CurrentSection.Permalink }}" style="color: var(--color-text-muted);">{{ .CurrentSection.Title }}</a>
     <span style="color: var(--color-text-muted); margin: 0 0.5rem;">/</span>
@@ -53,7 +53,7 @@
         </div>
         <h1 style="font-size: 2rem; margin-bottom: 1rem;">{{ .Title }}</h1>
         <p style="color: var(--color-text-muted); margin-bottom: 1.5rem;">
-          High-quality {{ .Params.product_type }} available for wholesale export. Trusted by buyers from USA, Europe, Japan, and Korea.
+          {{ T "product_description" }}
         </p>
         
         <!-- Product Specs (if available in content) -->
@@ -68,13 +68,13 @@
               <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
               <polyline points="22,6 12,13 2,6"/>
             </svg>
-            Send Inquiry
+            {{ T "send_inquiry" }}
           </a>
           <a href="{{ .CurrentSection.Permalink }}" class="btn btn-outline">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 0.5rem;">
               <path d="M19 12H5M12 19l-7-7 7-7"/>
             </svg>
-            Back to {{ .CurrentSection.Title }}
+            {{ T "back_to" }} {{ .CurrentSection.Title }}
           </a>
         </div>
       </div>
@@ -102,7 +102,7 @@
     <div class="product-gallery-section" style="margin-bottom: 3rem;">
       <h2 style="text-align: center; margin-bottom: 2rem;">
         <span style="color: var(--color-accent);">✦</span>
-        Product Gallery
+        {{ T "product_gallery" }}
       </h2>
       {{ if $isLongImage }}
         <!-- Full-width single column layout for long images -->
@@ -128,26 +128,26 @@
   
   <!-- Trust Section -->
   <div class="trust-section" style="background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%); border-radius: var(--border-radius); padding: 3rem; text-align: center; color: white; margin-bottom: 3rem;">
-    <h2 style="color: white; margin-bottom: 1rem;">Why Choose YIWUYIMEI?</h2>
+    <h2 style="color: white; margin-bottom: 1rem;">{{ T "why_choose_us" }}</h2>
     <p style="color: rgba(255,255,255,0.8); max-width: 600px; margin: 0 auto 2rem;">
-      From concept to creation — custom-made, co-developed, and crafted just for you.
+      {{ T "why_choose_text" }}
     </p>
     <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap;">
       <div style="text-align: center;">
         <div style="font-size: 2rem; margin-bottom: 0.5rem;">🏭</div>
-        <div style="font-weight: 600;">Factory Direct</div>
+        <div style="font-weight: 600;">{{ T "factory_direct" }}</div>
       </div>
       <div style="text-align: center;">
         <div style="font-size: 2rem; margin-bottom: 0.5rem;">✓</div>
-        <div style="font-weight: 600;">Quality Control</div>
+        <div style="font-weight: 600;">{{ T "quality_control" }}</div>
       </div>
       <div style="text-align: center;">
         <div style="font-size: 2rem; margin-bottom: 0.5rem;">🚢</div>
-        <div style="font-weight: 600;">Global Shipping</div>
+        <div style="font-weight: 600;">{{ T "global_shipping" }}</div>
       </div>
       <div style="text-align: center;">
         <div style="font-size: 2rem; margin-bottom: 0.5rem;">🤝</div>
-        <div style="font-weight: 600;">OEM/ODM</div>
+        <div style="font-weight: 600;">{{ T "oem_odm" }}</div>
       </div>
     </div>
   </div>
@@ -158,7 +158,7 @@
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 0.5rem;">
         <path d="M19 12H5M12 19l-7-7 7-7"/>
       </svg>
-      Back to {{ .CurrentSection.Title }}
+      {{ T "back_to" }} {{ .CurrentSection.Title }}
     </a>
   </div>
 </div>
