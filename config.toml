@@ -1,6 +1,6 @@
 baseURL = "https://www.yiwuyimei.com/"
 defaultContentLanguage = "en"
-defaultContentLanguageInSubdir = false
+defaultContentLanguageInSubdir = true
 languageCode = "en-us"
 title = "YiwuYimei Products"
 theme = "PaperMod"
@@ -16,11 +16,12 @@ ignoreLogs = ["warning-goldmark-raw-html"]
 [permalinks]
   products = "/products/:slug/"
 
-# 多语言配置
+# 多语言配置 - 每个语言独立内容目录
 [languages]
   [languages.en]
     languageName = "English"
     weight = 1
+    contentDir = "content/en"
     title = "YiwuYimei Products"
     [languages.en.params]
       description = "YiwuYimei exports high-quality products from China to the world."
@@ -53,6 +54,7 @@ ignoreLogs = ["warning-goldmark-raw-html"]
   [languages.ko]
     languageName = "한국어"
     weight = 2
+    contentDir = "content/ko"
     title = "YiwuYimei 제품"
     [languages.ko.params]
       description = "YiwuYimei는 중국에서 고품질 제품을 전 세계로 수출합니다."
@@ -85,6 +87,7 @@ ignoreLogs = ["warning-goldmark-raw-html"]
   [languages.ja]
     languageName = "日本語"
     weight = 3
+    contentDir = "content/ja"
     title = "YiwuYimei 製品"
     [languages.ja.params]
       description = "YiwuYimeiは中国から高品質な製品を世界中に輸出しています。"
