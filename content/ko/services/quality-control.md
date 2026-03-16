@@ -1,31 +1,30 @@
 ---
-title: "Quality Control"
-description: "Experienced QC professionals ensuring high standards for global clients."
+title: "품질 관리"
+description: "글로벌 클라이언트를 위한 높은 기준을 보장하는 경험丰富的 QC 전문가들."
 ---
 
-## Experienced, Reliable, and Client-Centric
+## 경험丰富하고 신뢰할 수 있으며 고객 중심적인
 
-Our Quality Control team consists of seasoned professionals with deep experience in large-scale QC institutions. Every member of our team has spent years conducting rigorous inspections and audits for world-class brands.
+우리의 품질 관리 팀은 대규모 QC 기관에서 풍부한 경험을 가진 숙련된 전문가들로 구성되어 있습니다. 팀의 모든 구성원은 세계적 수준의 브랜드를 위해 엄격한 검사와 감사를 수년간 수행해 왔습니다.
 
-## Deep Understanding of Global Standards
+## 글로벌 표준에 대한 깊은 이해
 
-With a strong background serving clients from Europe, North America, Japan, and South Korea, our QC professionals are well-versed in:
+유럽, 북미, 일본, 한국의 클라이언트를 위해 서비스를 제공한 강력한 배경을 바탕으로, 우리의 QC 전문가들은 다음에 능통합니다:
 
- International quality standards and compliance | 
- Cultural and communication expectations across regions | 
- Industry-specific testing protocols
+ 국제 품질 표준 및 규정 준수 |
+ 지역 간 문화적 및 커뮤니케이션 기대치 |
+ 산업별 테스트 프로토콜
 
-## What We Deliver
+## 우리가 제공하는 것
 
-**Pre-production Inspections** | 
-**In-line Quality Audits** | 
-**Final Random Inspections (FRI)** | 
-**On-site Reporting with Photos and Checklists** | 
-**Root Cause Analysis & Corrective Action Guidance**
+**생산 전 검사** |
+**인라인 품질 감사** |
+**최종 무작위 검사 (FRI)** |
+**사진 및 체크리스트를 포함한 현장 보고** |
+**근본 원인 분석 및 시정 조치 지침**
 
-## Why Clients Trust Us
+## 고객이 신뢰하는 이유
 
-We not only understand how to detect quality issues — we understand **what matters to your customer**.
+우리는 품질 문제를 감지하는 방법만 이해하는 것이 아니라 — **고객에게 중요한 것이 무엇인지** 이해합니다.
 
-Let our QC team be your trusted eyes on the ground in China.
-
+우리의 QC 팀이 중국에서 당신의 믿을 수 있는 눈이 되어 드리겠습니다.

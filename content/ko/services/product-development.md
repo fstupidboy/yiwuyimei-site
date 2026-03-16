@@ -1,24 +1,24 @@
 ---
-title: "Product Development"
-description: "From concept to creation, we help turn your ideas into impactful products."
+title: "제품 개발"
+description: "컨셉에서 창조까지, 우리는 당신의 아이디어를 영향력 있는 제품으로 만드는 것을 돕습니다."
 ---
 
-## Crafting More Than Products
+## 단순한 제품 그 이상을 만들어갑니다
 
-We go beyond just making products — we craft transformative experiences.
+우리는 단순히 제품을 만드는 것을 넘어 — 변혁적인 경험을 만듭니다.
 
-Our in-house **Creative Designers** and **Skilled Engineers** work together to transform ideas into high-quality, market-ready products...
+사내 **크리에이티브 디자이너**와 **숙련된 엔지니어**가 협력하여
+아이디어를 고품질의 시장 준비된 제품으로 변환합니다...
 
-## Our Services
+## 우리의 서비스
 
- **Product Design & Engineering** | 
- **Tech Packs & Spec Sheets** | 
- **Brand Guidelines** | 
- **Logo Design**
+ **제품 디자인 및 엔지니어링** |
+ **기술 패키지 및 사양서** |
+ **브랜드 가이드라인** |
+ **로고 디자인**
 
-## What Makes Our Process Unique
+## 우리의 프로세스가 독특한 이유
 
- Identifying the Target Audience | 
- Understanding What the Consumer Values | 
- Creating Designs That Excite the Consumer
-
+ 타겟 오디언스 식별 |
+ 소비자가 중요하게 여기는 것 이해 |
+ 소비자를 excited하게 만드는 디자인 생성

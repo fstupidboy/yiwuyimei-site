@@ -1,36 +1,35 @@
 ---
-title: "Logistics Services"
-description: "Reliable and efficient export logistics tailored for global business needs."
+title: "物流サービス"
+description: "グローバルビジネスニーズに合わせた信頼性が高く効率的な輸出物流ソリューション。"
 ---
 
-## Efficient, Accurate, and Reliable
+## 効率的で正確かつ信頼できる
 
-Our logistics support is designed for exporters who demand speed, precision, and flexibility.  
-With years of experience handling shipments to Europe, North America, Japan, and Korea,  
-we fully understand the documentation, compliance, and delivery expectations of each market.
+私たちの物流サポートは、スピード、精度、柔軟性を求める輸出業者のために設計されています。
+欧州、北米、日本、韓国への出荷処理における長年の経験を持ち、
+各市場の書類作成、規制対応、配送期待について完全に理解しています。
 
-## What We Offer
+## 提供サービス
 
-Export Documentation (CI, PL, COO, Form A) ｜ Factory-to-Port Coordination | 
-FCL & LCL Freight Booking ｜ Warehousing & Pre-shipment Storage | 
-FBA & Last-Mile Delivery Support ｜ Customs Clearance Consulting
+輸出書類 (CI, PL, COO, Form A) | 工場-港の調整 |
+FCL & LCL 貨物予約 | 倉庫保管と出荷前保管 |
+FBA & ラストマイル配送サポート | 税関クリアランスコンサルティング
 
-## Global Shipping Coverage
+## グローバル配送カバレッジ
 
-We work closely with trusted international freight forwarders and carriers  
-to ensure timely delivery, smooth customs clearance, and full shipment visibility.
+私たちは信頼できる国際貨物フォワーダーおよび運送業者と緊密に協力し、
+適時配送、スムーズな税関クリアランス、出荷全体の可視性を確保します。
 
-Whether it's by sea, air, or rail — we deliver more than goods. We deliver confidence.
+海上、航空、または鉄道 — 私たちは単に商品を配送するだけではありません。信頼を配送します。
 
-## Why Clients Choose Us
+## お客様が選ぶ理由
 
-Clear understanding of Incoterms and trade termsi
+インコタームズおよび貿易用語に対する明確な理解
 
-Seamless coordination between factory, freight forwarder, and buyer
+工場、貨物フォワーダー、バイヤー間のシームレスな調整
 
-Experience with DDP, FBA logistics, EU/UK compliance
+DDP、FBA物流、EU/UK規制対応の経験
 
-Bilingual communication support for smooth workflows
+スムーズな業務のためのバイリンガルコミュニケーションサポート
 
-Let us simplify your global logistics — so you can focus on growing your business.
-
+グローバル物流をシンプルにし、ビジネスの成長に集中できるようにサポートします。

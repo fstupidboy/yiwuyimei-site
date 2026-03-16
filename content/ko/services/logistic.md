@@ -1,36 +1,35 @@
 ---
-title: "Logistics Services"
-description: "Reliable and efficient export logistics tailored for global business needs."
+title: "물류 서비스"
+description: "글로벌 비즈니스 요구에 맞춘 신뢰할 수 있고 효율적인 수출 물류 솔루션."
 ---
 
-## Efficient, Accurate, and Reliable
+## 효율적이고 정확하며 신뢰할 수 있는
 
-Our logistics support is designed for exporters who demand speed, precision, and flexibility.  
-With years of experience handling shipments to Europe, North America, Japan, and Korea,  
-we fully understand the documentation, compliance, and delivery expectations of each market.
+우리의 물류 지원은 속도, 정밀성, 유연성을 요구하는 수출업체를 위해 설계되었습니다.
+유럽, 북미, 일본, 한국으로의 출하물 처리에 대한 수년간의 경험을 바탕으로,
+각 시장의 서류 작업, 규정 준수, 배송 기대치를 완벽히 이해합니다.
 
-## What We Offer
+## 제공 서비스
 
-Export Documentation (CI, PL, COO, Form A) ｜ Factory-to-Port Coordination | 
-FCL & LCL Freight Booking ｜ Warehousing & Pre-shipment Storage | 
-FBA & Last-Mile Delivery Support ｜ Customs Clearance Consulting
+수출 서류 (CI, PL, COO, Form A) | 공장-항구 조정 |
+FCL & LCL 화물 예약 | 보관 및 선적 전 저장 |
+FBA & 라스트마일 배송 지원 | 통관 컨설팅
 
-## Global Shipping Coverage
+## 글로벌 배송 커버리지
 
-We work closely with trusted international freight forwarders and carriers  
-to ensure timely delivery, smooth customs clearance, and full shipment visibility.
+우리는 신뢰할 수 있는 국제 화물 포워더 및 운송업체와 긴급히 협력하여
+적시 배송, 원활한 통관, 전체 출하물 가시성을 보장합니다.
 
-Whether it's by sea, air, or rail — we deliver more than goods. We deliver confidence.
+해상, 항공 또는 철도 — 우리는 단순히 물걸만 배송하지 않습니다. 우리는 신뢰를 배송합니다.
 
-## Why Clients Choose Us
+## 고객이 선택하는 이유
 
-Clear understanding of Incoterms and trade termsi
+인코텀즈 및 무역 용어에 대한 명확한 이해
 
-Seamless coordination between factory, freight forwarder, and buyer
+공장, 화물 포워더, 바이어 간의 원활한 조정
 
-Experience with DDP, FBA logistics, EU/UK compliance
+DDP, FBA 물류, EU/UK 규정 준수에 대한 경험
 
-Bilingual communication support for smooth workflows
+원활한 업무를 위한 이중 언어 커뮤니케이션 지원
 
-Let us simplify your global logistics — so you can focus on growing your business.
-
+글로벌 물류를 단순화하여 비즈니스 성장에 집중할 수 있도록 도와드립니다.
