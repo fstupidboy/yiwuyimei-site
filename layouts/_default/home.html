@@ -76,7 +76,7 @@
         New Arrivals
       </h2>
       <div class="product-grid">
-        {{ range first 8 (where site.RegularPages "Params.section" "new") }}
+        {{ range first 8 (where site.RegularPages "Params.section" "new").ByDate.Reverse }}
           <div class="product-card animate-fade-in-up">
             <a href="{{ .RelPermalink }}">
               <div class="product-card-image">
@@ -106,7 +106,7 @@
         Best Sellers
       </h2>
       <div class="product-grid">
-        {{ range first 8 (where site.RegularPages "Params.section" "best") }}
+        {{ range first 8 (where site.RegularPages "Params.section" "best").ByDate.Reverse }}
           <div class="product-card animate-fade-in-up">
             <a href="{{ .RelPermalink }}">
               <div class="product-card-image">
@@ -136,7 +136,7 @@
         Unique Products
       </h2>
       <div class="product-grid">
-        {{ range first 8 (where site.RegularPages "Params.section" "unique") }}
+        {{ range first 8 (where site.RegularPages "Params.section" "unique").ByDate.Reverse }}
           <div class="product-card animate-fade-in-up">
             <a href="{{ .RelPermalink }}">
               <div class="product-card-image">

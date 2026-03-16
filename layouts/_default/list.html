@@ -48,7 +48,7 @@
   </div>
   
   <div class="product-grid" style="margin-bottom: 3rem;">
-    {{ range .Pages }}
+    {{ range .Pages.ByDate.Reverse }}
       {{ $coverImage := "" }}
       {{ $productType := "" }}
       
