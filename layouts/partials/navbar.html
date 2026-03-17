@@ -2,14 +2,51 @@
   <div class="container">
     <a href="{{ "/" | relLangURL }}" class="navbar-brand">YIWU<span>YIMEI</span></a>
 
-    <!-- Hamburger Menu Button -->
-    <button class="hamburger" id="hamburger-btn" aria-label="Menu" style="display: none;">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <line x1="3" y1="12" x2="21" y2="12"></line>
-        <line x1="3" y1="6" x2="21" y2="6"></line>
-        <line x1="3" y1="18" x2="21" y2="18"></line>
-      </svg>
-    </button>
+    <!-- Mobile Header: Language + Hamburger -->
+    <div class="mobile-header">
+      <!-- Mobile Language Dropdown -->
+      <div class="mobile-lang-dropdown">
+        <button class="lang-toggle" id="lang-toggle" aria-label="Select Language">
+          {{ .Site.Language.Lang | upper }}
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </button>
+        <div class="lang-menu" id="lang-menu">
+          {{ range .Site.Languages }}
+            {{ $lang := .Lang }}
+            {{ $langName := .LanguageName }}
+            {{ if eq $lang $.Site.Language.Lang }}
+              <span class="active">{{ $lang | upper }} - {{ $langName }}</span>
+            {{ else }}
+              {{ $translated := false }}
+              {{ range $.Page.Translations }}
+                {{ if eq .Lang $lang }}
+                  <a href="{{ .RelPermalink }}">{{ $lang | upper }} - {{ $langName }}</a>
+                  {{ $translated = true }}
+                {{ end }}
+              {{ end }}
+              {{ if not $translated }}
+                {{ if eq $lang "en" }}
+                  <a href="{{ $.Page.RelPermalink | strings.TrimPrefix (printf "/%s" $.Site.Language.Lang) | strings.TrimPrefix "/" | printf "/%s" }}">{{ $lang | upper }} - {{ $langName }}</a>
+                {{ else }}
+                  <a href="{{ $.Page.RelPermalink | printf "/%s%s" $lang }}">{{ $lang | upper }} - {{ $langName }}</a>
+                {{ end }}
+              {{ end }}
+            {{ end }}
+          {{ end }}
+        </div>
+      </div>
+
+      <!-- Hamburger Menu Button -->
+      <button class="hamburger" id="hamburger-btn" aria-label="Menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </div>
 
     <ul class="navbar-nav" id="nav-menu">
       <li><a href="{{ "/" | relLangURL }}">{{ T "home" }}</a></li>
@@ -32,8 +69,8 @@
       <li><a href="{{ "/contact/" | relLangURL }}">{{ T "contact" }}</a></li>
     </ul>
 
-    <!-- Language Switcher -->
-    <div class="language-switcher">
+    <!-- Desktop Language Switcher -->
+    <div class="language-switcher desktop-only">
       {{ range .Site.Languages }}
         {{ $lang := .Lang }}
         {{ $langName := .LanguageName }}
@@ -107,7 +144,7 @@
   color: var(--color-primary);
 }
 
-/* Language Switcher */
+/* Desktop Language Switcher */
 .language-switcher {
   display: flex;
   align-items: center;
@@ -148,15 +185,103 @@
   border-color: var(--color-primary);
 }
 
+/* Mobile Header */
+.mobile-header {
+  display: none;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+/* Mobile Language Dropdown */
+.mobile-lang-dropdown {
+  position: relative;
+}
+
+.lang-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.4rem 0.6rem;
+  background: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-sm);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.lang-toggle:hover {
+  background: var(--color-primary-light);
+}
+
+.lang-menu {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  right: 0;
+  background: white;
+  border-radius: var(--border-radius-sm);
+  box-shadow: var(--shadow-lg);
+  padding: 0.5rem 0;
+  min-width: 180px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all var(--transition-fast);
+  z-index: 1002;
+}
+
+.lang-menu.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.lang-menu a,
+.lang-menu span {
+  display: block;
+  padding: 0.6rem 1rem;
+  font-size: 0.85rem;
+  color: var(--color-text);
+  text-decoration: none;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.lang-menu a:hover {
+  background: var(--color-bg-alt);
+  color: var(--color-primary);
+}
+
+.lang-menu span.active {
+  color: var(--color-primary);
+  background: var(--color-primary-light);
+  font-weight: 600;
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-primary);
+  padding: 0.5rem;
+}
+
 /* Mobile responsive */
 @media (max-width: 768px) {
+  .mobile-header {
+    display: flex;
+  }
+  
+  .desktop-only {
+    display: none !important;
+  }
+  
   .hamburger {
-    display: block !important;
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: var(--color-primary);
-    padding: 0.5rem;
+    display: block;
   }
   
   .navbar-nav {
@@ -204,15 +329,6 @@
   .dropdown.active .dropdown-menu {
     display: block;
   }
-  
-  .language-switcher {
-    margin-left: 0;
-    margin-top: 1rem;
-    padding: 1rem 0 0 0;
-    border-left: none;
-    border-top: 1px solid var(--color-border);
-    justify-content: center;
-  }
 }
 </style>
 
@@ -221,10 +337,32 @@
 document.addEventListener('DOMContentLoaded', function() {
   const hamburger = document.getElementById('hamburger-btn');
   const navMenu = document.getElementById('nav-menu');
+  const langToggle = document.getElementById('lang-toggle');
+  const langMenu = document.getElementById('lang-menu');
   
+  // Hamburger menu
   if (hamburger) {
     hamburger.addEventListener('click', function() {
       navMenu.classList.toggle('active');
+      // Close language menu when opening nav
+      if (langMenu) {
+        langMenu.classList.remove('active');
+      }
+    });
+  }
+  
+  // Language dropdown
+  if (langToggle && langMenu) {
+    langToggle.addEventListener('click', function(e) {
+      e.stopPropagation();
+      langMenu.classList.toggle('active');
+    });
+    
+    // Close language menu when clicking outside
+    document.addEventListener('click', function(e) {
+      if (!langToggle.contains(e.target) && !langMenu.contains(e.target)) {
+        langMenu.classList.remove('active');
+      }
     });
   }
   
