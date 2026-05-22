@@ -1,31 +1,13 @@
 {{ define "main" }}
 
-<!-- Banner -->
-{{ with .Params.banner }}
-  <section class="hero-banner" style="height: 300px;">
-    {{ partial "responsive-img-cf.html" (dict 
-      "src" .
-      "alt" (printf "%s" $.Title)
-      "class" ""
-      "hero" true
-      "sizes" "100vw"
-      "widths" (slice 640 900 1280 1600)
-    ) }}
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <h1>{{ $.Title }}</h1>
-      <p>{{ T "services_subtitle" }}</p>
-    </div>
-  </section>
-{{ else }}
-  <section class="hero-banner" style="height: 300px; background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);">
-    <div class="hero-content">
-      <div class="hero-badge">{{ T "what_we_offer" }}</div>
-      <h1>{{ .Title }}</h1>
-      <p>{{ T "services_subtitle" }}</p>
-    </div>
-  </section>
-{{ end }}
+<!-- Services Hero -->
+<section class="hero-banner" style="height: 250px; background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);">
+  <div class="hero-content">
+    <div class="hero-badge">{{ T "what_we_offer" }}</div>
+    <h1>{{ .Title }}</h1>
+    <p>{{ T "services_subtitle" }}</p>
+  </div>
+</section>
 
 <!-- Breadcrumb -->
 <div class="container">

@@ -1,16 +1,8 @@
 {{ define "main" }}
 
 <!-- Hero Banner -->
-<section class="hero-banner">
-  {{ partial "responsive-img-cf.html" (dict 
-    "src" "/images/banner.jpg"
-    "alt" "YiwuYimei - Wholesale Home Appliances from China"
-    "class" "hero-banner-img"
-    "hero" true
-    "sizes" "100vw"
-    "widths" (slice 640 900 1280 1600 1920)
-  ) }}
-  <div class="hero-overlay"></div>
+<section class="hero-banner hero-gradient">
+  <div class="hero-bg-pattern"></div>
   <div class="hero-content">
     <div class="hero-badge">{{ T "trusted_by" }}</div>
     <h1>{{ T "hero_title" }}</h1>
