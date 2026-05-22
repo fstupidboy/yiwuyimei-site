@@ -71,8 +71,8 @@
       {{ end }}
       
       <div class="product-card animate-fade-in-up">
-        <a href="{{ .RelPermalink }}">
-          <div class="product-card-image" style="position: relative; background: linear-gradient(135deg, var(--color-bg-alt) 0%, #e8e7e5 100%);">
+        <div class="product-card-image" style="position: relative; background: linear-gradient(135deg, var(--color-bg-alt) 0%, #e8e7e5 100%);">
+          <a href="{{ .RelPermalink }}">
             {{ if $coverImage }}
               <img src="{{ $coverImage }}" alt="{{ .Title }}{{ if $productType }} - {{ $productType }}{{ end }}" style="width: 100%; aspect-ratio: 1; object-fit: cover; display: block;">
             {{ else }}
@@ -80,12 +80,18 @@
                 📦
               </div>
             {{ end }}
-          </div>
-          <div class="product-card-content">
+          </a>
+        </div>
+        <div class="product-card-content">
+          <a href="{{ .RelPermalink }}">
             <div class="product-card-category">{{ $productType }}</div>
             <h3 class="product-card-title">{{ .Title }}</h3>
-          </div>
-        </a>
+          </a>
+          <a href="mailto:sales@yiwuyimei.com?subject=Inquiry: {{ .Title }}" class="card-inquiry-btn">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            {{ T "send_inquiry" }}
+          </a>
+        </div>
       </div>
     {{ end }}
   </div>

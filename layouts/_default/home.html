@@ -123,8 +123,8 @@
       <div class="product-grid">
         {{ range first 8 .Site.RegularPages.ByDate.Reverse }}
           <div class="product-card animate-fade-in-up">
-            <a href="{{ .RelPermalink }}">
-              <div class="product-card-image">
+            <div class="product-card-image">
+              <a href="{{ .RelPermalink }}">
                 {{ partial "responsive-img-cf.html" (dict 
                   "src" .Params.cover.image 
                   "alt" (printf "%s - %s from YiwuYimei" .Title .Params.product_type)
@@ -133,12 +133,18 @@
                   "widths" (slice 240 360 480 640)
                 ) }}
                 <span class="product-card-badge">New</span>
-              </div>
-              <div class="product-card-content">
+              </a>
+            </div>
+            <div class="product-card-content">
+              <a href="{{ .RelPermalink }}">
                 <div class="product-card-category">{{ .Params.product_type }}</div>
                 <h3 class="product-card-title">{{ .Title }}</h3>
-              </div>
-            </a>
+              </a>
+              <a href="mailto:sales@yiwuyimei.com?subject={{ T "send_inquiry" }}: {{ .Title }}" class="card-inquiry-btn">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                {{ T "send_inquiry" }}
+              </a>
+            </div>
           </div>
         {{ end }}
       </div>
@@ -153,8 +159,8 @@
       <div class="product-grid">
         {{ range first 6 (where .Site.RegularPages "Params.section" "best").ByDate.Reverse }}
           <div class="product-card animate-fade-in-up">
-            <a href="{{ .RelPermalink }}">
-              <div class="product-card-image">
+            <div class="product-card-image">
+              <a href="{{ .RelPermalink }}">
                 {{ partial "responsive-img-cf.html" (dict 
                   "src" .Params.cover.image 
                   "alt" (printf "%s - %s from YiwuYimei" .Title .Params.product_type)
@@ -163,12 +169,18 @@
                   "widths" (slice 240 360 480 640)
                 ) }}
                 <span class="product-card-badge bestseller">{{ T "best_sellers" }}</span>
-              </div>
-              <div class="product-card-content">
+              </a>
+            </div>
+            <div class="product-card-content">
+              <a href="{{ .RelPermalink }}">
                 <div class="product-card-category">{{ .Params.product_type }}</div>
                 <h3 class="product-card-title">{{ .Title }}</h3>
-              </div>
-            </a>
+              </a>
+              <a href="mailto:sales@yiwuyimei.com?subject={{ T "send_inquiry" }}: {{ .Title }}" class="card-inquiry-btn">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                {{ T "send_inquiry" }}
+              </a>
+            </div>
           </div>
         {{ end }}
       </div>
@@ -183,8 +195,8 @@
       <div class="product-grid">
         {{ range first 6 (where .Site.RegularPages "Params.section" "unique").ByDate.Reverse }}
           <div class="product-card animate-fade-in-up">
-            <a href="{{ .RelPermalink }}">
-              <div class="product-card-image">
+            <div class="product-card-image">
+              <a href="{{ .RelPermalink }}">
                 {{ partial "responsive-img-cf.html" (dict 
                   "src" .Params.cover.image 
                   "alt" (printf "%s - %s from YiwuYimei" .Title .Params.product_type)
@@ -193,12 +205,18 @@
                   "widths" (slice 240 360 480 640)
                 ) }}
                 <span class="product-card-badge unique">{{ T "unique_products" }}</span>
-              </div>
-              <div class="product-card-content">
+              </a>
+            </div>
+            <div class="product-card-content">
+              <a href="{{ .RelPermalink }}">
                 <div class="product-card-category">{{ .Params.product_type }}</div>
                 <h3 class="product-card-title">{{ .Title }}</h3>
-              </div>
-            </a>
+              </a>
+              <a href="mailto:sales@yiwuyimei.com?subject={{ T "send_inquiry" }}: {{ .Title }}" class="card-inquiry-btn">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                {{ T "send_inquiry" }}
+              </a>
+            </div>
           </div>
         {{ end }}
       </div>
