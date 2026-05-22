@@ -121,7 +121,7 @@
         {{ T "new_arrivals" }}
       </h2>
       <div class="product-grid">
-        {{ range first 6 (where .Site.RegularPages "Params.section" "new").ByDate.Reverse }}
+        {{ range first 8 .Site.RegularPages.ByDate.Reverse }}
           <div class="product-card animate-fade-in-up">
             <a href="{{ .RelPermalink }}">
               <div class="product-card-image">
