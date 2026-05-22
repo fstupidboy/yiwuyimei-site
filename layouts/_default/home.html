@@ -23,56 +23,59 @@
 </section>
 
 <!-- Stats / Trust Badges -->
-<section class="container">
-  <div class="stats-badges">
-    <div class="stat-badge">
-      <div class="stat-number">{{ T "stat_products" | default "150+ Products" }}</div>
-      <span class="trust-badge-label">{{ T "global_shipping" }}</span>
-    </div>
-    <div class="stat-badge">
-      <div class="stat-number">{{ T "stat_partners" | default "50+ Partners" }}</div>
-      <span class="trust-badge-label">{{ T "quality_certified" }}</span>
-    </div>
-    <div class="stat-badge">
-      <div class="stat-number">{{ T "stat_years" | default "10+ Years" }}</div>
-      <span class="trust-badge-label">{{ T "factory_direct" }}</span>
-    </div>
-    <div class="stat-badge">
-      <div class="stat-number">{{ T "stat_oem" | default "OEM/ODM" }}</div>
-      <span class="trust-badge-label">{{ T "b2b_specialist" }}</span>
+<section class="stats-section">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item">
+        <div class="stat-val">150+</div>
+        <div class="stat-desc">{{ T "stat_products" }}</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-val">50+</div>
+        <div class="stat-desc">{{ T "stat_partners" }}</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-val">10+</div>
+        <div class="stat-desc">{{ T "stat_years" }}</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-val">OEM/ODM</div>
+        <div class="stat-desc">{{ T "stat_oem" }}</div>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- Category Cards -->
-<section class="container">
-  <div class="category-cards">
-    <a href="{{ "/products/fans/" | relLangURL }}" class="category-card">
-      <div class="category-card-icon">🌀</div>
-      <h3 class="category-card-title">{{ T "fans" }}</h3>
-      <span class="category-card-link">{{ T "explore_products" }} →</span>
-    </a>
-    <a href="{{ "/products/scent-diffusers/" | relLangURL }}" class="category-card">
-      <div class="category-card-icon">🌸</div>
-      <h3 class="category-card-title">{{ T "scent_diffusers" }}</h3>
-      <span class="category-card-link">{{ T "explore_products" }} →</span>
-    </a>
-    <a href="{{ "/products/shoes-dryers/" | relLangURL }}" class="category-card">
-      <div class="category-card-icon">👟</div>
-      <h3 class="category-card-title">{{ T "shoes_dryers" }}</h3>
-      <span class="category-card-link">{{ T "explore_products" }} →</span>
-    </a>
-    <a href="{{ "/products/monitor-lights/" | relLangURL }}" class="category-card">
-      <div class="category-card-icon">💡</div>
-      <h3 class="category-card-title">{{ T "monitor_lights" }}</h3>
-      <span class="category-card-link">{{ T "explore_products" }} →</span>
-    </a>
-    <a href="{{ "/products/humidifiers/" | relLangURL }}" class="category-card">
-      <div class="category-card-icon">💨</div>
-      <h3 class="category-card-title">{{ T "humidifiers" }}</h3>
-      <span class="category-card-link">{{ T "explore_products" }} →</span>
-    </a>
-    <a href="{{ "/products/mobile-accessories/" | relLangURL }}" class="category-card">
+<section class="categories-section">
+  <div class="container">
+    <div class="category-cards">
+      <a href="{{ "/products/fans/" | relLangURL }}" class="category-card">
+        <div class="category-icon-wrap">🌀</div>
+        <h3 class="category-card-title">{{ T "fans" }}</h3>
+        <span class="category-card-link">{{ T "explore_products" }} →</span>
+      </a>
+      <a href="{{ "/products/scent-diffusers/" | relLangURL }}" class="category-card">
+        <div class="category-icon-wrap">🌸</div>
+        <h3 class="category-card-title">{{ T "scent_diffusers" }}</h3>
+        <span class="category-card-link">{{ T "explore_products" }} →</span>
+      </a>
+      <a href="{{ "/products/shoes-dryers/" | relLangURL }}" class="category-card">
+        <div class="category-icon-wrap">👟</div>
+        <h3 class="category-card-title">{{ T "shoes_dryers" }}</h3>
+        <span class="category-card-link">{{ T "explore_products" }} →</span>
+      </a>
+      <a href="{{ "/products/monitor-lights/" | relLangURL }}" class="category-card">
+        <div class="category-icon-wrap">💡</div>
+        <h3 class="category-card-title">{{ T "monitor_lights" }}</h3>
+        <span class="category-card-link">{{ T "explore_products" }} →</span>
+      </a>
+      <a href="{{ "/products/humidifiers/" | relLangURL }}" class="category-card">
+        <div class="category-icon-wrap">💨</div>
+        <h3 class="category-card-title">{{ T "humidifiers" }}</h3>
+        <span class="category-card-link">{{ T "explore_products" }} →</span>
+      </a>
+      <a href="{{ "/products/mobile-accessories/" | relLangURL }}" class="category-card">
       <div class="category-card-icon">📱</div>
       <h3 class="category-card-title">{{ T "mobile_accessories" }}</h3>
       <span class="category-card-link">{{ T "explore_products" }} →</span>

@@ -23,56 +23,59 @@
 </section>
 
 <!-- Stats / Trust Badges -->
-<section class="container" style="margin-top: -40px; position: relative; z-index: 2;">
-  <div class="trust-badges stats-badges">
-    <div class="trust-badge stat-badge">
-      <div class="stat-number">150+</div>
-      <span class="trust-badge-label">{{ T "stat_products" }}</span>
-    </div>
-    <div class="trust-badge stat-badge">
-      <div class="stat-number">50+</div>
-      <span class="trust-badge-label">{{ T "stat_partners" }}</span>
-    </div>
-    <div class="trust-badge stat-badge">
-      <div class="stat-number">10+</div>
-      <span class="trust-badge-label">{{ T "stat_years" }}</span>
-    </div>
-    <div class="trust-badge stat-badge">
-      <div class="stat-number">✓</div>
-      <span class="trust-badge-label">{{ T "stat_oem" }}</span>
+<section class="stats-section">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item">
+        <div class="stat-val">150+</div>
+        <div class="stat-desc">Products Worldwide</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-val">50+</div>
+        <div class="stat-desc">Global Partners</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-val">10+</div>
+        <div class="stat-desc">Years of Excellence</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-val">OEM/ODM</div>
+        <div class="stat-desc">Custom Solutions</div>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- Category Cards -->
-<section class="container" style="margin-top: 3rem;">
-  <div class="category-cards">
-    <a href="/products/fans/" class="category-card">
-      <div class="category-card-icon">🌀</div>
-      <h3 class="category-card-title">{{ T "fans" }}</h3>
-      <span class="category-card-link">{{ T "explore_products" }} →</span>
-    </a>
-    <a href="/products/scent-diffusers/" class="category-card">
-      <div class="category-card-icon">🌸</div>
-      <h3 class="category-card-title">{{ T "scent_diffusers" }}</h3>
-      <span class="category-card-link">{{ T "explore_products" }} →</span>
-    </a>
-    <a href="/products/shoes-dryers/" class="category-card">
-      <div class="category-card-icon">👟</div>
-      <h3 class="category-card-title">{{ T "shoes_dryers" }}</h3>
-      <span class="category-card-link">{{ T "explore_products" }} →</span>
-    </a>
-    <a href="/products/monitor-lights/" class="category-card">
-      <div class="category-card-icon">💡</div>
-      <h3 class="category-card-title">{{ T "monitor_lights" }}</h3>
-      <span class="category-card-link">{{ T "explore_products" }} →</span>
-    </a>
-    <a href="/products/humidifiers/" class="category-card">
-      <div class="category-card-icon">💨</div>
-      <h3 class="category-card-title">{{ T "humidifiers" }}</h3>
-      <span class="category-card-link">{{ T "explore_products" }} →</span>
-    </a>
-    <a href="/products/mobile-accessories/" class="category-card">
+<section class="categories-section">
+  <div class="container">
+    <div class="category-cards">
+      <a href="/products/fans/" class="category-card">
+        <div class="category-icon-wrap">🌀</div>
+        <h3 class="category-card-title">{{ T "fans" }}</h3>
+        <span class="category-card-link">Explore →</span>
+      </a>
+      <a href="/products/scent-diffusers/" class="category-card">
+        <div class="category-icon-wrap">🌸</div>
+        <h3 class="category-card-title">{{ T "scent_diffusers" }}</h3>
+        <span class="category-card-link">Explore →</span>
+      </a>
+      <a href="/products/shoes-dryers/" class="category-card">
+        <div class="category-icon-wrap">👟</div>
+        <h3 class="category-card-title">{{ T "shoes_dryers" }}</h3>
+        <span class="category-card-link">Explore →</span>
+      </a>
+      <a href="/products/monitor-lights/" class="category-card">
+        <div class="category-icon-wrap">💡</div>
+        <h3 class="category-card-title">{{ T "monitor_lights" }}</h3>
+        <span class="category-card-link">Explore →</span>
+      </a>
+      <a href="/products/humidifiers/" class="category-card">
+        <div class="category-icon-wrap">💨</div>
+        <h3 class="category-card-title">{{ T "humidifiers" }}</h3>
+        <span class="category-card-link">Explore →</span>
+      </a>
+      <a href="/products/mobile-accessories/" class="category-card">
       <div class="category-card-icon">📱</div>
       <h3 class="category-card-title">{{ T "mobile_accessories" }}</h3>
       <span class="category-card-link">{{ T "explore_products" }} →</span>
@@ -243,67 +246,7 @@
   font-weight: 500;
   color: var(--color-text-light);
 }
-.category-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
-  gap: 1rem;
-  margin-bottom: 2rem;
-}
-.category-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding: 1.5rem 1rem;
-  background: var(--color-bg-card);
-  border-radius: var(--border-radius);
-  box-shadow: var(--shadow-sm);
-  transition: all var(--transition-normal);
-}
-.category-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-hover);
-}
-.category-card-icon {
-  font-size: 2rem;
-  margin-bottom: 0.75rem;
-}
-.category-card-title {
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: var(--color-primary);
-  margin: 0 0 0.5rem;
-}
-.category-card-link {
-  font-size: 0.8rem;
-  color: var(--color-accent);
-  font-weight: 500;
-}
-.stats-badges {
-  background: white;
-  border-radius: var(--border-radius);
-  padding: 1.5rem 2rem;
-  box-shadow: var(--shadow-lg);
-}
-.stat-badge {
-  flex-direction: column;
-  gap: 0.25rem !important;
-}
-.stat-number {
-  font-size: 1.75rem;
-  font-weight: 700;
-  color: var(--color-primary);
-  line-height: 1.2;
-}
-@media (max-width: 768px) {
-  .category-cards {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .stats-badges {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-  }
-}
+
 </style>
 
 {{ end }}
