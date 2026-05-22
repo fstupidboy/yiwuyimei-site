@@ -1,141 +1,291 @@
 {{ define "main" }}
-<div class="homepage-container">
-  <!-- Hero Section -->
-  <section class="home-hero-section">
-    <div class="home-hero-background">
-       {{ partial "responsive-img-cf.html" (dict 
-          "src" "/images/banner.jpg" 
-          "alt" "YiwuYimei Premium Collection" 
-          "class" "home-hero-bg-img"
-          "hero" true
-          "sizes" "100vw"
-          "widths" (slice 640 900 1280 1600 1920)
-        ) }}
+
+<!-- Hero Banner -->
+<section class="hero-banner">
+  {{ partial "responsive-img-cf.html" (dict 
+    "src" "/images/banner.jpg"
+    "alt" "YiwuYimei - Wholesale Home Appliances from China"
+    "class" "hero-banner-img"
+    "hero" true
+    "sizes" "100vw"
+    "widths" (slice 640 900 1280 1600 1920)
+  ) }}
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-badge">{{ T "trusted_by" }}</div>
+    <h1>{{ T "hero_title" }}</h1>
+    <p>{{ T "hero_subtitle" }}</p>
+    <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+      <a href="#products" class="btn btn-accent">{{ T "explore_products" }} →</a>
+      <a href="/contact/" class="btn btn-outline" style="border-color: white; color: white;">{{ T "get_quote" }}</a>
     </div>
-    <div class="home-hero-overlay"></div>
-    <div class="home-hero-content">
-      <h1 class="home-hero-title">Elevate Your Lifestyle with Exquisite Design</h1>
-      <p class="home-hero-subtitle">Premium Home Appliances & Curated Gifts from YiwuYimei</p>
-      <a href="/products/" class="cta-button">Explore Collection</a>
-    </div>
-  </section>
-
-  <!-- Categories & Products Layout -->
-  <div class="content-wrapper">
-    <!-- Sidebar -->
-    <aside class="sidebar-categories">
-      <h3 class="sidebar-title">Collections</h3>
-      <ul class="category-list">
-        <li><a href="/products/fans/">Fans</a></li>
-        <li><a href="/products/scent-diffusers/">Scent Diffusers</a></li>
-        <li><a href="/products/humidifiers/">Humidifiers</a></li>
-        <li><a href="/products/monitor-lights/">Monitor Lights</a></li>
-        <li><a href="/products/shoes-dryers/">Shoes Dryers</a></li>
-        <li><a href="/products/badges/">Badges</a></li>
-        <li><a href="/products/mosquito-repellent/">Mosquito Repellent</a></li>
-        <li><a href="/products/water-bottles/">Water Bottles</a></li>
-        <li><a href="/products/mobile-accessories/">Mobile Accessories</a></li>
-        <li><a href="/products/others/">Curated Gifts</a></li>
-      </ul>
-    </aside>
-
-    <!-- Main Content -->
-    <main class="main-products">
-      
-      <!-- Introduction -->
-      <section class="intro-section">
-        <h2>Refined Quality, Global Reach</h2>
-        <p>From minimal aesthetics to functional innovation, we bring you the finest selection of home essentials.</p>
-      </section>
-
-      <!-- New Arrivals -->
-      <section class="product-section">
-        <div class="section-header">
-          <h3>New Arrivals</h3>
-          <a href="/products/" class="view-all">View All →</a>
-        </div>
-        <div class="product-grid">
-          {{ range first 4 (where site.RegularPages "Params.section" "new") }}
-            <div class="product-card">
-              <a href="{{ .RelPermalink }}" class="card-link">
-                <div class="img-container">
-                  {{ partial "responsive-img-cf.html" (dict 
-                    "src" .Params.cover.image 
-                    "alt" .Title 
-                    "class" "product-img"
-                    "sizes" "(max-width: 768px) 100vw, 300px"
-                    "widths" (slice 300 450 600)
-                  ) }}
-                </div>
-                <div class="card-info">
-                  <h4>{{ .Title }}</h4>
-                  <span class="view-details">View Details</span>
-                </div>
-              </a>
-            </div>
-          {{ end }}
-        </div>
-      </section>
-
-      <!-- Best Sellers -->
-      <section class="product-section">
-        <div class="section-header">
-          <h3>Best Sellers</h3>
-          <a href="/products/" class="view-all">View All →</a>
-        </div>
-        <div class="product-grid">
-          {{ range first 4 (where site.RegularPages "Params.section" "best") }}
-            <div class="product-card">
-              <a href="{{ .RelPermalink }}" class="card-link">
-                <div class="img-container">
-                  {{ partial "responsive-img-cf.html" (dict 
-                    "src" .Params.cover.image 
-                    "alt" .Title 
-                    "class" "product-img"
-                    "sizes" "(max-width: 768px) 100vw, 300px"
-                    "widths" (slice 300 450 600)
-                  ) }}
-                </div>
-                <div class="card-info">
-                   <h4>{{ .Title }}</h4>
-                   <span class="view-details">View Details</span>
-                </div>
-              </a>
-            </div>
-          {{ end }}
-        </div>
-      </section>
-
-      <!-- Unique -->
-      <section class="product-section">
-        <div class="section-header">
-           <h3>Unique Finds</h3>
-           <a href="/products/" class="view-all">View All →</a>
-        </div>
-        <div class="product-grid">
-          {{ range first 4 (where site.RegularPages "Params.section" "unique") }}
-            <div class="product-card">
-              <a href="{{ .RelPermalink }}" class="card-link">
-                <div class="img-container">
-                  {{ partial "responsive-img-cf.html" (dict 
-                    "src" .Params.cover.image 
-                    "alt" .Title 
-                    "class" "product-img"
-                    "sizes" "(max-width: 768px) 100vw, 300px"
-                    "widths" (slice 300 450 600)
-                  ) }}
-                </div>
-                <div class="card-info">
-                   <h4>{{ .Title }}</h4>
-                   <span class="view-details">View Details</span>
-                </div>
-              </a>
-            </div>
-          {{ end }}
-        </div>
-      </section>
-
-    </main>
   </div>
+</section>
+
+<!-- Stats / Trust Badges -->
+<section class="container" style="margin-top: -40px; position: relative; z-index: 2;">
+  <div class="trust-badges stats-badges">
+    <div class="trust-badge stat-badge">
+      <div class="stat-number">150+</div>
+      <span class="trust-badge-label">{{ T "stat_products" }}</span>
+    </div>
+    <div class="trust-badge stat-badge">
+      <div class="stat-number">50+</div>
+      <span class="trust-badge-label">{{ T "stat_partners" }}</span>
+    </div>
+    <div class="trust-badge stat-badge">
+      <div class="stat-number">10+</div>
+      <span class="trust-badge-label">{{ T "stat_years" }}</span>
+    </div>
+    <div class="trust-badge stat-badge">
+      <div class="stat-number">✓</div>
+      <span class="trust-badge-label">{{ T "stat_oem" }}</span>
+    </div>
+  </div>
+</section>
+
+<!-- Category Cards -->
+<section class="container" style="margin-top: 3rem;">
+  <div class="category-cards">
+    <a href="/products/fans/" class="category-card">
+      <div class="category-card-icon">🌀</div>
+      <h3 class="category-card-title">{{ T "fans" }}</h3>
+      <span class="category-card-link">{{ T "explore_products" }} →</span>
+    </a>
+    <a href="/products/scent-diffusers/" class="category-card">
+      <div class="category-card-icon">🌸</div>
+      <h3 class="category-card-title">{{ T "scent_diffusers" }}</h3>
+      <span class="category-card-link">{{ T "explore_products" }} →</span>
+    </a>
+    <a href="/products/shoes-dryers/" class="category-card">
+      <div class="category-card-icon">👟</div>
+      <h3 class="category-card-title">{{ T "shoes_dryers" }}</h3>
+      <span class="category-card-link">{{ T "explore_products" }} →</span>
+    </a>
+    <a href="/products/monitor-lights/" class="category-card">
+      <div class="category-card-icon">💡</div>
+      <h3 class="category-card-title">{{ T "monitor_lights" }}</h3>
+      <span class="category-card-link">{{ T "explore_products" }} →</span>
+    </a>
+    <a href="/products/humidifiers/" class="category-card">
+      <div class="category-card-icon">💨</div>
+      <h3 class="category-card-title">{{ T "humidifiers" }}</h3>
+      <span class="category-card-link">{{ T "explore_products" }} →</span>
+    </a>
+    <a href="/products/mobile-accessories/" class="category-card">
+      <div class="category-card-icon">📱</div>
+      <h3 class="category-card-title">{{ T "mobile_accessories" }}</h3>
+      <span class="category-card-link">{{ T "explore_products" }} →</span>
+    </a>
+  </div>
+</section>
+
+<!-- Main Content Area -->
+<div class="page-wrapper" id="products" style="padding-top: 1rem;">
+  <!-- Sidebar -->
+  <aside class="catalogue-sidebar">
+    <h2>{{ T "categories" }}</h2>
+    <ul class="catalogue-menu">
+      <li><a href="/products/fans/">{{ T "fans" }}</a></li>
+      <li><a href="/products/scent-diffusers/">{{ T "scent_diffusers" }}</a></li>
+      <li><a href="/products/humidifiers/">{{ T "humidifiers" }}</a></li>
+      <li><a href="/products/monitor-lights/">{{ T "monitor_lights" }}</a></li>
+      <li><a href="/products/shoes-dryers/">{{ T "shoes_dryers" }}</a></li>
+      <li><a href="/products/badges/">{{ T "badges" }}</a></li>
+      <li><a href="/products/mosquito-repellent/">{{ T "mosquito_repellent" }}</a></li>
+      <li><a href="/products/water-bottles/">{{ T "water_bottles" }}</a></li>
+      <li><a href="/products/mobile-accessories/">{{ T "mobile_accessories" }}</a></li>
+      <li><a href="/products/others/">{{ T "gift_items" }}</a></li>
+    </ul>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main-content">
+
+    <!-- Welcome / Social Proof -->
+    <section class="welcome-section">
+      <h2>{{ T "welcome_title" }}</h2>
+      <p>{{ T "welcome_text" }}</p>
+      <div class="client-logos">
+        <span class="client-tag">🇺🇸 USA Retail Chains</span>
+        <span class="client-tag">🇪🇺 European Brands</span>
+        <span class="client-tag">🇯🇵 Japanese Importers</span>
+        <span class="client-tag">🇰🇷 Korean Distributors</span>
+      </div>
+    </section>
+
+    <!-- New Arrivals -->
+    <section class="product-section">
+      <h2>
+        <span style="color: var(--color-accent);">✦</span>
+        {{ T "new_arrivals" }}
+      </h2>
+      <div class="product-grid">
+        {{ range first 6 (where .Site.RegularPages "Params.section" "new").ByDate.Reverse }}
+          <div class="product-card animate-fade-in-up">
+            <a href="{{ .RelPermalink }}">
+              <div class="product-card-image">
+                {{ partial "responsive-img-cf.html" (dict 
+                  "src" .Params.cover.image 
+                  "alt" (printf "%s - %s from YiwuYimei" .Title .Params.product_type)
+                  "class" ""
+                  "sizes" "(max-width: 768px) 50vw, 240px"
+                  "widths" (slice 240 360 480 640)
+                ) }}
+                <span class="product-card-badge">New</span>
+              </div>
+              <div class="product-card-content">
+                <div class="product-card-category">{{ .Params.product_type }}</div>
+                <h3 class="product-card-title">{{ .Title }}</h3>
+              </div>
+            </a>
+          </div>
+        {{ end }}
+      </div>
+    </section>
+
+    <!-- Best Sellers -->
+    <section class="product-section">
+      <h2>
+        <span style="color: var(--color-warm);">★</span>
+        {{ T "best_sellers" }}
+      </h2>
+      <div class="product-grid">
+        {{ range first 6 (where .Site.RegularPages "Params.section" "best").ByDate.Reverse }}
+          <div class="product-card animate-fade-in-up">
+            <a href="{{ .RelPermalink }}">
+              <div class="product-card-image">
+                {{ partial "responsive-img-cf.html" (dict 
+                  "src" .Params.cover.image 
+                  "alt" (printf "%s - %s from YiwuYimei" .Title .Params.product_type)
+                  "class" ""
+                  "sizes" "(max-width: 768px) 50vw, 240px"
+                  "widths" (slice 240 360 480 640)
+                ) }}
+                <span class="product-card-badge bestseller">{{ T "best_sellers" }}</span>
+              </div>
+              <div class="product-card-content">
+                <div class="product-card-category">{{ .Params.product_type }}</div>
+                <h3 class="product-card-title">{{ .Title }}</h3>
+              </div>
+            </a>
+          </div>
+        {{ end }}
+      </div>
+    </section>
+
+    <!-- Unique Products -->
+    <section class="product-section">
+      <h2>
+        <span style="color: var(--color-primary);">◆</span>
+        {{ T "unique_products" }}
+      </h2>
+      <div class="product-grid">
+        {{ range first 6 (where .Site.RegularPages "Params.section" "unique").ByDate.Reverse }}
+          <div class="product-card animate-fade-in-up">
+            <a href="{{ .RelPermalink }}">
+              <div class="product-card-image">
+                {{ partial "responsive-img-cf.html" (dict 
+                  "src" .Params.cover.image 
+                  "alt" (printf "%s - %s from YiwuYimei" .Title .Params.product_type)
+                  "class" ""
+                  "sizes" "(max-width: 768px) 50vw, 240px"
+                  "widths" (slice 240 360 480 640)
+                ) }}
+                <span class="product-card-badge unique">{{ T "unique_products" }}</span>
+              </div>
+              <div class="product-card-content">
+                <div class="product-card-category">{{ .Params.product_type }}</div>
+                <h3 class="product-card-title">{{ .Title }}</h3>
+              </div>
+            </a>
+          </div>
+        {{ end }}
+      </div>
+    </section>
+
+  </main>
 </div>
+
+<style>
+.client-logos {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+.client-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.5rem 1rem;
+  background: var(--color-bg-alt);
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--color-text-light);
+}
+.category-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+.category-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  background: var(--color-bg-card);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-normal);
+}
+.category-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+}
+.category-card-icon {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+}
+.category-card-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin: 0 0 0.5rem;
+}
+.category-card-link {
+  font-size: 0.8rem;
+  color: var(--color-accent);
+  font-weight: 500;
+}
+.stats-badges {
+  background: white;
+  border-radius: var(--border-radius);
+  padding: 1.5rem 2rem;
+  box-shadow: var(--shadow-lg);
+}
+.stat-badge {
+  flex-direction: column;
+  gap: 0.25rem !important;
+}
+.stat-number {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  line-height: 1.2;
+}
+@media (max-width: 768px) {
+  .category-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .stats-badges {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
+</style>
+
 {{ end }}

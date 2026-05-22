@@ -701,6 +701,22 @@ a:hover {
     gap: 1.5rem;
   }
   
+  .stats-badges {
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 0;
+    padding: 1.5rem;
+  }
+  
+  .stat-badge {
+    flex: 0 0 calc(50% - 0.5rem);
+  }
+  
+  .category-cards {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+  }
+  
   .welcome-section {
     padding: 1.5rem;
   }
@@ -722,6 +738,102 @@ a:hover {
   .catalogue-sidebar {
     padding: var(--spacing-md);
   }
+}
+
+/* ----- Stats Badges (numbered trust indicators) ----- */
+.stats-badges {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: -40px auto 2rem;
+  padding: 1.5rem 2rem;
+  background: var(--color-bg-card);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-lg);
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+}
+
+.stat-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  flex: 1;
+  text-align: center;
+}
+
+.stat-number {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  line-height: 1.2;
+}
+
+/* ----- Category Cards (icon-based navigation) ----- */
+.category-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.category-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  background: var(--color-bg-card);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-normal);
+  text-decoration: none;
+}
+
+.category-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+}
+
+.category-card-icon {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+  line-height: 1;
+}
+
+.category-card-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin: 0 0 0.5rem;
+}
+
+.category-card-link {
+  font-size: 0.8rem;
+  color: var(--color-accent);
+  font-weight: 500;
+}
+
+/* ----- Client Tags (social proof) ----- */
+.client-logos {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+
+.client-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.5rem 1rem;
+  background: var(--color-bg-alt);
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--color-text-light);
 }
 
 /* ----- Scrollbar Styling ----- */
