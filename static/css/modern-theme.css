@@ -196,33 +196,10 @@ a:hover {
   width: 100%;
   height: 500px;
   overflow: hidden;
-  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 50%, var(--color-primary-dark) 100%);
+  background: var(--color-primary);
 }
 
-.hero-gradient {
-  background: linear-gradient(135deg, #1a365d 0%, #1e3a5f 30%, #2a4a7f 60%, #1a365d 100%);
-}
 
-.hero-bg-pattern {
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background-image: 
-    radial-gradient(circle at 20% 50%, rgba(78, 205, 196, 0.08) 0%, transparent 50%),
-    radial-gradient(circle at 80% 20%, rgba(212, 165, 116, 0.06) 0%, transparent 40%),
-    radial-gradient(circle at 50% 80%, rgba(78, 205, 196, 0.05) 0%, transparent 45%);
-  pointer-events: none;
-}
-
-.hero-banner::before {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 80px;
-  background: linear-gradient(to top, var(--color-bg), transparent);
-  z-index: 1;
-}
 
 .hero-content {
   position: relative;
