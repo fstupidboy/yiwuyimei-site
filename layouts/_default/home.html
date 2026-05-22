@@ -13,8 +13,13 @@
   <div class="hero-overlay"></div>
   <div class="hero-content">
     <div class="hero-badge">{{ T "trusted_by" }}</div>
+    {{ if eq .Site.Language.Lang "en" }}
+    <h1>{{ T "hero_title" }}</h1>
+    <p>{{ T "hero_subtitle" }}</p>
+    {{ else }}
     <h1>YIWUYIMEI</h1>
     <p>{{ .Site.Params.premiumWholesale | default (T "hero_subtitle") }}</p>
+    {{ end }}
     <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
       <a href="#products" class="btn btn-accent">{{ T "explore_products" }}</a>
       <a href="{{ "/contact/" | relLangURL }}" class="btn btn-outline" style="border-color: white; color: white;">{{ T "get_quote" | default "Get a Quote →" }}</a>
@@ -26,6 +31,24 @@
 <section class="stats-section">
   <div class="container">
     <div class="stats-grid">
+      {{ if eq .Site.Language.Lang "en" }}
+      <div class="stat-item">
+        <div class="stat-val">150+</div>
+        <div class="stat-desc">Products Worldwide</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-val">50+</div>
+        <div class="stat-desc">Global Partners</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-val">10+</div>
+        <div class="stat-desc">Years of Excellence</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-val">OEM/ODM</div>
+        <div class="stat-desc">Custom Solutions</div>
+      </div>
+      {{ else }}
       <div class="stat-item">
         <div class="stat-val">150+</div>
         <div class="stat-desc">{{ T "stat_products" }}</div>
@@ -42,6 +65,7 @@
         <div class="stat-val">OEM/ODM</div>
         <div class="stat-desc">{{ T "stat_oem" }}</div>
       </div>
+      {{ end }}
     </div>
   </div>
 </section>
