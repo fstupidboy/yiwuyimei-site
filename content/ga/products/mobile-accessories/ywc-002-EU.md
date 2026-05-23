@@ -1,7 +1,7 @@
 ---
 title: "Luchtaire Balla 65W YW-C-002-EU"
 product_type: "mobile accessory"
-date: 2025-04-22
+date: 2026-05-22
 section: "new"
 cover:
   image: "/images/products/mobile-accessories/ywc-002-EU/charger EU1.png"

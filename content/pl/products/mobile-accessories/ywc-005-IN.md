@@ -1,7 +1,7 @@
 ---
 title: "Ładowarka Ścienna 65W YW-C-005-IN"
 product_type: "mobile accessory"
-date: 2025-04-22
+date: 2026-05-22
 section: "new"
 cover:
   image: "/images/products/mobile-accessories/ywc-005-IN/charger IN1.png"
