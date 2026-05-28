@@ -11,12 +11,24 @@
 
 <!-- Breadcrumb -->
 <div class="container">
-  <nav class="breadcrumb" style="padding: 1.5rem 0; font-size: 0.9rem;">
+  <nav class="breadcrumb" style="padding: 1.5rem 0; font-size: 0.9rem;" aria-label="breadcrumb">
     <a href="{{ "/" | relLangURL }}" style="color: var(--color-text-muted);">{{ T "home" }}</a>
     <span style="color: var(--color-text-muted); margin: 0 0.5rem;">/</span>
-    <span style="color: var(--color-primary); font-weight: 500;">{{ .Title }}</span>
+    <span style="color: var(--color-primary); font-weight: 500;" aria-current="page">{{ .Title }}</span>
   </nav>
 </div>
+
+<!-- Breadcrumb Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": {{ (T "home") | jsonify | safeJS }}, "item": {{ (absURL "/") | jsonify | safeJS }} },
+    { "@type": "ListItem", "position": 2, "name": {{ .Title | jsonify | safeJS }}, "item": {{ .Permalink | jsonify | safeJS }} }
+  ]
+}
+</script>
 
 <!-- Services Grid -->
 <div class="container" style="padding-bottom: 4rem;">

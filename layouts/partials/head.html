@@ -1,14 +1,27 @@
-<!-- layouts/partials/head.html -->
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-{{/* ---------- Derived SEO values (description, image, type, robots) ---------- */}}
+{{/* ---------- SEO: Derived values ---------- */}}
 {{ $site := .Site }}
+{{ $lang := .Site.Language.Lang }}
+
+{{/* Description: page > params > summary > site */}}
 {{ $desc := .Description }}
 {{ if not $desc }}{{ $desc = .Params.description }}{{ end }}
 {{ if not $desc }}{{ $desc = .Summary }}{{ end }}
 {{ if not $desc }}{{ $desc = $site.Params.description }}{{ end }}
+{{ $desc = strings.Truncate 160 $desc }}
 
+{{/* Keywords: derive from page context */}}
+{{ $keywords := slice }}
+{{ if eq .Section "products" }}
+  {{ $keywords = $keywords | append "China wholesale" "Yiwu exporter" "factory direct" "OEM ODM" }}
+  {{ with .Params.product_type }}{{ $keywords = $keywords | append . }}{{ end }}
+{{ end }}
+{{ with .Params.keywords }}{{ range . }}{{ $keywords = $keywords | append . }}{{ end }}{{ end }}
+{{ $keywordsStr := delimit ($keywords | append "YiwuYimei" "China products" "home appliances" "global sourcing") ", " }}
+
+{{/* OG Image */}}
 {{ $ogImage := "" }}
 {{ with .Params.cover.image }}{{ $ogImage = . }}{{ end }}
 {{ if eq $ogImage "" }}
@@ -24,145 +37,238 @@
   {{ end }}
 {{ end }}
 {{ if eq $ogImage "" }}{{ $ogImage = "/images/og-default.webp" }}{{ end }}
+{{ $ogImage = absURL $ogImage }}
 
+{{/* Page type */}}
 {{ $ogType := "website" }}
 {{ if .IsHome }}
   {{ $ogType = "website" }}
 {{ else if eq .Section "products" }}
   {{ $ogType = "product" }}
+{{ else if eq .Section "posts" }}
+  {{ $ogType = "article" }}
+{{ else if eq .Section "services" }}
+  {{ $ogType = "website" }}
 {{ else }}
   {{ $ogType = "article" }}
 {{ end }}
 
-{{ $robots := "index,follow" }}
-{{ if or .Params.noindex .Draft }}{{ $robots = "noindex,nofollow" }}{{ end }}
+{{/* Robots */}}
+{{ $robots := "index, follow, max-image-preview:large" }}
+{{ if or .Params.noindex .Draft }}{{ $robots = "noindex, nofollow" }}{{ end }}
 
-<title>{{ .Title }} | {{ .Site.Title }}</title>
+{{/* Title: optimize for homepage */}}
+{{ $pageTitle := .Title }}
+{{ if .IsHome }}
+  {{ $pageTitle = $site.Title }}
+{{ end }}
+<title>{{ $pageTitle }}{{ if not .IsHome }} | {{ $site.Title }}{{ end }}</title>
 
-<!-- 网站图标 favicon -->
-<link rel="icon" href="/favicon.png" type="image/png" />
+<!-- Favicon -->
+<link rel="icon" href="/favicon.png" type="image/png" sizes="32x32" />
+<link rel="apple-touch-icon" href="/favicon.png" />
 
 <!-- Canonical & hreflang -->
 <link rel="canonical" href="{{ .Permalink }}" />
-<link rel="alternate" href="{{ .Permalink }}" hreflang="en-us" />
+{{ range .AllTranslations }}
+<link rel="alternate" href="{{ .Permalink }}" hreflang="{{ .Language.Lang }}" />
+{{ end }}
 <link rel="alternate" href="{{ .Permalink }}" hreflang="x-default" />
 
-<!-- 公共样式 -->
+<!-- Preconnect to external domains -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://umami.117global.cn">
+<link rel="dns-prefetch" href="https://umami.117global.cn">
+
+<!-- Preload critical font -->
+<link rel="preload" href="https://fonts.gstatic.com/s/inter/v18/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfAZ9hiJ-Ek-_EeA.woff2" as="font" type="font/woff2" crossorigin>
+
+<!-- Stylesheets -->
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/css/modern-theme.css?v=3" />
 <link rel="stylesheet" href="/css/extra.css?v=2" />
 <link rel="stylesheet" href="/css/footer.css?v=2" />
 <link rel="stylesheet" href="/css/products.css?v=2" />
-  <link rel="stylesheet" href="/css/product-detail.css?v=2" />
+<link rel="stylesheet" href="/css/product-detail.css?v=2" />
 <link rel="stylesheet" href="/css/contact.css?v=2" />
+<link rel="stylesheet" href="/css/navbar.css?v=2" />
+<link rel="stylesheet" href="/css/service.css?v=2" />
 
-<!-- ✅ SEO 基础信息 -->
+<!-- Core Meta Tags -->
 <meta name="description" content="{{ $desc }}">
-<meta name="keywords" content="China wholesale, Yiwu exporter, fans supplier, humidifier wholesale, aroma diffuser manufacturer, home appliances, global sourcing, USA Europe Japan Korea, high quality, affordable price">
+<meta name="keywords" content="{{ $keywordsStr }}">
 <meta name="author" content="YIWUYIMEI Technology Co. Ltd.">
-<meta name="robots" content="{{ $robots }}" />
+<meta name="robots" content="{{ $robots }}">
+<meta name="googlebot" content="{{ $robots }}">
 
-<!-- ✅ Open Graph（社交媒体分享用） -->
-<meta property="og:site_name" content="{{ .Site.Title }}" />
-<meta property="og:title" content="{{ .Title }} | {{ .Site.Title }}" />
+<!-- Mobile & Theme -->
+<meta name="theme-color" content="#1e3a5f" media="(prefers-color-scheme: light)">
+<meta name="msapplication-TileColor" content="#1e3a5f">
+
+{{/* Locale mapping for Open Graph */}}
+{{ $localeMap := dict "en" "en_US" "ko" "ko_KR" "ja" "ja_JP" "es" "es_ES" "de" "de_DE" "fr" "fr_FR" "it" "it_IT" "pl" "pl_PL" "fi" "fi_FI" "ga" "ga_IE" }}
+{{ $ogLocale := index $localeMap $lang | default (printf "%s_%s" $lang (upper $lang)) }}
+
+<!-- Open Graph -->
+<meta property="og:site_name" content="{{ $site.Title }}" />
+<meta property="og:title" content="{{ $pageTitle }}" />
 <meta property="og:description" content="{{ $desc }}" />
 <meta property="og:image" content="{{ $ogImage }}" />
+<meta property="og:image:alt" content="{{ $pageTitle }}" />
 <meta property="og:type" content="{{ $ogType }}" />
 <meta property="og:url" content="{{ .Permalink }}" />
-<meta property="og:locale" content="en_US" />
+<meta property="og:locale" content="{{ $ogLocale }}" />
+{{ range .Translations }}
+{{ $trLocale := index $localeMap .Language.Lang | default (printf "%s_%s" .Language.Lang (upper .Language.Lang)) }}
+<meta property="og:locale:alternate" content="{{ $trLocale }}" />
+{{ end }}
 
-<!-- ✅ Twitter 卡片 -->
+<!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="{{ .Title }} | {{ .Site.Title }}" />
+<meta name="twitter:site" content="@yiwuyimei" />
+<meta name="twitter:title" content="{{ $pageTitle }}" />
 <meta name="twitter:description" content="{{ $desc }}" />
 <meta name="twitter:image" content="{{ $ogImage }}" />
+<meta name="twitter:image:alt" content="{{ $pageTitle }}" />
 
-<link rel="stylesheet" href="/css/navbar.css?v=2" />
-<link rel="stylesheet" href="/css/service.css?v=2">
-
-<!-- Lazy-load images as a progressive enhancement -->
+<!-- Lazy-load images progressively -->
 <script>
-  window.addEventListener('load', function () {
-    const images = document.querySelectorAll('img:not([loading])');
-    images.forEach(img => img.setAttribute('loading', 'lazy'));
+  document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('img:not([loading])').forEach(img => {
+      img.setAttribute('loading', 'lazy');
+      img.setAttribute('decoding', 'async');
+    });
   });
-  
-  // Add rel=noopener to external links
   document.addEventListener('click', function(e) {
-    if (e.target && e.target.tagName === 'A') {
-      const a = e.target;
-      if (a.target === '_blank' && !a.rel.includes('noopener')) {
-        a.rel += (a.rel ? ' ' : '') + 'noopener';
-      }
+    const a = e.target.closest('a[target="_blank"]');
+    if (a && !a.rel.includes('noopener')) {
+      a.rel += (a.rel ? ' ' : '') + 'noopener noreferrer';
     }
   });
 </script>
 
-<!-- Umami analytics (privacy-friendly) -->
-<script defer src="https://umami.117global.cn/script.js" data-website-id="ba20fb86-c5be-4065-bd62-6732e3d1fe5f"></script>
+<!-- Analytics -->
+<script defer src="https://umami.117global.cn/script.js" data-website-id="ba20fb86-c5be-4065-bd62-6732e3d1fe5f" data-auto-track="true"></script>
 
-{{/* ---------- JSON-LD: Organization on home, Product on product pages ---------- */}}
+{{/* ========== JSON-LD Structured Data ========== */}}
+
+{{/* WebSite + Organization on homepage */}}
 {{ if .IsHome }}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "{{ .Site.Title }}",
-  "url": "{{ .Site.BaseURL }}",
-  "logo": "/favicon.png",
-  "sameAs": []
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "{{ $site.BaseURL }}#website",
+      "url": "{{ $site.BaseURL }}",
+      "name": {{ $site.Title | jsonify | safeJS }},
+      "description": {{ $desc | jsonify | safeJS }},
+      "publisher": { "@id": "{{ $site.BaseURL }}#organization" },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": { "@type": "EntryPoint", "urlTemplate": "{{ $site.BaseURL }}?s={search_term_string}" },
+        "query-input": "required name=search_term_string"
+      },
+      "inLanguage": "{{ $lang }}"
+    },
+    {
+      "@type": "Organization",
+      "@id": "{{ $site.BaseURL }}#organization",
+      "name": "YIWUYIMEI Technology Co. Ltd.",
+      "alternateName": "YiwuYimei",
+      "url": "{{ $site.BaseURL }}",
+      "logo": { "@type": "ImageObject", "url": "{{ absURL "/favicon.png" }}", "width": 512, "height": 512 },
+      "sameAs": [],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "sales@yiwuyimei.com",
+        "contactType": "sales",
+        "availableLanguage": ["English", "Chinese", "Korean", "Japanese", "Spanish", "German"]
+      }
+    }
+  ]
 }
 </script>
-{{ else if and (eq .Section "products") .IsPage }}
-{{/* Compute a safe SKU even if .File is nil (e.g., head used on virtual pages) */}}
+{{ end }}
+
+{{/* Product page schema */}}
+{{ if and (eq .Section "products") .IsPage }}
 {{ $sku := (urlize .Title) }}
 {{ with .File }}{{ $sku = .BaseFileName }}{{ end }}
+{{ $productImages := slice }}
+{{ with .Params.cover.image }}{{ $productImages = $productImages | append (absURL .) }}{{ end }}
+{{ with .Params.cover.gallery }}{{ range . }}{{ $productImages = $productImages | append (absURL .) }}{{ end }}{{ end }}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Product",
-  "name": {{ printf "%q" .Title }},
-  "description": {{ printf "%q" $desc }},
-  "category": {{ printf "%q" (default "" .Params.product_type) }},
-  "brand": { "@type": "Brand", "name": "YiwuYimei" },
-  "sku": {{ printf "%q" $sku }},
-  "url": {{ printf "%q" .Permalink }},
+  "name": {{ .Title | jsonify | safeJS }},
   "image": [
-    {{- $imgs := slice -}}
-    {{- with .Params.cover.image }}{{ $imgs = $imgs | append . }}{{ end -}}
-    {{- with .Params.cover.gallery }}{{ range . }}{{ $imgs = $imgs | append . }}{{ end }}{{ end -}}
-    {{- if eq (len $imgs) 0 }}{{ $imgs = $imgs | append $ogImage }}{{ end -}}
-    {{- range $i, $img := $imgs -}}{{ if gt $i 0 }}, {{ end }}{{ printf "%q" $img }}{{- end -}}
+    {{- range $i, $img := $productImages -}}{{ if gt $i 0 }}, {{ end }}{{ $img | jsonify | safeJS }}{{- end -}}
+  ],
+  "description": {{ $desc | jsonify | safeJS }},
+  "sku": {{ $sku | jsonify | safeJS }},
+  "brand": {
+    "@type": "Brand",
+    "name": "YiwuYimei",
+    "logo": { "@type": "ImageObject", "url": {{ absURL "/favicon.png" | jsonify | safeJS }} }
+  },
+  "manufacturer": {
+    "@type": "Organization",
+    "name": "YIWUYIMEI Technology Co. Ltd.",
+    "address": { "@type": "PostalAddress", "addressLocality": "Shenzhen", "addressCountry": "CN" }
+  },
+  "category": {{ (default "" .Params.product_type) | jsonify | safeJS }},
+  "url": {{ .Permalink | jsonify | safeJS }},
+  "offers": {
+    "@type": "Offer",
+    "url": {{ .Permalink | jsonify | safeJS }},
+    "availability": "https://schema.org/InStock",
+    "seller": { "@type": "Organization", "name": "YiwuYimei" },
+    "businessFunction": "http://purl.org/goodrelations/v1#Sell",
+    "availableAtOrFrom": { "@type": "Place", "name": "Shenzhen, China" }
+  },
+  "additionalProperty": [
+    { "@type": "PropertyValue", "name": "Material", "value": "OEM" },
+    { "@type": "PropertyValue", "name": "Certification", "value": "CE/FCC/ROHS" },
+    { "@type": "PropertyValue", "name": "Service", "value": "OEM/ODM Customization" }
   ]
 }
 </script>
-{{ else if and (eq .Section "posts") .IsPage }}
+{{ end }}
+
+{{/* Article schema for posts */}}
+{{ if and (eq .Section "posts") .IsPage }}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": {{ printf "%q" .Title }},
-  "description": {{ printf "%q" $desc }},
-  "datePublished": {{ printf "%q" (.PublishDate | default .Date | time.Format "2006-01-02T15:04:05Z07:00") }},
-  "dateModified": {{ printf "%q" (.Lastmod | time.Format "2006-01-02T15:04:05Z07:00") }},
-  "mainEntityOfPage": {"@type":"WebPage","@id": {{ printf "%q" .Permalink }}},
-  "author": {"@type":"Organization","name":"YiwuYimei"},
-  "publisher": {"@type":"Organization","name":"YiwuYimei","logo":{"@type":"ImageObject","url":"/favicon.png"}},
-  "image": {{ printf "%q" $ogImage }}
+  "headline": {{ .Title | jsonify | safeJS }},
+  "description": {{ $desc | jsonify | safeJS }},
+  "datePublished": {{ (.PublishDate | default .Date | time.Format "2006-01-02T15:04:05Z07:00") | jsonify | safeJS }},
+  "dateModified": {{ (.Lastmod | time.Format "2006-01-02T15:04:05Z07:00") | jsonify | safeJS }},
+  "mainEntityOfPage": { "@type": "WebPage", "@id": {{ .Permalink | jsonify | safeJS }} },
+  "author": { "@type": "Organization", "name": "YiwuYimei", "url": {{ $site.BaseURL | jsonify | safeJS }} },
+  "publisher": { "@type": "Organization", "name": "YiwuYimei", "logo": { "@type": "ImageObject", "url": {{ absURL "/favicon.png" | jsonify | safeJS }} } },
+  "image": {{ $ogImage | jsonify | safeJS }}
 }
 </script>
-{{ else if and (eq .Section "services") .IsPage }}
+{{ end }}
+
+{{/* Service schema */}}
+{{ if and (eq .Section "services") .IsPage }}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Service",
-  "name": {{ printf "%q" .Title }},
-  "description": {{ printf "%q" $desc }},
-  "provider": {"@type":"Organization","name":"YiwuYimei","url": {{ printf "%q" .Site.BaseURL }}},
+  "name": {{ .Title | jsonify | safeJS }},
+  "description": {{ $desc | jsonify | safeJS }},
+  "provider": { "@type": "Organization", "name": "YiwuYimei", "url": {{ $site.BaseURL | jsonify | safeJS }} },
   "areaServed": "Worldwide",
-  "serviceType": {{ printf "%q" .Title }}
+  "serviceType": {{ .Title | jsonify | safeJS }},
+  "availableChannel": { "@type": "ServiceChannel", "serviceUrl": {{ .Permalink | jsonify | safeJS }} }
 }
 </script>
 {{ end }}

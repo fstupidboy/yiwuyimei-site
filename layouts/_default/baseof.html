@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ .Site.Language.Lang }}">
 <head>
   {{ partial "head.html" . }}
 </head>
@@ -13,48 +13,40 @@
   <!-- Footer -->
   {{ partial "footer.html" . }}
 
-  <!-- Home Button -->
-  <a href="/" class="home-circle-button" title="Back to Home">
+  <!-- Back to Top Button -->
+  <a href="#" class="home-circle-button" title="Back to Top" aria-label="Back to Top">
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6c0-1.1.9-2 2-2z"></path>
-      <polyline points="9 22 9 12 15 12 15 22"></polyline>
+      <path d="M12 19V5M5 12l7-7 7 7"/>
     </svg>
   </a>
 
   <!-- Scripts -->
   <script src="/js/navbar.js" defer></script>
   <script>
-    // Add scroll effect to navbar
-    window.addEventListener('scroll', function() {
+    // Navbar scroll effect
+    document.addEventListener('DOMContentLoaded', function() {
       const navbar = document.querySelector('.navbar');
-      if (window.scrollY > 10) {
-        navbar.classList.add('scrolled');
-      } else {
-        navbar.classList.remove('scrolled');
-      }
-    });
-
-    // Intersection Observer for fade-in animations
-    const observerOptions = {
-      root: null,
-      rootMargin: '0px',
-      threshold: 0.1
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.style.opacity = '1';
-          entry.target.style.transform = 'translateY(0)';
-        }
+      if (!navbar) return;
+      window.addEventListener('scroll', function() {
+        navbar.classList.toggle('scrolled', window.scrollY > 10);
       });
-    }, observerOptions);
 
-    document.querySelectorAll('.product-card').forEach(card => {
-      card.style.opacity = '0';
-      card.style.transform = 'translateY(30px)';
-      card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-      observer.observe(card);
+      // Fade-in animations
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+          }
+        });
+      }, { root: null, rootMargin: '0px', threshold: 0.1 });
+
+      document.querySelectorAll('.product-card').forEach(card => {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(30px)';
+        card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        observer.observe(card);
+      });
     });
   </script>
 </body>
