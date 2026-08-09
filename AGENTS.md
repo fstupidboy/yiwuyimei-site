@@ -9,7 +9,7 @@ This is the source code for **YiwuYimei** (义乌亿美), a multilingual B2B who
 - **Base theme:** [PaperMod](https://github.com/adityatelange/hugo-PaperMod) (Git submodule)
 - **Hosting:** Netlify
 - **Primary language:** English (`en`)
-- **Total active languages:** 10
+- **Total active languages:** 3 (`en`, `ko`, `ja`) — reduced from 10 on 2026-08-09; removed languages (es/de/fr/it/pl/fi/ga) exist only in git history
 
 > **Note:** Almost all layouts, styles, and behavior are heavily customized. Do not assume PaperMod defaults apply — always check the files in `layouts/` and `static/css/` first.
 
@@ -38,15 +38,9 @@ This is the source code for **YiwuYimei** (义乌亿美), a multilingual B2B who
 ├── content/                 # Content per language
 │   ├── en/                  # English (source language)
 │   ├── ko/                  # Korean
-│   ├── ja/                  # Japanese
-│   ├── es/                  # Spanish
-│   ├── de/                  # German
-│   ├── fr/                  # French
-│   ├── it/                  # Italian
-│   ├── pl/                  # Polish
-│   ├── fi/                  # Finnish
-│   └── ga/                  # Irish (Gaeilge)
+│   └── ja/                  # Japanese
 │       ├── _index.md        # Homepage content
+│       ├── custom-development.md # Custom development (OEM/ODM) showcase page
 │       ├── products/        # Product categories & items
 │       ├── services/        # Service pages
 │       ├── contact/         # Contact page
