@@ -1,6 +1,24 @@
+# Build output & cache
 /public
 /resources
+
+# macOS
 .DS_Store
+
+# Logs
 *.log
+
+# Node
 node_modules
-.DS_Store
+
+# Local agent memory bank (not part of the site)
+.memory-bank/
+
+# Hugo build lock (regenerated on every build)
+.hugo_build.lock
+
+# Config backup
+config.toml.backup
+
+# Image backup directory (497MB originals; kept only as local backup)
+/images_backup/
