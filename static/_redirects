@@ -1,2 +1,5 @@
 /checkout / 301
 /checkout/* / 301
+/en/services/product-development/ /en/custom-development/ 301
+/ko/services/product-development/ /ko/custom-development/ 301
+/ja/services/product-development/ /ja/custom-development/ 301
