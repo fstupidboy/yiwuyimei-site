@@ -151,3 +151,12 @@ cdp_floor1_cap: "プラスチック射出成形 — 扇風機・ディフュー�
 cdp_floor2_cap: "亜鉛合金ダイカスト — バッジ・ディフューザー"
 cdp_floor3_cap: "自動オイル充填ライン"
 cdp_floor4_cap: "最終組立ライン"
+
+# Custom Development — factory videos
+cdp_videos_title: "工場の実際の生産現場"
+cdp_videos_sub: "カスタム製品の裏側にある実生産ラインのショート動画 — 金型加工、ダイカスト、組立、CNC加工、精密電子機器。"
+cdp_video1_cap: "金型加工・組付け"
+cdp_video2_cap: "亜鉛合金ダイカスト"
+cdp_video3_cap: "組立・梱包ライン"
+cdp_video4_cap: "CNC加工センター"
+cdp_video5_cap: "精密電子機器ステーション"

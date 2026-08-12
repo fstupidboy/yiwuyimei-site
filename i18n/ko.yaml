@@ -151,3 +151,12 @@ cdp_floor1_cap: "플라스틱 사출 성형 — 선풍기 & 디퓨저"
 cdp_floor2_cap: "아연 합금 다이캐스팅 — 배지 & 디퓨저"
 cdp_floor3_cap: "자동 오일 충전 라인"
 cdp_floor4_cap: "최종 조립 라인"
+
+# Custom Development — factory videos
+cdp_videos_title: "공장 현장을 직접 확인하세요"
+cdp_videos_sub: "맞춤 제품 뒤에 있는 실제 생산 라인의 짧은 영상 — 금형 가공, 다이캐스팅, 조립, CNC 가공, 정밀 전자 장비."
+cdp_video1_cap: "금형 가공 및 피팅"
+cdp_video2_cap: "아연 합금 다이캐스팅"
+cdp_video3_cap: "조립 & 포장 라인"
+cdp_video4_cap: "CNC 가공 센터"
+cdp_video5_cap: "정밀 전자 장비"

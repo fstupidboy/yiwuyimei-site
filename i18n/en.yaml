@@ -167,3 +167,12 @@ cdp_floor1_cap: "Plastic injection molding — fans & diffusers"
 cdp_floor2_cap: "Zinc alloy die-casting — badges & diffusers"
 cdp_floor3_cap: "Automatic oil filling line"
 cdp_floor4_cap: "Final assembly line"
+
+# Custom Development — factory videos
+cdp_videos_title: "See Our Factory in Action"
+cdp_videos_sub: "Short clips from the real production lines behind our custom products — tooling, die-casting, assembly, machining and precision electronics."
+cdp_video1_cap: "Mold machining & fitting"
+cdp_video2_cap: "Zinc alloy die-casting"
+cdp_video3_cap: "Assembly & packing lines"
+cdp_video4_cap: "CNC machining center"
+cdp_video5_cap: "Precision electronics station"
