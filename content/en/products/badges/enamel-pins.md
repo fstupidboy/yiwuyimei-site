@@ -15,4 +15,10 @@ draft: false
 **Product name:** Enamel Pins
 **Product type:** Badges
 
+## Design Your Own Pin
+
+Have a specific idea in mind? Design your own badge your way at [wemkr.ai](https://www.wemkr.ai/) — create the artwork yourself, then send it to us and we will manufacture it for you. Custom shapes, colors, finishes and plating are all available.
+
+[🎨 Start Designing at wemkr.ai](https://www.wemkr.ai/)
+
 More product details coming soon.

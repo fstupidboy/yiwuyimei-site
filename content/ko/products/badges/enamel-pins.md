@@ -15,4 +15,10 @@ draft: false
 **Product name:** Enamel Pins
 **Product type:** Badges
 
-More product details coming soon.
+## 나만의 핀 디자인하기
+
+구체적인 아이디어가 있으신가요? [wemkr.ai](https://www.wemkr.ai/)에서 원하는 대로 나만의 배지를 직접 디자인하세요 — 직접 만든 아트워크를 보내주시면 저희가 제작해 드립니다. 맞춤 모양, 색상, 마감, 도금 모두 가능합니다.
+
+[🎨 wemkr.ai에서 디자인 시작하기](https://www.wemkr.ai/)
+
+더 자세한 제품 정보는 곧 업데이트됩니다.
