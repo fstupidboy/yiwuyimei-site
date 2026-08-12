@@ -1,6 +1,7 @@
 ---
 title: "Portable Camping Fan YWF017"
 product_type: "portable fan"
+description: "Beat the heat anywhere with the Portable Camping Fan YWF017. Size: 200 x 200 x 88.5mm. Ideal for outdoor activities, commuting, travel and promotional give"
 date: 2025-04-01
 section: "best"
 cover:
@@ -32,3 +33,7 @@ draft: false
 **Working gear:** Fan 4rd gear
 **Material:** ABS+PP+steel+semiconductor
 **Product Certification:** CE/FCC/ROHS
+
+## About this product
+
+Beat the heat anywhere with the Portable Camping Fan YWF017. Size: 200 x 200 x 88.5mm. Ideal for outdoor activities, commuting, travel and promotional giveaways. We support OEM/ODM customization — logo printing, custom colors, retail packaging and battery options. Available for wholesale with flexible MOQ — contact us for pricing and samples.

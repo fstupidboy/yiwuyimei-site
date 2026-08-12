@@ -1,5 +1,5 @@
 ---
-title: "Fans"
+title: "Portable Fans"
 product_type: "portable fan"
 banner: "/images/catalogue/fans-banner.webp"
 ---

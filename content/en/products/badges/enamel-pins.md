@@ -1,6 +1,7 @@
 ---
 title: "Enamel Pins"
 product_type: "badges"
+description: "Enamel Pins — a custom metal badge made with zinc alloy die-casting and premium enamel finish. Fully customizable: shape, size, colors, plating and backing"
 date: 2026-03-10
 section: "normal"
 cover:
@@ -22,3 +23,7 @@ Have a specific idea in mind? Design your own badge your way at [wemkr.ai](https
 [🎨 Start Designing at wemkr.ai](https://www.wemkr.ai/)
 
 More product details coming soon.
+
+## About this product
+
+Enamel Pins — a custom metal badge made with zinc alloy die-casting and premium enamel finish. Fully customizable: shape, size, colors, plating and backing. Design your own at wemkr.ai and we will manufacture it. Wholesale and bulk orders with flexible MOQ — contact us for a quote.

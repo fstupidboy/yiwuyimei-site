@@ -1,6 +1,7 @@
 ---
 title: "ポータブル Camping 扇風機 YWF017"
 product_type: "扇風機"
+description: "ポータブル Camping 扇風機 YWF017 — どこでも涼しさを。アウトドア、通勤、旅行、販促品に最適です。ロゴ印刷、カスタムカラー、リテールパッケージ、バッテリーオプションなどOEM/ODMカスタマイズに対応。柔軟なMOQで卸売可能 — 価格・サンプルはお問い合わせください。"
 date: 2025-04-01
 section: "best"
 cover:
@@ -32,3 +33,7 @@ draft: false
 **Working gear:** Fan 4rd gear
 **材質:** ABS+PP+steel+semiconductor
 **Product 認証:** CE/FCC/ROHS
+
+## About this product
+
+ポータブル Camping 扇風機 YWF017 — どこでも涼しさを。アウトドア、通勤、旅行、販促品に最適です。ロゴ印刷、カスタムカラー、リテールパッケージ、バッテリーオプションなどOEM/ODMカスタマイズに対応。柔軟なMOQで卸売可能 — 価格・サンプルはお問い合わせください。

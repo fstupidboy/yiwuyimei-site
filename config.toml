@@ -41,6 +41,7 @@ ignoreLogs = ["warning-goldmark-raw-html"]
       factoryDirect = "Factory Direct"
       b2bSpecialist = "B2B Specialist"
       premiumWholesale = "Premium Wholesale Products from China — Fans, Diffusers, Humidifiers & More"
+      homeTitle = "Wholesale Fans, Aroma Diffusers & Custom Badges — YiwuYimei Factory Direct"
       trustedBy = "Trusted by Global Buyers"
     [[languages.en.menu.main]]
       identifier = "products"
@@ -74,6 +75,7 @@ ignoreLogs = ["warning-goldmark-raw-html"]
       factoryDirect = "공장 직접"
       b2bSpecialist = "B2B 전문"
       premiumWholesale = "중국 프리미엄 도매 제품 — 선풍기, 디퓨저, 가습기 등"
+      homeTitle = "도매 선풍기, 아로마 디퓨저 & 맞춤 배지 — YiwuYimei 공장 직송"
       trustedBy = "글로벌 바이어가 신뢰하는 브랜드"
     [[languages.ko.menu.main]]
       identifier = "products"
@@ -107,6 +109,7 @@ ignoreLogs = ["warning-goldmark-raw-html"]
       factoryDirect = "工場直送"
       b2bSpecialist = "B2B専門"
       premiumWholesale = "中国プレミアム卸売製品 — 扇風機、ディフューザー、加湿器など"
+      homeTitle = "卸売扇風機、アロマディフューザー＆カスタムバッジ — YiwuYimei 工場直販"
       trustedBy = "グローバルバイヤーが信頼するブランド"
     [[languages.ja.menu.main]]
       identifier = "products"

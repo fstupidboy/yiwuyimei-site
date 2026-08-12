@@ -1,6 +1,7 @@
 ---
 title: "Key Chain"
 product_type: "badges"
+description: "Key Chain — a custom metal badge made with zinc alloy die-casting and premium enamel finish. Fully customizable: shape, size, colors, plating and backing. "
 date: 2026-03-10
 section: "normal"
 cover:
@@ -27,3 +28,7 @@ draft: false
 **Product type:** Badges
 
 More product details coming soon.
+
+## About this product
+
+Key Chain — a custom metal badge made with zinc alloy die-casting and premium enamel finish. Fully customizable: shape, size, colors, plating and backing. Design your own at wemkr.ai and we will manufacture it. Wholesale and bulk orders with flexible MOQ — contact us for a quote.

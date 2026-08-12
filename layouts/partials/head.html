@@ -60,7 +60,7 @@
 {{/* Title: optimize for homepage */}}
 {{ $pageTitle := .Title }}
 {{ if .IsHome }}
-  {{ $pageTitle = $site.Title }}
+  {{ $pageTitle = $site.Params.homeTitle | default $site.Title }}
 {{ end }}
 <title>{{ $pageTitle }}{{ if not .IsHome }} | {{ $site.Title }}{{ end }}</title>
 
