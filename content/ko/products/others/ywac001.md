@@ -1,6 +1,7 @@
 ---
 title: "YWYM 의류 건조기 YWAC001"
 product_type: "홈 가젯"
+description: "YWYM 의류 건조기 YWAC001 — 프로모션 캠페인, 기업 선물, 소매에 완벽한 큐레이션 선물용품. 로고, 색상, 포장 등 OEM/ODM 커스터마이징 지원. 유연한 MOQ 도매 — 견적 문의는 연락 주세요."
 date: 2025-04-01
 cover:
   image: "/images/products/others/ywac001.jpg"
@@ -26,3 +27,7 @@ draft: false
 **Brand:**	OEM/ODM
 **모드l number:**	YWAC001
 **크기:** l x w x h (inches)	6.3 x 3.15 x 3.15in
+
+## About this product
+
+YWYM 의류 건조기 YWAC001 — 프로모션 캠페인, 기업 선물, 소매에 완벽한 큐레이션 선물용품. 로고, 색상, 포장 등 OEM/ODM 커스터마이징 지원. 유연한 MOQ 도매 — 견적 문의는 연락 주세요.

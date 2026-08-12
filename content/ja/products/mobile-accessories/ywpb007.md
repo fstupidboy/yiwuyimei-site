@@ -1,6 +1,7 @@
 ---
 title: "Potable モバイルバッテリー YWPB007"
 product_type: "mobile accessory"
+description: "Potable モバイルバッテリー YWPB007 — どこでもデバイスを充電。旅行、日常使用、販促バンドルに最適です。ロゴ、カラー、プラグ規格、パッケージなどOEM/ODMカスタマイズ対応。柔軟なMOQで卸売 — 見積もりはお問い合わせください。"
 date: 2025-04-24
 section: "new"
 cover:
@@ -41,3 +42,7 @@ draft: false
 **White**
 **Purple**
 **Beige-Yellow**
+
+## About this product
+
+Potable モバイルバッテリー YWPB007 — どこでもデバイスを充電。旅行、日常使用、販促バンドルに最適です。ロゴ、カラー、プラグ規格、パッケージなどOEM/ODMカスタマイズ対応。柔軟なMOQで卸売 — 見積もりはお問い合わせください。

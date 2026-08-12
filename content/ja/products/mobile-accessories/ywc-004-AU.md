@@ -1,6 +1,7 @@
 ---
 title: "65W 壁充電器 YW-C-004-AU"
 product_type: "mobile accessory"
+description: "65W 壁充電器 YW-C-004-AU — どこでもデバイスを充電。旅行、日常使用、販促バンドルに最適です。ロゴ、カラー、プラグ規格、パッケージなどOEM/ODMカスタマイズ対応。柔軟なMOQで卸売 — 見積もりはお問い合わせください。"
 date: 2026-05-22
 section: "new"
 cover:
@@ -44,3 +45,7 @@ draft: false
 | USB-C1                | 45W (5V/3A, 9V/3A, 12V/3A, 15V/3A, 20V/2.25A) |
 | USB-C2                | 20W (5V/3A, 9V/2.2A, 12V/1.67A)            |
 | Total                 | 65W                                         |
+
+## About this product
+
+65W 壁充電器 YW-C-004-AU — どこでもデバイスを充電。旅行、日常使用、販促バンドルに最適です。ロゴ、カラー、プラグ規格、パッケージなどOEM/ODMカスタマイズ対応。柔軟なMOQで卸売 — 見積もりはお問い合わせください。

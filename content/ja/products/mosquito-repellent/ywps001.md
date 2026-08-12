@@ -1,6 +1,7 @@
 ---
 title: "YWYM 蚊取り器 YWPS001"
 product_type: "mosquito repeller"
+description: "YWYM 蚊取り器 YWPS001 — 蚊を寄せ付けません。寝室、パティオ、キャンプ、お子様のいるご家庭に安全です。ロゴ、カラー、パッケージなどOEM/ODMカスタマイズ対応。柔軟なMOQで卸売 — 見積もりはお問い合わせください。"
 date: 2025-04-01
 section: "new"
 cover:
@@ -26,3 +27,7 @@ draft: false
 **カートンサイズ:** 625 x 515 x 500mm
 **Carton Gross 重量:** 15.4kg
 **Super Design:** Dualsafety Switch Lamp
+
+## About this product
+
+YWYM 蚊取り器 YWPS001 — 蚊を寄せ付けません。寝室、パティオ、キャンプ、お子様のいるご家庭に安全です。ロゴ、カラー、パッケージなどOEM/ODMカスタマイズ対応。柔軟なMOQで卸売 — 見積もりはお問い合わせください。

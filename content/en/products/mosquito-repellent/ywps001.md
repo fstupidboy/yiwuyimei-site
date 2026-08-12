@@ -1,6 +1,7 @@
 ---
 title: "YWYM Mosquito Repellent YWPS001"
 product_type: "mosquito repeller"
+description: "Keep mosquitoes away with the YWYM Mosquito Repellent YWPS001. Size: 490 x 210 x 30mm. Safe for bedrooms, patios, camping and families with children. We su"
 date: 2025-04-01
 section: "new"
 cover:
@@ -26,3 +27,7 @@ draft: false
 **Carton size:** 625 x 515 x 500mm
 **Carton Gross Weight:** 15.4kg
 **Super Design:** Dualsafety Switch Lamp
+
+## About this product
+
+Keep mosquitoes away with the YWYM Mosquito Repellent YWPS001. Size: 490 x 210 x 30mm. Safe for bedrooms, patios, camping and families with children. We support OEM/ODM customization — logo, colors and packaging. Wholesale with flexible MOQ — contact us for pricing.

@@ -1,6 +1,7 @@
 ---
 title: "65W Wall Charger YW-C-001-US"
 product_type: "mobile accessory"
+description: "Power up devices anywhere with the 65W Wall Charger YW-C-001-US. Ideal for travel, daily use and promotional bundles. We support OEM/ODM customization — lo"
 date: 2026-05-22
 section: "new"
 cover:
@@ -43,3 +44,7 @@ draft: false
 | USB-C1                | 45W (5V/3A, 9V/3A, 12V/3A, 15V/3A, 20V/2.25A) |
 | USB-C2                | 20W (5V/3A, 9V/2.2A, 12V/1.67A)            |
 | Total                 | 65W                                         |
+
+## About this product
+
+Power up devices anywhere with the 65W Wall Charger YW-C-001-US. Ideal for travel, daily use and promotional bundles. We support OEM/ODM customization — logo, colors, plug standards and packaging. Wholesale with flexible MOQ — contact us for a quote.

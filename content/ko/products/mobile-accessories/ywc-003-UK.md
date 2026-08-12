@@ -1,6 +1,7 @@
 ---
 title: "65W 벽 충전기 YW-C-003-UK"
 product_type: "mobile accessory"
+description: "65W 벽 충전기 YW-C-003-UK — 어디서나 기기를 충전하세요. 여행, 일상 사용, 프로모션 번들에 적합합니다. 로고, 색상, 플러그 규격, 포장 등 OEM/ODM 커스터마이징 지원. 유연한 MOQ 도매 — 견적 문의는 연락 주세요."
 date: 2026-05-22
 section: "new"
 cover:
@@ -44,3 +45,7 @@ draft: false
 | USB-C1                | 45W (5V/3A, 9V/3A, 12V/3A, 15V/3A, 20V/2.25A) |
 | USB-C2                | 20W (5V/3A, 9V/2.2A, 12V/1.67A)            |
 | Total                 | 65W                                         |
+
+## About this product
+
+65W 벽 충전기 YW-C-003-UK — 어디서나 기기를 충전하세요. 여행, 일상 사용, 프로모션 번들에 적합합니다. 로고, 색상, 플러그 규격, 포장 등 OEM/ODM 커스터마이징 지원. 유연한 MOQ 도매 — 견적 문의는 연락 주세요.

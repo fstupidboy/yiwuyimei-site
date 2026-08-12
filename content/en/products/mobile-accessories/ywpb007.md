@@ -1,6 +1,7 @@
 ---
 title: "Potable Power Bank YWPB007"
 product_type: "mobile accessory"
+description: "Power up devices anywhere with the Potable Power Bank YWPB007. Ideal for travel, daily use and promotional bundles. We support OEM/ODM customization — logo"
 date: 2025-04-24
 section: "new"
 cover:
@@ -41,3 +42,7 @@ draft: false
 **White**
 **Purple**
 **Beige-Yellow**
+
+## About this product
+
+Power up devices anywhere with the Potable Power Bank YWPB007. Ideal for travel, daily use and promotional bundles. We support OEM/ODM customization — logo, colors, plug standards and packaging. Wholesale with flexible MOQ — contact us for a quote.

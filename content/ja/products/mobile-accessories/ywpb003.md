@@ -1,6 +1,7 @@
 ---
 title: "Potable モバイルバッテリー YWPB003"
 product_type: "mobile accessory"
+description: "Potable モバイルバッテリー YWPB003 — どこでもデバイスを充電。旅行、日常使用、販促バンドルに最適です。ロゴ、カラー、プラグ規格、パッケージなどOEM/ODMカスタマイズ対応。柔軟なMOQで卸売 — 見積もりはお問い合わせください。"
 date: 2025-04-22
 cover:
   image: "/images/products/mobile-accessories/ywpb003.webp"
@@ -23,3 +24,7 @@ draft: false
 **Energy Conversion Rate:** ≥75%
 **Product サイズ:** 80 x 60 x 18 mm
 **Product 重量:** 200g
+
+## About this product
+
+Potable モバイルバッテリー YWPB003 — どこでもデバイスを充電。旅行、日常使用、販促バンドルに最適です。ロゴ、カラー、プラグ規格、パッケージなどOEM/ODMカスタマイズ対応。柔軟なMOQで卸売 — 見積もりはお問い合わせください。

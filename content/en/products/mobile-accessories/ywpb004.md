@@ -1,6 +1,7 @@
 ---
 title: "Potable Power Bank YWPB004"
 product_type: "mobile accessory"
+description: "Power up devices anywhere with the Potable Power Bank YWPB004. Ideal for travel, daily use and promotional bundles. We support OEM/ODM customization — logo"
 date: 2025-04-24
 cover:
   long_image: true
@@ -30,3 +31,7 @@ draft: false
 **Energy Conversion Rate:** ≥75%
 **Product Dimensions:** 79 x 33.5 x 27 mm
 **Product Weight:** 95g
+
+## About this product
+
+Power up devices anywhere with the Potable Power Bank YWPB004. Ideal for travel, daily use and promotional bundles. We support OEM/ODM customization — logo, colors, plug standards and packaging. Wholesale with flexible MOQ — contact us for a quote.
