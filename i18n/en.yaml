@@ -176,3 +176,8 @@ cdp_video2_cap: "Zinc alloy die-casting"
 cdp_video3_cap: "Assembly & packing lines"
 cdp_video4_cap: "CNC machining center"
 cdp_video5_cap: "Precision electronics station"
+
+# wemkr.ai design-your-own badge banner (badges category)
+wemkr_banner_title: "Design Your Own Badge Online"
+wemkr_banner_text: "Use wemkr.ai to design your badge exactly the way you want — shapes, colors, finishes and plating — then send us the artwork and we will manufacture it for you."
+wemkr_banner_cta: "🎨 Start Designing at wemkr.ai"

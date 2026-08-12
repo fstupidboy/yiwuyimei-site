@@ -160,3 +160,8 @@ cdp_video2_cap: "아연 합금 다이캐스팅"
 cdp_video3_cap: "조립 & 포장 라인"
 cdp_video4_cap: "CNC 가공 센터"
 cdp_video5_cap: "정밀 전자 장비"
+
+# wemkr.ai design-your-own badge banner (badges category)
+wemkr_banner_title: "온라인으로 나만의 배지 디자인하기"
+wemkr_banner_text: "wemkr.ai에서 모양, 색상, 마감, 도금까지 원하는 대로 배지를 직접 디자인한 뒤, 아트워크를 보내주시면 저희가 제작해 드립니다."
+wemkr_banner_cta: "🎨 wemkr.ai에서 디자인 시작하기"

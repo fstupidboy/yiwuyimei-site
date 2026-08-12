@@ -160,3 +160,8 @@ cdp_video2_cap: "亜鉛合金ダイカスト"
 cdp_video3_cap: "組立・梱包ライン"
 cdp_video4_cap: "CNC加工センター"
 cdp_video5_cap: "精密電子機器ステーション"
+
+# wemkr.ai design-your-own badge banner (badges category)
+wemkr_banner_title: "オンラインでオリジナルバッジをデザイン"
+wemkr_banner_text: "wemkr.aiで形状、カラー、仕上げ、メッキまで、ご希望どおりにバッジをデザインし、アートワークをお送りいただければ、弊社で製造いたします。"
+wemkr_banner_cta: "🎨 wemkr.aiでデザインを始める"
