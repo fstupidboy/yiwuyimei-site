@@ -557,6 +557,10 @@
   background: #111;
 }
 
+.cdp-video-item.portrait video {
+  aspect-ratio: 9 / 16;
+}
+
 .cdp-video-item figcaption {
   padding: 0.7rem 0.9rem;
   font-size: 0.82rem;
