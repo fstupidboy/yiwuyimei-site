@@ -90,7 +90,7 @@
         <div class="product-card-image" style="position: relative; background: linear-gradient(135deg, var(--color-bg-alt) 0%, #e8e7e5 100%);">
           <a href="{{ .RelPermalink }}">
             {{ if $coverImage }}
-              <img src="{{ $coverImage }}" alt="{{ .Title }}{{ if $productType }} - {{ $productType }}{{ end }}" style="width: 100%; aspect-ratio: 1; object-fit: cover; display: block;">
+              <img src="{{ $coverImage }}" alt="{{ .Title }}{{ if $productType }} - {{ $productType }}{{ end }}" loading="lazy" decoding="async" style="width: 100%; aspect-ratio: 1; object-fit: cover; display: block;">
             {{ else }}
               <div style="width: 100%; aspect-ratio: 1; display: flex; align-items: center; justify-content: center; font-size: 3rem;">
                 📦

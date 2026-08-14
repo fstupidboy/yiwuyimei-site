@@ -183,6 +183,43 @@
     </div>
   </div>
 
+  <!-- Related Products -->
+  {{ $related := where (where .Site.RegularPages "Params.product_type" .Params.product_type) "Permalink" "ne" .Permalink }}
+  {{ if gt (len $related) 0 }}
+  <div class="container" style="padding-bottom: 3rem;">
+    <div class="section-header">
+      <h2>{{ T "related_products" }}</h2>
+    </div>
+    <div class="product-grid">
+      {{ range first 4 $related }}
+        {{ $rc := "" }}
+        {{ with .Params.cover }}{{ with .image }}{{ $rc = . }}{{ end }}{{ end }}
+        <div class="product-card">
+          <div class="product-card-image" style="position: relative; background: linear-gradient(135deg, var(--color-bg-alt) 0%, #e8e7e5 100%);">
+            <a href="{{ .RelPermalink }}">
+              {{ if $rc }}
+                <img src="{{ $rc }}" alt="{{ .Title }}" loading="lazy" decoding="async" style="width: 100%; aspect-ratio: 1; object-fit: cover; display: block;">
+              {{ else }}
+                <div style="width: 100%; aspect-ratio: 1; display: flex; align-items: center; justify-content: center; font-size: 3rem;">📦</div>
+              {{ end }}
+            </a>
+          </div>
+          <div class="product-card-content">
+            <a href="{{ .RelPermalink }}">
+              <div class="product-card-category">{{ .Params.product_type }}</div>
+              <h3 class="product-card-title">{{ .Title }}</h3>
+            </a>
+            <a href="mailto:sales@yiwuyimei.com?subject={{ T "send_inquiry" }}: {{ .Title }}" class="card-inquiry-btn">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              {{ T "send_inquiry" }}
+            </a>
+          </div>
+        </div>
+      {{ end }}
+    </div>
+  </div>
+  {{ end }}
+
   <!-- Bottom Navigation -->
   <div class="product-bottom-nav">
     <a href="{{ .CurrentSection.Permalink }}" class="btn btn-outline">

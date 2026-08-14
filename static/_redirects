@@ -29,3 +29,22 @@
 /en/products/badge-ywb-023/ /en/products/custom-metal-badge-ywb-023/ 301
 /en/products/badge-ywb-024/ /en/products/custom-metal-badge-ywb-024/ 301
 /en/products/badge-ywb-025/ /en/products/custom-metal-badge-ywb-025/ 301
+
+# Language cut 2026-08-09: removed de/es/fr/it/fi/ga/pl -> 301 to en equivalent
+/de/ /en/ 301
+/de/* /en/:splat 301
+/es/ /en/ 301
+/es/* /en/:splat 301
+/fr/ /en/ 301
+/fr/* /en/:splat 301
+/it/ /en/ 301
+/it/* /en/:splat 301
+/fi/ /en/ 301
+/fi/* /en/:splat 301
+/ga/ /en/ 301
+/ga/* /en/:splat 301
+/pl/ /en/ 301
+/pl/* /en/:splat 301
+
+# Water bottle product line removed -> category landing
+/en/products/water-bottle-* /en/products/ 301
