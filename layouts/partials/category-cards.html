@@ -1,0 +1,23 @@
+{{/* Category cards with real product images.
+     Used on the homepage (home.html) and the products hub (/products/ root in list.html).
+     9 categories, ordered to match the sidebar. */}}
+{{ $cats := slice
+  (dict "slug" "fans"               "img" "/images/catalogue/fans-banner.webp"               "key" "fans")
+  (dict "slug" "scent-diffusers"    "img" "/images/catalogue/scent-diffusers-banner.webp"    "key" "scent_diffusers")
+  (dict "slug" "humidifiers"        "img" "/images/catalogue/humidifiers-banner.webp"        "key" "humidifiers")
+  (dict "slug" "monitor-lights"     "img" "/images/catalogue/light-banner.webp"              "key" "monitor_lights")
+  (dict "slug" "shoes-dryers"       "img" "/images/catalogue/shoes-dryers-banner.webp"       "key" "shoes_dryers")
+  (dict "slug" "badges"             "img" "/images/catalogue/badges-banner.webp"             "key" "badges")
+  (dict "slug" "mosquito-repellent" "img" "/images/catalogue/mosquito-repellent-banner.webp" "key" "mosquito_repellent")
+  (dict "slug" "mobile-accessories" "img" "/images/catalogue/mobile-banner.webp"             "key" "mobile_accessories")
+  (dict "slug" "others"             "img" "/images/catalogue/others-banner.webp"             "key" "gift_items")
+}}
+<div class="category-cards with-images">
+  {{ range $cats }}
+  <a href="{{ printf "/products/%s/" .slug | relLangURL }}" class="category-card with-image">
+    <img class="category-card-img" src="{{ .img | relURL }}" alt="{{ T .key }}" loading="lazy" decoding="async" width="1200" height="280">
+    <h3 class="category-card-title">{{ T .key }}</h3>
+    <span class="category-card-link">{{ T "explore_products" }} →</span>
+  </a>
+  {{ end }}
+</div>

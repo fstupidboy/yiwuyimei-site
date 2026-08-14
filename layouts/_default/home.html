@@ -64,43 +64,7 @@
 <!-- Category Cards -->
 <section class="categories-section">
   <div class="container">
-    <div class="category-cards">
-      <a href="{{ "/products/fans/" | relLangURL }}" class="category-card">
-        <div class="category-icon-wrap">🌀</div>
-        <h3 class="category-card-title">{{ T "fans" }}</h3>
-        <span class="category-card-link">{{ T "explore_products" }} →</span>
-      </a>
-      <a href="{{ "/products/scent-diffusers/" | relLangURL }}" class="category-card">
-        <div class="category-icon-wrap">🌸</div>
-        <h3 class="category-card-title">{{ T "scent_diffusers" }}</h3>
-        <span class="category-card-link">{{ T "explore_products" }} →</span>
-      </a>
-      <a href="{{ "/products/shoes-dryers/" | relLangURL }}" class="category-card">
-        <div class="category-icon-wrap">👟</div>
-        <h3 class="category-card-title">{{ T "shoes_dryers" }}</h3>
-        <span class="category-card-link">{{ T "explore_products" }} →</span>
-      </a>
-      <a href="{{ "/products/monitor-lights/" | relLangURL }}" class="category-card">
-        <div class="category-icon-wrap">💡</div>
-        <h3 class="category-card-title">{{ T "monitor_lights" }}</h3>
-        <span class="category-card-link">{{ T "explore_products" }} →</span>
-      </a>
-      <a href="{{ "/products/humidifiers/" | relLangURL }}" class="category-card">
-        <div class="category-icon-wrap">💨</div>
-        <h3 class="category-card-title">{{ T "humidifiers" }}</h3>
-        <span class="category-card-link">{{ T "explore_products" }} →</span>
-      </a>
-      <a href="{{ "/products/mobile-accessories/" | relLangURL }}" class="category-card">
-        <div class="category-icon-wrap">📱</div>
-        <h3 class="category-card-title">{{ T "mobile_accessories" }}</h3>
-        <span class="category-card-link">{{ T "explore_products" }} →</span>
-      </a>
-      <a href="{{ "/products/badges/" | relLangURL }}" class="category-card">
-        <div class="category-icon-wrap">🎖️</div>
-        <h3 class="category-card-title">{{ T "badges" }}</h3>
-        <span class="category-card-link">{{ T "explore_products" }} →</span>
-      </a>
-    </div>
+    {{ partial "category-cards.html" . }}
   </div>
 </section>
 
@@ -146,7 +110,18 @@
         {{ T "new_arrivals" }}
       </h2>
       <div class="product-grid">
-        {{ range first 8 .Site.RegularPages.ByDate.Reverse }}
+        {{ $seen := slice }}
+        {{ $newItems := slice }}
+        {{ range (where .Site.RegularPages "Section" "products").ByDate.Reverse }}
+          {{ if lt (len $newItems) 8 }}
+            {{ $key := .Parent.RelPermalink }}
+            {{ if not (in $seen $key) }}
+              {{ $seen = $seen | append $key }}
+              {{ $newItems = $newItems | append . }}
+            {{ end }}
+          {{ end }}
+        {{ end }}
+        {{ range $newItems }}
           <div class="product-card animate-fade-in-up">
             <div class="product-card-image">
               <a href="{{ .RelPermalink }}">

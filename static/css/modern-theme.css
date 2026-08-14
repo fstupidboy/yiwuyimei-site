@@ -1161,3 +1161,43 @@ html {
   background: rgba(78, 205, 196, 0.2);
   color: var(--color-primary);
 }
+
+/* ===== Category cards with product images (homepage + products hub) ===== */
+.category-cards.with-images {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+.category-card.with-image {
+  padding: 0 0 1rem;
+  align-items: stretch;
+}
+
+.category-card.with-image .category-card-img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  display: block;
+}
+
+.category-card.with-image .category-card-title {
+  padding: 0.9rem 0.75rem 0.2rem;
+  font-size: 0.98rem;
+  margin: 0;
+}
+
+.category-card.with-image .category-card-link {
+  padding: 0 0.75rem;
+}
+
+@media (max-width: 768px) {
+  .category-cards.with-images {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+
+  .category-card.with-image .category-card-title {
+    font-size: 0.85rem;
+    padding: 0.7rem 0.5rem 0.15rem;
+  }
+}

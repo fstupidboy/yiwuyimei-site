@@ -1,12 +1,28 @@
 {{ define "main" }}
 
-{{ if eq .Title (T "products") }}
-  <!-- Redirect to home page products section -->
-  <meta http-equiv="refresh" content="0; url=/#products">
-  <script>window.location.href = "/#products";</script>
-  <div style="text-align: center; padding: 5rem 2rem;">
-    <h1>{{ T "redirecting" }}</h1>
-    <p>{{ T "redirect_text" | safeHTML }}</p>
+{{ if and (eq .Section "products") (eq .Parent.Kind "home") }}
+  <!-- Products root — category hub -->
+  <section class="hero-banner" style="height: 250px;">
+    <div class="hero-content">
+      <h1>{{ T "products" }}</h1>
+      <p>{{ T "products_subtitle" }}</p>
+    </div>
+  </section>
+
+  <div class="container">
+    <nav class="breadcrumb" style="padding: 1.5rem 0; font-size: 0.9rem;" aria-label="breadcrumb">
+      <a href="{{ "/" | relLangURL }}" style="color: var(--color-text-muted);">{{ T "home" }}</a>
+      <span style="color: var(--color-text-muted); margin: 0 0.5rem;">/</span>
+      <span style="color: var(--color-primary); font-weight: 500;" aria-current="page">{{ T "products" }}</span>
+    </nav>
+  </div>
+
+  <div class="container" style="padding-bottom: 4rem;">
+    <div class="section-header">
+      <h2>{{ T "categories" }}</h2>
+      <p class="section-subtitle">{{ T "browse_products" }}</p>
+    </div>
+    {{ partial "category-cards.html" . }}
   </div>
 {{ else }}
 
