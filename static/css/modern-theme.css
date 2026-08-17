@@ -45,6 +45,9 @@
   --spacing-md: 1.5rem;
   --spacing-lg: 2.5rem;
   --spacing-xl: 4rem;
+
+  /* Typography — display face paired with Inter body (CJK falls through to system sans) */
+  --font-display: "Fraunces", Georgia, "Noto Sans KR", "Noto Sans JP", -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 /* ----- Global Styles ----- */
@@ -196,7 +199,14 @@ a:hover {
   width: 100%;
   height: 500px;
   overflow: hidden;
-  background: var(--color-primary);
+  background: var(--color-primary) url('/images/custom-dev/factory-injection-shop.webp') center 35% / cover no-repeat;
+}
+
+.hero-banner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(105deg, rgba(21, 42, 69, 0.94) 0%, rgba(30, 58, 95, 0.82) 55%, rgba(30, 58, 95, 0.62) 100%);
 }
 
 
@@ -217,12 +227,13 @@ a:hover {
 }
 
 .hero-content h1 {
-  font-size: 2.5rem;
-  font-weight: 700;
+  font-size: 2.75rem;
+  font-weight: 600;
   color: white;
   margin-bottom: 1rem;
-  text-shadow: 0 2px 30px rgba(0, 0, 0, 0.15);
-  letter-spacing: -0.02em;
+  text-shadow: 0 2px 30px rgba(0, 0, 0, 0.25);
+  letter-spacing: -0.01em;
+  font-optical-sizing: auto;
 }
 
 .hero-content p {
@@ -246,9 +257,10 @@ a:hover {
   margin-bottom: 1.5rem;
 }
 
-.hero-badge::before {
-  content: '✦';
-  color: var(--color-warm);
+/* Display face for major headings; CJK glyphs fall through to system sans */
+h1, h2 {
+  font-family: var(--font-display);
+  font-optical-sizing: auto;
 }
 
 /* ----- Section Headers ----- */
@@ -321,14 +333,14 @@ a:hover {
   color: var(--color-text-light);
   font-size: 0.95rem;
   font-weight: 500;
-  transition: all var(--transition-fast);
+  transition: color var(--transition-fast), background-color var(--transition-fast), transform var(--transition-fast), opacity var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
 }
 
 .catalogue-menu a::after {
   content: '›';
   opacity: 0;
   transform: translateX(-5px);
-  transition: all var(--transition-fast);
+  transition: color var(--transition-fast), background-color var(--transition-fast), transform var(--transition-fast), opacity var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
 }
 
 .catalogue-menu a:hover {
@@ -371,7 +383,7 @@ a:hover {
   border-radius: var(--border-radius);
   overflow: hidden;
   box-shadow: var(--shadow-sm);
-  transition: all var(--transition-normal);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal), border-color var(--transition-normal), background-color var(--transition-normal);
   cursor: pointer;
   border: 1px solid rgba(30, 58, 95, 0.04);
 }
@@ -463,7 +475,7 @@ a:hover {
   border-radius: var(--border-radius-sm);
   border: none;
   cursor: pointer;
-  transition: all var(--transition-fast);
+  transition: color var(--transition-fast), background-color var(--transition-fast), transform var(--transition-fast), opacity var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
 }
 
 .btn-primary {
@@ -973,7 +985,7 @@ a:hover {
   background: var(--color-bg-card);
   border-radius: var(--border-radius);
   box-shadow: var(--shadow-sm);
-  transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   text-decoration: none;
   position: relative;
   overflow: hidden;
@@ -1011,7 +1023,7 @@ a:hover {
   font-size: 1.5rem;
   margin-bottom: 0.75rem;
   background: linear-gradient(135deg, rgba(78, 205, 196, 0.12) 0%, rgba(78, 205, 196, 0.04) 100%);
-  transition: all 0.35s ease;
+  transition: transform 0.35s ease, background-color 0.35s ease;
 }
 
 .category-card:hover .category-icon-wrap {
@@ -1057,7 +1069,7 @@ a:hover {
   border: 1.5px solid var(--color-accent);
   border-radius: 50px;
   text-decoration: none;
-  transition: all var(--transition-fast);
+  transition: color var(--transition-fast), background-color var(--transition-fast), transform var(--transition-fast), opacity var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
   width: fit-content;
 }
 
@@ -1092,7 +1104,7 @@ a:hover {
   font-weight: 500;
   color: var(--color-text-light);
   border: 1px solid rgba(30, 58, 95, 0.05);
-  transition: all var(--transition-fast);
+  transition: color var(--transition-fast), background-color var(--transition-fast), transform var(--transition-fast), opacity var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
 }
 
 .client-tag:hover {
@@ -1133,7 +1145,7 @@ a:hover {
   align-items: center;
   justify-content: center;
   box-shadow: var(--shadow-lg);
-  transition: all var(--transition-normal);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal), border-color var(--transition-normal), background-color var(--transition-normal);
   z-index: 999;
   border: none;
 }
