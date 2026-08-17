@@ -4,15 +4,77 @@
   <h1>{{ .Title }}</h1>
   {{ .Content }}
 
+  <div class="contact-intro">
+    <p>{{ T "contact_intro" }}</p>
+  </div>
+
   <div class="contact-info">
     <h3>Shenzhen Yiwuyimei Technology Co., Ltd</h3>
     <p>{{ T "address" }}: Rm503, Building G, Sanlian Jewelry City, Shenzhen, China, 518112</p>
-
     <div class="contact-methods">
-      <span>iMessage: jerry.nga@me.com</span>
-      <span>|</span>
       <span>{{ T "email" }}: <a href="mailto:info@yiwuyimei.com">info@yiwuyimei.com</a></span>
+      <span>|</span>
+      <span>{{ T "contact_sales" }}: <a href="mailto:sales@yiwuyimei.com">sales@yiwuyimei.com</a></span>
+      <span>|</span>
+      <span>iMessage: jerry.nga@me.com</span>
+    </div>
+    <p>{{ T "contact_hours_title" }}: {{ T "contact_hours_value" }}</p>
+    <p class="contact-reply-note">✅ {{ T "contact_reply_note" }}</p>
+  </div>
+
+  <div class="contact-categories">
+    <h2>{{ T "contact_what_title" }}</h2>
+    <ul class="contact-cat-list">
+      {{ $catMap := dict "fans" "fans" "scent_diffusers" "scent-diffusers" "shoes_dryers" "shoes-dryers" "monitor_lights" "monitor-lights" "humidifiers" "humidifiers" "mobile_accessories" "mobile-accessories" "badges" "badges" "mosquito_repellent" "mosquito-repellent" "gift_items" "others" }}
+      {{ range $key := slice "fans" "scent_diffusers" "shoes_dryers" "monitor_lights" "humidifiers" "mobile_accessories" "badges" "mosquito_repellent" "gift_items" }}
+        <li><a href="{{ printf "/products/%s/" (index $catMap $key) | relLangURL }}">{{ T $key }}</a></li>
+      {{ end }}
+    </ul>
+  </div>
+
+  <div class="contact-faq">
+    <h2>{{ T "contact_faq_title" }}</h2>
+    <div class="faq-item">
+      <h3>{{ T "contact_faq1_q" }}</h3>
+      <p>{{ T "contact_faq1_a" }}</p>
+    </div>
+    <div class="faq-item">
+      <h3>{{ T "contact_faq2_q" }}</h3>
+      <p>{{ T "contact_faq2_a" }}</p>
+    </div>
+    <div class="faq-item">
+      <h3>{{ T "contact_faq3_q" }}</h3>
+      <p>{{ T "contact_faq3_a" }}</p>
     </div>
   </div>
+
+  <div class="contact-cta">
+    <h2>{{ T "contact_cta_title" }}</h2>
+    <p>{{ T "contact_cta_text" }}</p>
+    <a href="mailto:sales@yiwuyimei.com?subject={{ T "contact_cta_subject" }}" class="btn btn-accent">{{ T "get_quote" }}</a>
+  </div>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Shenzhen Yiwuyimei Technology Co., Ltd",
+    "url": "https://www.yiwuyimei.com/",
+    "email": "sales@yiwuyimei.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Rm503, Building G, Sanlian Jewelry City",
+      "addressLocality": "Shenzhen",
+      "postalCode": "518112",
+      "addressCountry": "CN"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "email": "sales@yiwuyimei.com",
+      "contactType": "sales"
+    }
+  }
+  </script>
 </div>
+
 {{ end }}
