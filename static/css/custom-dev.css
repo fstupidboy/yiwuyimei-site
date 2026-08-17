@@ -416,6 +416,30 @@
   color: var(--color-text-inverse);
 }
 
+/* Inline mid-page CTA (case study strip) */
+.cdp-inline-cta {
+  margin-top: 2rem;
+  padding: 1.6rem 2rem;
+  border: 1px solid rgba(30, 58, 95, 0.1);
+  border-radius: var(--border-radius);
+  background: var(--color-bg-card);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.cdp-inline-cta p {
+  margin: 0;
+  flex: 1 1 320px;
+  font-size: 1.02rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  line-height: 1.6;
+}
+
 /* ---------- Responsive ---------- */
 @media (max-width: 1024px) {
   .cd-cap-grid { grid-template-columns: repeat(2, 1fr); }
