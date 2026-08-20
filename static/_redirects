@@ -46,5 +46,11 @@
 /pl/ /en/ 301
 /pl/* /en/:splat 301
 
+# Ghost-lang crawler targets (2026-08-20): zh/ru never were active languages; CF Pages SPA-fallback served meta-refresh 200 -> 301 to en
+/zh/ /en/ 301
+/zh/* /en/:splat 301
+/ru/ /en/ 301
+/ru/* /en/:splat 301
+
 # Water bottle product line removed -> category landing
 /en/products/water-bottle-* /en/products/ 301
