@@ -54,3 +54,22 @@
 
 # Water bottle product line removed -> category landing
 /en/products/water-bottle-* /en/products/ 301
+
+# No-trailing-slash 404 landings (2026-08-21): Google residual index, 100% bounce -> 301
+/en/products/badge-ywb-015 /en/products/custom-metal-badge-ywb-015/ 301
+/en/products/badge-ywb-016 /en/products/custom-metal-badge-ywb-016/ 301
+/en/products/badge-ywb-017 /en/products/custom-metal-badge-ywb-017/ 301
+/en/products/badge-ywb-018 /en/products/custom-metal-badge-ywb-018/ 301
+/en/products/badge-ywb-019 /en/products/custom-metal-badge-ywb-019/ 301
+/en/products/badge-ywb-021 /en/products/custom-metal-badge-ywb-021/ 301
+/en/products/badge-ywb-022 /en/products/custom-metal-badge-ywb-022/ 301
+/en/products/badge-ywb-023 /en/products/custom-metal-badge-ywb-023/ 301
+/en/products/badge-ywb-024 /en/products/custom-metal-badge-ywb-024/ 301
+/en/products/badge-ywb-025 /en/products/custom-metal-badge-ywb-025/ 301
+/en/products/badge-ywb001 /en/products/custom-metal-badge-ywb-001/ 301
+/en/products/badge-ywb006 /en/products/custom-metal-badge-ywb-006/ 301
+/en/products/badge-ywb008 /en/products/custom-metal-badge-ywb-008/ 301
+/en/products/cargador-de-pared-65w-yw-c-002-eu /en/products/65w-wall-charger-yw-c-002-eu/ 301
+/en/products/cargador-de-pared-65w-yw-c-003-uk /en/products/65w-wall-charger-yw-c-003-uk/ 301
+/en/products/cargador-de-pared-65w-yw-c-004-au /en/products/65w-wall-charger-yw-c-004-au/ 301
+/en/services/product-development /en/custom-development/ 301
