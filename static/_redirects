@@ -73,3 +73,9 @@
 /en/products/cargador-de-pared-65w-yw-c-003-uk /en/products/65w-wall-charger-yw-c-003-uk/ 301
 /en/products/cargador-de-pared-65w-yw-c-004-au /en/products/65w-wall-charger-yw-c-004-au/ 301
 /en/services/product-development /en/custom-development/ 301
+
+# Ghost-lang crawler targets (2026-08-21): /ko/en/ /ja/en/ -> en
+/ko/en/ /en/ 301
+/ko/en/* /en/:splat 301
+/ja/en/ /en/ 301
+/ja/en/* /en/:splat 301
