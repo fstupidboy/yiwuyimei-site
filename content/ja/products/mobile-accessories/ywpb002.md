@@ -1,5 +1,6 @@
 ---
 title: "Potable モバイルバッテリー YWPB002"
+slug: "potable-モバイルバッテリー-ywpb002"
 product_type: "mobile accessory"
 description: "Potable モバイルバッテリー YWPB002 — どこでもデバイスを充電。旅行、日常使用、販促バンドルに最適です。ロゴ、カラー、プラグ規格、パッケージなどOEM/ODMカスタマイズ対応。柔軟なMOQで卸売 — 見積もりはお問い合わせください。"
 date: 2025-04-22

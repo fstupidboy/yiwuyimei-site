@@ -1,5 +1,6 @@
 ---
 title: "YWYM 衣類乾燥機 YWAC001"
+slug: "ywym-衣類乾燥機-ywac001"
 product_type: "ホームガジェット"
 description: "YWYM 衣類乾燥機 YWAC001 — 販促キャンペーン、企業ギフト、小売に最適な厳選ギフト用品。ロゴ、カラー、パッケージなどOEM/ODMカスタマイズ対応。柔軟なMOQで卸売 — 見積もりはお問い合わせください。"
 date: 2025-04-01

@@ -1,5 +1,6 @@
 ---
 title: "YWYM 모기 퇴치기 YWPS001"
+slug: "ywym-모기-퇴치기-ywps001"
 product_type: "mosquito repeller"
 description: "YWYM 모기 퇴치기 YWPS001 — 모기 걱정 없이. 침실, 테라스, 캠핑, 아이가 있는 가정에 안전합니다. 로고, 색상, 포장 등 OEM/ODM 커스터마이징 지원. 유연한 MOQ 도매 — 견적 문의는 연락 주세요."
 date: 2025-04-01

@@ -1,5 +1,6 @@
 ---
 title: "65W 벽 충전기 YW-C-002-EU"
+slug: "65w-벽-충전기-yw-c-002-eu"
 product_type: "mobile accessory"
 description: "65W 벽 충전기 YW-C-002-EU — 어디서나 기기를 충전하세요. 여행, 일상 사용, 프로모션 번들에 적합합니다. 로고, 색상, 플러그 규격, 포장 등 OEM/ODM 커스터마이징 지원. 유연한 MOQ 도매 — 견적 문의는 연락 주세요."
 date: 2026-05-22
