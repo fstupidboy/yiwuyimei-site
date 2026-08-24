@@ -55,6 +55,22 @@
 }
 </script>
 
+<!-- Buying Guide banner (categories with a guide page — fans, scent-diffusers, badges, mobile-accessories) -->
+{{ with .Params.guide }}
+<div class="container">
+  <a href="{{ . | relLangURL }}" style="display: flex; margin: 0 0 2rem; padding: 1.4rem 2rem; border-radius: var(--border-radius); background: linear-gradient(135deg, var(--color-bg-alt) 0%, #e8e7e5 100%); color: var(--color-text); align-items: center; justify-content: space-between; gap: 1.5rem; flex-wrap: wrap; text-decoration: none; box-shadow: var(--shadow-hover);">
+    <div style="flex: 1 1 320px;">
+      <div style="font-size: 0.8rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-primary); margin-bottom: 0.3rem;">{{ T "bg_kicker" }}</div>
+      <h2 style="margin: 0 0 0.3rem; font-size: 1.35rem; color: var(--color-text);">{{ T "bg_banner_title" }}</h2>
+      <p style="margin: 0; font-size: 0.95rem; line-height: 1.6; color: var(--color-text-muted);">{{ printf (T "bg_banner_text") $.Title }}</p>
+    </div>
+    <span style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.8rem 1.5rem; background: var(--color-primary); color: #fff; font-weight: 600; border-radius: 50px; white-space: nowrap; transition: transform 0.2s ease;">
+      {{ T "bg_banner_cta" }}
+    </span>
+  </a>
+</div>
+{{ end }}
+
 <!-- wemkr.ai design-your-own badge banner (badges category only) -->
 {{ if eq .Params.product_type "badges" }}
 <div class="container">

@@ -183,6 +183,26 @@
     </div>
   </div>
 
+  <!-- Buying Guide backlink (categories with a guide page; chargers only for ywc-* models) -->
+  {{ $guidePath := "" }}
+  {{ if eq .Params.product_type "portable fan" }}{{ $guidePath = "/buying-guide-fans/" }}
+  {{ else if eq .Params.product_type "aroma diffuser" }}{{ $guidePath = "/buying-guide-aroma-diffusers/" }}
+  {{ else if eq .Params.product_type "badges" }}{{ $guidePath = "/buying-guide-custom-badges/" }}
+  {{ else if and (eq .Params.product_type "mobile accessory") (hasPrefix .File.ContentBaseName "ywc") }}{{ $guidePath = "/buying-guide-65w-chargers/" }}{{ end }}
+  {{ with $guidePath }}
+  <div class="container" style="padding-bottom: 2.5rem;">
+    <a href="{{ . | relLangURL }}" style="display: flex; padding: 1.2rem 1.8rem; border-radius: var(--border-radius); background: linear-gradient(135deg, var(--color-bg-alt) 0%, #e8e7e5 100%); color: var(--color-text); align-items: center; justify-content: space-between; gap: 1.2rem; flex-wrap: wrap; text-decoration: none; box-shadow: var(--shadow-sm);">
+      <span style="flex: 1 1 280px;">
+        <span style="display: block; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-primary); margin-bottom: 0.25rem;">{{ T "bg_kicker" }}</span>
+        <span style="display: block; font-weight: 500;">{{ T "bg_prod_text" }}</span>
+      </span>
+      <span style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.7rem 1.4rem; background: var(--color-primary); color: #fff; font-weight: 600; border-radius: 50px; white-space: nowrap;">
+        {{ T "bg_banner_cta" }}
+      </span>
+    </a>
+  </div>
+  {{ end }}
+
   <!-- Related Products (same category, stable newest-first order, max 4, excludes self) -->
   {{ $related := (where (where .Site.RegularPages "Params.product_type" .Params.product_type) "Permalink" "ne" .Permalink).ByDate.Reverse }}
   {{ if gt (len $related) 0 }}
