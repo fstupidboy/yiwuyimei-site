@@ -5,7 +5,7 @@ description: "65W 壁充電器 YW-C-005-IN — どこでもデバイスを充電
 date: 2026-05-22
 section: "new"
 cover:
-  image: "/images/products/mobile-accessories/ywc-005-IN/charger IN1.png"
+  image: "/images/products/mobile-accessories/ywc-005-IN/charger-in1.webp"
   gallery:
     - "/images/products/mobile-accessories/ywc-005-IN/charger IN2.png"
     - "/images/products/mobile-accessories/ywc-005-IN/charger IN3.png"

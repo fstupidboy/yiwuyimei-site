@@ -5,7 +5,7 @@ description: "Power up devices anywhere with the 65W Wall Charger YW-C-005-IN. I
 date: 2026-05-22
 section: "new"
 cover:
-  image: "/images/products/mobile-accessories/ywc-005-IN/charger IN1.png"
+  image: "/images/products/mobile-accessories/ywc-005-IN/charger-in1.webp"
   gallery:
     - "/images/products/mobile-accessories/ywc-005-IN/charger IN2.png"
     - "/images/products/mobile-accessories/ywc-005-IN/charger IN3.png"

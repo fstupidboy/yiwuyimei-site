@@ -6,7 +6,7 @@ date: 2025-04-01
 section: "best"
 cover:
   long_image: true
-  image: "/images/products/fans/ywf17.jpg"
+  image: "/images/products/fans/ywf17.webp"
   gallery:
     - "/images/products/fans/ywf17/1.jpg"
     - "/images/products/fans/ywf17/2.jpg"
