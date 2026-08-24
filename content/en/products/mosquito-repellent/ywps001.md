@@ -1,18 +1,16 @@
 ---
-title: "YWYM Mosquito Repellent YWPS001"
+title: "YWYM 2-in-1 Mosquito Swatter & Lamp YWPS001"
+slug: "ywym-mosquito-repellent-ywps001"
 product_type: "mosquito repeller"
-description: "Keep mosquitoes away with the YWYM Mosquito Repellent YWPS001. Size: 490 x 210 x 30mm. Safe for bedrooms, patios, camping and families with children. We su"
+description: "2-in-1 mosquito swatter & lamp: handheld zapping plus standing UV-lamp mode. 490 x 210 x 30 mm, 1200 mAh, Type-C, dual-safety switches. OEM/ODM wholesale."
 date: 2025-04-01
 section: "new"
 cover:
   image: "/images/products/mosquito-repellent/ywps001.webp"
   gallery:
-    - "/images/products/mosquito-repellent/ywps001/01.jpg"
-    - "/images/products/mosquito-repellent/ywps001/03.jpg"
-    - "/images/products/mosquito-repellent/ywps001/04.jpg"
-    - "/images/products/mosquito-repellent/ywps001/05.jpg"
-    - "/images/products/mosquito-repellent/ywps001/06.jpg"
-    - "/images/products/mosquito-repellent/ywps001/07.jpg"
+    - "/images/products/mosquito-repellent/ywps001/02.webp"
+    - "/images/products/mosquito-repellent/ywps001/05.webp"
+    - "/images/products/mosquito-repellent/ywps001/06.webp"
 draft: false
 ---
 **Material:** ABS
@@ -26,8 +24,8 @@ draft: false
 **Charging power:** Type-C
 **Carton size:** 625 x 515 x 500mm
 **Carton Gross Weight:** 15.4kg
-**Super Design:** Dualsafety Switch Lamp
+**Design:** 2-in-1 — handheld swatter & standing UV-lamp mode; dual-safety switches (both pressed together to power)
 
 ## About this product
 
-Keep mosquitoes away with the YWYM Mosquito Repellent YWPS001. Size: 490 x 210 x 30mm. Safe for bedrooms, patios, camping and families with children. We support OEM/ODM customization — logo, colors and packaging. Wholesale with flexible MOQ — contact us for pricing.
+The YWYM YWPS001 is a 2-in-1 mosquito killer: use it as a handheld electric swatter for instant zapping, or stand it upright as a UV mosquito lamp for hands-free indoor protection. The dual-safety switch design — both switches must be pressed together to power the grid — makes it safer around children. The 1200 mAh battery charges via Type-C. Safe for bedrooms, patios, camping and families with children. We support OEM/ODM customization — logo, colors and packaging. Wholesale with flexible MOQ — contact us for pricing.

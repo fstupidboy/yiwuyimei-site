@@ -2,18 +2,15 @@
 title: "YWYM 蚊取り器 YWPS001"
 slug: "ywym-蚊取り器-ywps001"
 product_type: "mosquito repeller"
-description: "YWYM 蚊取り器 YWPS001 — 蚊を寄せ付けません。寝室、パティオ、キャンプ、お子様のいるご家庭に安全です。ロゴ、カラー、パッケージなどOEM/ODMカスタマイズ対応。柔軟なMOQで卸売 — 見積もりはお問い合わせください。"
+description: "YWYM 蚊取り器 YWPS001 — 手持ちで使える電撃ラケット + 立てて使うUV蚊取りライトの2-in-1。二重安全スイッチ(2つのスイッチを同時に押さないと通電しない)、490 x 210 x 30 mm、1200 mAh、Type-C。ロゴ、カラー、パッケージなどOEM/ODMカスタマイズ対応。柔軟なMOQで卸売 — 見積もりはお問い合わせください。"
 date: 2025-04-01
 section: "new"
 cover:
   image: "/images/products/mosquito-repellent/ywps001.webp"
   gallery:
-    - "/images/products/mosquito-repellent/ywps001/01.jpg"
-    - "/images/products/mosquito-repellent/ywps001/03.jpg"
-    - "/images/products/mosquito-repellent/ywps001/04.jpg"
-    - "/images/products/mosquito-repellent/ywps001/05.jpg"
-    - "/images/products/mosquito-repellent/ywps001/06.jpg"
-    - "/images/products/mosquito-repellent/ywps001/07.jpg"
+    - "/images/products/mosquito-repellent/ywps001/02.webp"
+    - "/images/products/mosquito-repellent/ywps001/05.webp"
+    - "/images/products/mosquito-repellent/ywps001/06.webp"
 draft: false
 ---
 **材質:** ABS
@@ -27,8 +24,8 @@ draft: false
 **Charging power:** Type-C
 **カートンサイズ:** 625 x 515 x 500mm
 **Carton Gross 重量:** 15.4kg
-**Super Design:** Dualsafety Switch Lamp
+**デザイン:** 2-in-1 — 手持ちモスキートラケット + 立て型UV蚊取りライト; 二重安全スイッチ(2つのスイッチを同時に押さないと通電しない)
 
 ## About this product
 
-YWYM 蚊取り器 YWPS001 — 蚊を寄せ付けません。寝室、パティオ、キャンプ、お子様のいるご家庭に安全です。ロゴ、カラー、パッケージなどOEM/ODMカスタマイズ対応。柔軟なMOQで卸売 — 見積もりはお問い合わせください。
+YWYM YWPS001は2-in-1の蚊対策製品です。手持ちの電撃ラケットとして使うことも、立ててUV蚊取りライトとして使うこともできます。二重安全スイッチ — 2つのスイッチを同時に押さないと通電しないため、お子様のいるご家庭でも安心です。1200 mAhバッテリー、Type-C充電。寝室、パティオ、キャンプ、お子様のいるご家庭に安全です。ロゴ、カラー、パッケージなどOEM/ODMカスタマイズ対応。柔軟なMOQで卸売 — 見積もりはお問い合わせください。
