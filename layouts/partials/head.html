@@ -5,11 +5,19 @@
 {{ $site := .Site }}
 {{ $lang := .Site.Language.Lang }}
 
-{{/* Description: page > params > summary > site */}}
+{{/* Description: page > params > summary > SEO fallback (home/category) > site */}}
 {{ $desc := .Description }}
 {{ if not $desc }}{{ $desc = .Params.description }}{{ end }}
 {{ if not $desc }}{{ $desc = .Summary }}{{ end }}
-{{ if not $desc }}{{ $desc = $site.Params.description }}{{ end }}
+{{ if not $desc }}
+  {{ if .IsHome }}
+    {{ $desc = T "meta_desc_home" }}
+  {{ else if and (eq .Section "products") (eq .Kind "section") }}
+    {{ $desc = printf (T "meta_desc_category") .Title }}
+  {{ else }}
+    {{ $desc = $site.Params.description }}
+  {{ end }}
+{{ end }}
 {{ $desc = strings.Truncate 160 $desc }}
 
 {{/* Keywords: derive from page context */}}

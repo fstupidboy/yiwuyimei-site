@@ -183,12 +183,13 @@
     </div>
   </div>
 
-  <!-- Related Products -->
-  {{ $related := where (where .Site.RegularPages "Params.product_type" .Params.product_type) "Permalink" "ne" .Permalink }}
+  <!-- Related Products (same category, stable newest-first order, max 4, excludes self) -->
+  {{ $related := (where (where .Site.RegularPages "Params.product_type" .Params.product_type) "Permalink" "ne" .Permalink).ByDate.Reverse }}
   {{ if gt (len $related) 0 }}
   <div class="container" style="padding-bottom: 3rem;">
     <div class="section-header">
       <h2>{{ T "related_products" }}</h2>
+      <p style="margin-top: 0.5rem; color: var(--color-text-muted); font-size: 0.95rem;">{{ T "related_products_sub" }}</p>
     </div>
     <div class="product-grid">
       {{ range first 4 $related }}
