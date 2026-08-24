@@ -1,8 +1,8 @@
 ---
-title: "65W 壁充電器 YW-C-003-UK"
+title: "65W 壁掛け充電器 YW-C-003-UK"
 slug: "65w-壁充電器-yw-c-003-uk"
 product_type: "mobile accessory"
-description: "65W 壁充電器 YW-C-003-UK — どこでもデバイスを充電。旅行、日常使用、販促バンドルに最適です。ロゴ、カラー、プラグ規格、パッケージなどOEM/ODMカスタマイズ対応。柔軟なMOQで卸売 — 見積もりはお問い合わせください。"
+description: "65W 壁掛け充電器 YW-C-003-UK — どこでもデバイスを充電。旅行、日常使用、販促バンドルに最適です。ロゴ、カラー、プラグ規格、パッケージなどOEM/ODMカスタマイズ対応。柔軟なMOQで卸売 — 見積もりはお問い合わせください。"
 date: 2026-05-22
 section: "new"
 cover:
