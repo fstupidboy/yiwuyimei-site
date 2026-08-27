@@ -204,8 +204,9 @@
 
 {{/* Product page schema */}}
 {{ if and (eq .Section "products") .IsPage }}
-{{ $sku := (urlize .Title) }}
-{{ with .File }}{{ $sku = .BaseFileName }}{{ end }}
+{{ $sku := "" }}
+{{ with .Title }}{{ $m := findRE `Y[WMP][A-Z0-9-]+` . }}{{ if gt (len $m) 0 }}{{ $sku = index $m 0 }}{{ end }}{{ end }}
+{{ if not $sku }}{{ with .File }}{{ $sku = .BaseFileName }}{{ end }}{{ end }}
 {{ $productImages := slice }}
 {{ with .Params.cover.image }}{{ $productImages = $productImages | append (absURL .) }}{{ end }}
 {{ with .Params.cover.gallery }}{{ range . }}{{ $productImages = $productImages | append (absURL .) }}{{ end }}{{ end }}

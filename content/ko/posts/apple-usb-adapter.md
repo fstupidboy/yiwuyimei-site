@@ -6,7 +6,7 @@ slug: "apple-usb-adapter"
 draft: false
 ---
 
-![Product Image](/images/products/test001/test.webp)
+![Apple USB 어댑터 - Apple 기기용 고속 USB 충전기(YiwuYimei)](/images/products/test001/test.webp)
 
 High-speed USB adapter for Apple devices. Compact and reliable.
 

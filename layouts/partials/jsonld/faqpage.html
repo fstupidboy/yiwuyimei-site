@@ -1,0 +1,30 @@
+{{/* FAQPage JSON-LD — parses the page's own <div class="cdp-faq"><details><summary>Q</summary><p>A</p></details></div> blocks.
+    Content-driven, per-language automatic (en/ko/ja authored bodies). No i18n keys involved. */}}
+{{- $page := . -}}
+{{- $faqBlock := index (findRE `(?s)<div class="cdp-faq">(.*?)</div>` $page.Content) 0 | default "" -}}
+{{- if $faqBlock -}}
+  {{- $qs := findRE `(?s)<summary>(.*?)</summary>` $faqBlock -}}
+  {{- $as := findRE `(?s)<summary>(.*?)</summary>\s*<p>(.*?)</p>` $faqBlock -}}
+  {{- $mainEntity := slice -}}
+  {{- range $i, $qRaw := $qs -}}
+    {{- $q := replaceRE `<[^>]*>|\r?\n` " " $qRaw -}}
+    {{- $q = htmlUnescape $q -}}
+    {{- $q = replaceRE `\s+` " " $q -}}
+    {{- $q = trim $q " " -}}
+    {{- $a := "" -}}
+    {{- if lt $i (len $as) -}}
+      {{- $aRaw := index $as $i -}}
+      {{- $a = replaceRE `<[^>]*>|\r?\n` " " $aRaw -}}
+      {{- $a = htmlUnescape $a -}}
+      {{- $a = replaceRE `\s+` " " $a -}}
+      {{- $a = trim $a " " -}}
+    {{- end -}}
+    {{- if and $q $a -}}
+      {{- $mainEntity = $mainEntity | append (dict "@type" "Question" "name" $q "acceptedAnswer" (dict "@type" "Answer" "text" $a)) -}}
+    {{- end -}}
+  {{- end -}}
+  {{- if gt (len $mainEntity) 1 -}}
+    {{- $schema := dict "@context" "https://schema.org" "@type" "FAQPage" "mainEntity" $mainEntity -}}
+    <script type="application/ld+json">{{ jsonify $schema | safeJS }}</script>
+  {{- end -}}
+{{- end -}}

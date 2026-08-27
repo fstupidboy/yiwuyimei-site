@@ -44,7 +44,7 @@
           {{ end }}
         {{ end }}
         {{ if $coverImage }}
-          <img src="{{ $coverImage }}" alt="{{ .Title }}" loading="lazy">
+          <img src="{{ $coverImage }}" alt="{{ .Title }} - {{ .Params.product_type }} from YiwuYimei" loading="lazy">
         {{ else }}
           <div style="padding: 4rem 2rem; text-align: center; color: var(--color-text-muted);">
             <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="margin-bottom: 1rem; opacity: 0.4;">
@@ -203,6 +203,9 @@
   </div>
   {{ end }}
 
+  <!-- Country supplier pages banner (this product's category) -->
+  {{ partial "country-pages-banner.html" . }}
+
   <!-- Related Products (same category, stable newest-first order, max 4, excludes self) -->
   {{ $related := (where (where .Site.RegularPages "Params.product_type" .Params.product_type) "Permalink" "ne" .Permalink).ByDate.Reverse }}
   {{ if gt (len $related) 0 }}
@@ -279,6 +282,7 @@
   function openLightbox(index) {
     currentIndex = index;
     lightboxImg.src = images[currentIndex];
+    lightboxImg.alt = galleryItems[currentIndex].querySelector('img').alt || '';
     lightboxCounter.textContent = (currentIndex + 1) + ' / ' + images.length;
     lightbox.classList.add('active');
     document.body.style.overflow = 'hidden';

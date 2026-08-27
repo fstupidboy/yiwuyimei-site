@@ -6,7 +6,7 @@ slug: "apple-usb-adapter"
 draft: false
 ---
 
-![Product Image](/images/products/test001/test.webp)
+![Apple USB Adapter - high-speed USB charger for Apple devices from YiwuYimei](/images/products/test001/test.webp)
 
 High-speed USB adapter for Apple devices. Compact and reliable.
 

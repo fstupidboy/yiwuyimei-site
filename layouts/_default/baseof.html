@@ -4,6 +4,9 @@
   {{ partial "head.html" . }}
 </head>
 <body>
+  <!-- FAQPage JSON-LD (auto: renders only when the page body has a cdp-faq block, per language) -->
+  {{ partial "jsonld/faqpage.html" . }}
+
   <!-- Navigation -->
   {{ partial "navbar.html" . }}
 

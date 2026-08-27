@@ -1,0 +1,36 @@
+{{/* Country supplier pages banner: backlink from category pages and product pages.
+    Shown only for product types that have dedicated country supplier pages. */}}
+{{- $type := .Params.product_type | default "" -}}
+{{- $links := slice -}}
+{{- if eq $type "portable fan" -}}
+  {{- $links = slice
+      (dict "url" "/en/suppliers/portable-fan-supplier-usa/" "label" (T "cp_link_fans_usa"))
+      (dict "url" "/en/suppliers/portable-fan-supplier-uae/" "label" (T "cp_link_fans_uae"))
+  -}}
+{{- else if eq $type "aroma diffuser" -}}
+  {{- $links = slice (dict "url" "/en/suppliers/aroma-diffuser-supplier-uk/" "label" (T "cp_link_diffuser_uk")) -}}
+{{- else if eq $type "mobile accessory" -}}
+  {{- $showCharger := true -}}
+  {{- if and .IsPage (not (hasPrefix .File.ContentBaseName "ywc")) }}{{ $showCharger = false }}{{ end -}}
+  {{- if $showCharger -}}
+    {{- $links = slice (dict "url" "/en/suppliers/65w-charger-supplier-germany/" "label" (T "cp_link_charger_de")) -}}
+  {{- end -}}
+{{- end -}}
+{{- if gt (len $links) 0 -}}
+<section class="cdp-section alt">
+  <div class="container">
+    <div style="padding: 2rem; border-radius: var(--border-radius); background: linear-gradient(135deg, var(--color-bg-alt) 0%, #e8e7e5 100%); text-align: center;">
+      <div style="font-size: 0.8rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-primary); margin-bottom: 0.4rem;">{{ T "cp_banner_kicker" }}</div>
+      <h2 style="margin: 0 0 0.5rem; font-size: 1.5rem;">{{ T "cp_banner_title" }}</h2>
+      <p style="margin: 0 auto 1.4rem; max-width: 640px; color: var(--color-text-muted); font-size: 0.95rem; line-height: 1.6;">{{ T "cp_banner_text" }}</p>
+      <div style="display: flex; flex-wrap: wrap; gap: 0.8rem; justify-content: center;">
+        {{ range $links }}
+          <a href="{{ .url }}" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.7rem 1.4rem; background: var(--color-primary); color: #fff; font-weight: 600; border-radius: 50px; text-decoration: none; box-shadow: var(--shadow-sm);">
+            {{ .label }} →
+          </a>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</section>
+{{- end -}}
