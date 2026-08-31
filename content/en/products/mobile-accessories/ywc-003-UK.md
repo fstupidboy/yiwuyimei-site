@@ -1,5 +1,6 @@
 ---
 title: "65W Wall Charger YW-C-003-UK"
+slug: "65w-wall-charger-yw-c-003-uk"
 product_type: "mobile accessory"
 description: "Power up devices anywhere with the 65W Wall Charger YW-C-003-UK. Ideal for travel, daily use and promotional bundles. We support OEM/ODM customization — lo"
 date: 2026-05-22

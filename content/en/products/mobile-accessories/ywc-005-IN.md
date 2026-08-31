@@ -1,5 +1,6 @@
 ---
 title: "65W Wall Charger YW-C-005-IN"
+slug: "65w-wall-charger-yw-c-005-in"
 product_type: "mobile accessory"
 description: "Power up devices anywhere with the 65W Wall Charger YW-C-005-IN. Ideal for travel, daily use and promotional bundles. We support OEM/ODM customization — lo"
 date: 2026-05-22

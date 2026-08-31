@@ -28,7 +28,7 @@ ignoreLogs = ["warning-goldmark-raw-html"]
     languageName = "English"
     weight = 1
     contentDir = "content/en"
-    title = "YiwuYimei Products"
+    title = "YiwuYimei Wholesale Manufacturer"
     [languages.en.params]
       description = "YiwuYimei exports high-quality products from China to the world."
       keywords = ["Yiwu export", "China products", "small appliances", "fans", "diffusers"]
@@ -62,7 +62,7 @@ ignoreLogs = ["warning-goldmark-raw-html"]
     languageName = "한국어"
     weight = 2
     contentDir = "content/ko"
-    title = "YiwuYimei 제품"
+    title = "YiwuYimei 도매 공장"
     [languages.ko.params]
       description = "YiwuYimei는 중국에서 고품질 제품을 전 세계로 수출합니다."
       keywords = ["이우 수출", "중국 제품", "소형 가전", "선풍기", "디퓨저"]
@@ -96,7 +96,7 @@ ignoreLogs = ["warning-goldmark-raw-html"]
     languageName = "日本語"
     weight = 3
     contentDir = "content/ja"
-    title = "YiwuYimei 製品"
+    title = "YiwuYimei 工場直販"
     [languages.ja.params]
       description = "YiwuYimeiは中国から高品質な製品を世界中に輸出しています。"
       keywords = ["義烏輸出", "中国製品", "小型家電", "扇風機", "ディフューザー"]

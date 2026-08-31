@@ -1,5 +1,6 @@
 ---
-title: "YWYM Clothes Dryer YWAC001"
+title: "Clothes Dryer YWAC001"
+slug: "ywym-clothes-dryer-ywac001"
 product_type: "home gadget"
 description: "Discover the YWYM Clothes Dryer YWAC001 — a curated gift item perfect for promotional campaigns, corporate gifts and retail. We support OEM/ODM customizati"
 date: 2025-04-01

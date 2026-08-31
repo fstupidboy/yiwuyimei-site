@@ -1,5 +1,6 @@
 ---
-title: "Medals"
+title: "Custom Medals"
+slug: "medals"
 product_type: "badges"
 description: "Medals — a custom metal badge made with zinc alloy die-casting and premium enamel finish. Fully customizable: shape, size, colors, plating and backing. Des"
 date: 2026-03-10

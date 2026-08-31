@@ -1,5 +1,6 @@
 ---
-title: "Lanyards"
+title: "Custom Lanyards"
+slug: "lanyards"
 product_type: "badges"
 description: "Lanyards — a custom metal badge made with zinc alloy die-casting and premium enamel finish. Fully customizable: shape, size, colors, plating and backing. D"
 date: 2026-03-10

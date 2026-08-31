@@ -1,5 +1,6 @@
 ---
-title: "Coins"
+title: "Custom Coins"
+slug: "coins"
 product_type: "badges"
 description: "Coins — a custom metal badge made with zinc alloy die-casting and premium enamel finish. Fully customizable: shape, size, colors, plating and backing. Desi"
 date: 2026-03-10

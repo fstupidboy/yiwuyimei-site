@@ -1,5 +1,5 @@
 ---
-title: "YWYM 2-in-1 Mosquito Swatter & Lamp YWPS001"
+title: "2-in-1 Mosquito Swatter & Lamp YWPS001"
 slug: "ywym-mosquito-repellent-ywps001"
 product_type: "mosquito repeller"
 description: "2-in-1 mosquito swatter & lamp: handheld zapping plus standing UV-lamp mode. 490 x 210 x 30 mm, 1200 mAh, Type-C, dual-safety switches. OEM/ODM wholesale."

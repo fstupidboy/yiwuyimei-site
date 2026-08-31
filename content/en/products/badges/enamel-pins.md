@@ -1,5 +1,6 @@
 ---
-title: "Enamel Pins"
+title: "Custom Enamel Pins"
+slug: "enamel-pins"
 product_type: "badges"
 description: "Enamel Pins — a custom metal badge made with zinc alloy die-casting and premium enamel finish. Fully customizable: shape, size, colors, plating and backing"
 date: 2026-03-10
