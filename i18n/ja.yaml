@@ -227,6 +227,8 @@ related_products_sub: "このカテゴリーの他の製品 - 工場直販卸売
 
 # Buying Guide hub pages (A5, 2026-08-24)
 bg_kicker: "購入ガイド"
+bg_home_title: "購入ガイド"
+bg_home_sub: "工場直壶の選び方、仕様の説明、市場別認証FAQ - 発注前にご確認ください."
 bg_products_title: "%s 全製品"
 bg_products_sub: "下の全製品ラインナップをご覧ください - 工場直販卸売、OEM/ODM カスタマイズ歓迎。"
 bg_cta_title: "見積もりやカスタムデザインをご希望ですか?"

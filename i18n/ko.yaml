@@ -227,6 +227,8 @@ related_products_sub: "이 카테고리의 다른 제품 - 공장 직송 도매,
 
 # Buying Guide hub pages (A5, 2026-08-24)
 bg_kicker: "구매 가이드"
+bg_home_title: "구매 가이드"
+bg_home_sub: "공장 직솩 선택 팁, 스펙 설명 및 시장별 인증 FAQ - 주문 전에 확인하세요."
 bg_products_title: "전체 %s 제품"
 bg_products_sub: "아래에서 전체 제품을 둘러보세요 - 공장 직송 도매, OEM/ODM 맞춤 제작 환영."
 bg_cta_title: "견적 또는 맞춤 디자인이 필요하신가요?"

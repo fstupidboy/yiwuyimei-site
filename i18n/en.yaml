@@ -236,6 +236,8 @@ related_products_sub: "More products in this category - factory-direct wholesale
 
 # Buying Guide hub pages (A5, 2026-08-24)
 bg_kicker: "Buying Guide"
+bg_home_title: "Buying Guides"
+bg_home_sub: "Factory-direct selection tips, spec explanations and market compliance FAQs - read before you order."
 bg_products_title: "All %s Products"
 bg_products_sub: "Browse the full range below - factory-direct wholesale, OEM/ODM customization welcome."
 bg_cta_title: "Need a Quote or a Custom Design?"

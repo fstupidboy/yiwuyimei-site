@@ -219,6 +219,29 @@
       </div>
     </section>
 
+    <!-- Buying guides (internal links to deep content pages) -->
+    {{ $guides := where .Site.RegularPages "Layout" "buying-guide" }}
+    {{ if gt (len $guides) 0 }}
+    <section class="cdp-section alt">
+      <div class="container">
+        <div style="text-align: center; margin-bottom: 2rem;">
+          <div style="font-size: 0.8rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-primary); margin-bottom: 0.4rem;">{{ T "bg_kicker" }}</div>
+          <h2 style="margin: 0 0 0.5rem; font-size: 1.8rem;">{{ T "bg_home_title" }}</h2>
+          <p style="margin: 0 auto; max-width: 640px; color: var(--color-text-muted); font-size: 0.95rem; line-height: 1.6;">{{ T "bg_home_sub" }}</p>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem;">
+          {{ range $guides }}
+          <a href="{{ .RelPermalink }}" style="display: flex; flex-direction: column; gap: 0.6rem; padding: 1.6rem; border-radius: var(--border-radius); background: linear-gradient(135deg, var(--color-bg-alt) 0%, #e8e7e5 100%); box-shadow: var(--shadow-sm); text-decoration: none; color: var(--color-text);">
+            <h3 style="margin: 0; font-size: 1.1rem; line-height: 1.4; color: var(--color-text);">{{ .Title }}</h3>
+            <p style="margin: 0; font-size: 0.88rem; line-height: 1.6; color: var(--color-text-muted);">{{ .Params.description | truncate 110 }}</p>
+            <span style="margin-top: auto; font-weight: 600; font-size: 0.9rem; color: var(--color-primary);">{{ T "bg_banner_cta" }} →</span>
+          </a>
+          {{ end }}
+        </div>
+      </div>
+    </section>
+    {{ end }}
+
   </main>
 </div>
 
