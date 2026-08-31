@@ -1,5 +1,6 @@
 {{/* Country supplier pages banner: backlink from category pages and product pages.
-    Shown only for product types that have dedicated country supplier pages. */}}
+    Shown only for product types that have dedicated country supplier pages.
+    Self-links are filtered out so a supplier page never links to itself. */}}
 {{- $type := .Params.product_type | default "" -}}
 {{- $links := slice -}}
 {{- if eq $type "portable fan" -}}
@@ -8,13 +9,30 @@
       (dict "url" "/en/suppliers/portable-fan-supplier-uae/" "label" (T "cp_link_fans_uae"))
   -}}
 {{- else if eq $type "aroma diffuser" -}}
-  {{- $links = slice (dict "url" "/en/suppliers/aroma-diffuser-supplier-uk/" "label" (T "cp_link_diffuser_uk")) -}}
+  {{- $links = slice
+      (dict "url" "/en/suppliers/aroma-diffuser-supplier-uk/" "label" (T "cp_link_diffuser_uk"))
+      (dict "url" "/en/suppliers/aroma-diffuser-supplier-germany/" "label" (T "cp_link_diffuser_de"))
+  -}}
+{{- else if eq $type "badges" -}}
+  {{- $links = slice (dict "url" "/en/suppliers/custom-badge-supplier-australia/" "label" (T "cp_link_badges_au")) -}}
+{{- else if eq $type "shoe dryer" -}}
+  {{- $links = slice (dict "url" "/en/suppliers/shoe-dryer-supplier-canada/" "label" (T "cp_link_shoedryer_ca")) -}}
 {{- else if eq $type "mobile accessory" -}}
-  {{- $showCharger := true -}}
-  {{- if and .IsPage (not (hasPrefix .File.ContentBaseName "ywc")) }}{{ $showCharger = false }}{{ end -}}
-  {{- if $showCharger -}}
-    {{- $links = slice (dict "url" "/en/suppliers/65w-charger-supplier-germany/" "label" (T "cp_link_charger_de")) -}}
+  {{- $showChargers := true -}}
+  {{- if and .IsPage (not (hasPrefix .File.ContentBaseName "ywc")) }}{{ $showChargers = false }}{{ end -}}
+  {{- if $showChargers -}}
+  {{- $links = slice
+      (dict "url" "/en/suppliers/65w-charger-supplier-germany/" "label" (T "cp_link_charger_de"))
+      (dict "url" "/en/suppliers/65w-charger-supplier-uk/" "label" (T "cp_link_charger_uk"))
+  -}}
   {{- end -}}
+{{- end -}}
+{{- if and .IsPage (gt (len $links) 0) -}}
+  {{- $filtered := slice -}}
+  {{- range $links -}}
+    {{- if ne .url $.RelPermalink -}}{{- $filtered = $filtered | append . -}}{{- end -}}
+  {{- end -}}
+  {{- $links = $filtered -}}
 {{- end -}}
 {{- if gt (len $links) 0 -}}
 <section class="cdp-section alt">
