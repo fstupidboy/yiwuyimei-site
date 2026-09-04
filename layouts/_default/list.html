@@ -34,6 +34,15 @@
   </div>
 </section>
 
+<!-- Category intro content (only renders when the _index.md has a body) -->
+{{ with .Content }}
+<div class="container" style="max-width: 860px;">
+  <div class="category-intro" style="padding: 1.2rem 0 0.4rem; font-size: 0.95rem; line-height: 1.7; color: var(--color-text-muted);">
+    {{ . }}
+  </div>
+</div>
+{{ end }}
+
 <!-- Breadcrumb -->
 <div class="container">
   <nav class="breadcrumb" style="padding: 1.5rem 0; font-size: 0.9rem;" aria-label="breadcrumb">
