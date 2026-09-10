@@ -15,6 +15,19 @@
       <a href="#products" class="btn btn-accent">{{ T "explore_products" }}</a>
       <a href="{{ "/contact/" | relLangURL }}" class="btn btn-outline" style="border-color: white; color: white;">{{ T "get_quote" | default "Get a Quote →" }}</a>
     </div>
+    <div style="display: flex; gap: 0.5rem; justify-content: center; flex-wrap: wrap; margin-top: 1.4rem;">
+      {{ $heroCats := slice
+        (dict "slug" "fans" "key" "fans")
+        (dict "slug" "scent-diffusers" "key" "scent_diffusers")
+        (dict "slug" "badges" "key" "badges")
+        (dict "slug" "humidifiers" "key" "humidifiers")
+        (dict "slug" "shoes-dryers" "key" "shoes_dryers")
+        (dict "slug" "monitor-lights" "key" "monitor_lights")
+      }}
+      {{ range $heroCats }}
+      <a href="{{ printf "/products/%s/" .slug | relLangURL }}" style="padding: 0.45rem 1rem; border: 1px solid rgba(255,255,255,0.45); border-radius: 999px; color: white; font-size: 0.85rem; font-weight: 500; text-decoration: none; transition: background .2s, border-color .2s;">{{ T .key }}</a>
+      {{ end }}
+    </div>
     <p style="margin: 1.2rem auto 0; font-size: 0.88rem; letter-spacing: 0.02em; color: rgba(255,255,255,0.85); display: flex; align-items: center; justify-content: center; gap: 0.5rem; flex-wrap: wrap;">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink: 0;"><polyline points="20 6 9 17 4 12"/></svg>
       {{ T "hero_trust_line" }}
@@ -66,7 +79,7 @@
 </section>
 
 <!-- Category Cards -->
-<section class="categories-section">
+<section class="categories-section" id="products">
   <div class="container">
     {{ partial "category-cards.html" . }}
   </div>
@@ -75,7 +88,7 @@
 {{ partial "custom-dev-home.html" . }}
 
 <!-- Main Content -->
-<div class="page-wrapper" id="products">
+<div class="page-wrapper">
   <!-- Sidebar -->
   <aside class="catalogue-sidebar">
     <h2>{{ T "categories" }}</h2>
