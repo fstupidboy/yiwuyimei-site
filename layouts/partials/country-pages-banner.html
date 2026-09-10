@@ -17,8 +17,17 @@
   -}}
 {{- else if eq $type "badges" -}}
   {{- $links = slice
+      (dict "url" "/en/suppliers/custom-badge-supplier-usa/" "label" (T "cp_link_badges_usa"))
       (dict "url" "/en/suppliers/custom-badge-supplier-australia/" "label" (T "cp_link_badges_au"))
       (dict "url" "/en/suppliers/custom-badge-supplier-korea/" "label" (T "cp_link_badges_kr"))
+  -}}
+{{- else if eq $type "humidifier" -}}
+  {{- $links = slice
+      (dict "url" "/en/suppliers/humidifiers-supplier-usa/" "label" (T "cp_link_humidifiers_usa"))
+  -}}
+{{- else if eq $type "monitor light" -}}
+  {{- $links = slice
+      (dict "url" "/en/suppliers/monitor-lights-supplier-usa/" "label" (T "cp_link_monitorlights_usa"))
   -}}
 {{- else if eq $type "shoe dryer" -}}
   {{- $links = slice
