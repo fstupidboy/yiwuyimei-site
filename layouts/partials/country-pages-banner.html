@@ -6,6 +6,7 @@
 {{- if eq $type "portable fan" -}}
   {{- $links = slice
       (dict "url" "/en/suppliers/portable-fan-supplier-usa/" "label" (T "cp_link_fans_usa"))
+      (dict "url" "/en/suppliers/portable-fan-supplier-canada/" "label" (T "cp_link_fans_ca"))
       (dict "url" "/en/suppliers/portable-fan-supplier-uae/" "label" (T "cp_link_fans_uae"))
       (dict "url" "/en/suppliers/portable-fan-supplier-japan/" "label" (T "cp_link_fans_jp"))
   -}}
@@ -14,10 +15,12 @@
       (dict "url" "/en/suppliers/aroma-diffuser-supplier-usa/" "label" (T "cp_link_diffuser_usa"))
       (dict "url" "/en/suppliers/aroma-diffuser-supplier-uk/" "label" (T "cp_link_diffuser_uk"))
       (dict "url" "/en/suppliers/aroma-diffuser-supplier-germany/" "label" (T "cp_link_diffuser_de"))
+      (dict "url" "/en/suppliers/aroma-diffuser-supplier-netherlands/" "label" (T "cp_link_diffuser_nl"))
   -}}
 {{- else if eq $type "badges" -}}
   {{- $links = slice
       (dict "url" "/en/suppliers/custom-badge-supplier-usa/" "label" (T "cp_link_badges_usa"))
+      (dict "url" "/en/suppliers/custom-badge-supplier-canada/" "label" (T "cp_link_badges_ca"))
       (dict "url" "/en/suppliers/custom-badge-supplier-australia/" "label" (T "cp_link_badges_au"))
       (dict "url" "/en/suppliers/custom-badge-supplier-korea/" "label" (T "cp_link_badges_kr"))
   -}}
@@ -31,6 +34,7 @@
   -}}
 {{- else if eq $type "shoe dryer" -}}
   {{- $links = slice
+      (dict "url" "/en/suppliers/shoe-dryer-supplier-usa/" "label" (T "cp_link_shoedryer_usa"))
       (dict "url" "/en/suppliers/shoe-dryer-supplier-canada/" "label" (T "cp_link_shoedryer_ca"))
       (dict "url" "/en/suppliers/shoe-dryer-supplier-korea/" "label" (T "cp_link_shoedryer_kr"))
   -}}
@@ -39,6 +43,7 @@
   {{- if and .IsPage (not (hasPrefix .File.ContentBaseName "ywc")) }}{{ $showChargers = false }}{{ end -}}
   {{- if $showChargers -}}
   {{- $links = slice
+      (dict "url" "/en/suppliers/65w-charger-supplier-usa/" "label" (T "cp_link_charger_usa"))
       (dict "url" "/en/suppliers/65w-charger-supplier-germany/" "label" (T "cp_link_charger_de"))
       (dict "url" "/en/suppliers/65w-charger-supplier-uk/" "label" (T "cp_link_charger_uk"))
   -}}
