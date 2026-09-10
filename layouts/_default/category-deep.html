@@ -1,0 +1,123 @@
+{{ define "main" }}
+
+<!-- Deep-dive hero -->
+<section class="cdp-hero">
+  <div class="container">
+    <div class="cdp-hero-inner">
+      <span class="cd-kicker">{{ T "cddep_kicker" }}</span>
+      <h1>{{ .Title }}</h1>
+      <p>{{ .Params.description }}</p>
+    </div>
+  </div>
+</section>
+
+<!-- Real factory / product photo strip -->
+{{ with .Params.gallery }}
+<section class="cdp-section">
+  <div class="container">
+    <div class="cdp-shop">
+      <div class="cdp-shop-grid">
+        {{ range $i, $img := . }}
+        {{ $capKey := printf "%s_cap%d" $.Params.cap_prefix (add $i 1) }}
+        <figure class="cdp-shop-item">
+          <img src="{{ $img | relURL }}" alt="{{ T $capKey }}" loading="lazy">
+          <figcaption>{{ T $capKey }}</figcaption>
+        </figure>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}
+
+<!-- Deep-dive body (authored per language in the markdown body, incl. cdp-faq -> FAQPage JSON-LD) -->
+<section class="cdp-section alt">
+  <div class="container">
+    <div class="cdp-guide-body" style="max-width: 860px; margin: 0 auto; line-height: 1.85; font-size: 1rem;">
+      {{ .Content }}
+    </div>
+  </div>
+</section>
+
+<!-- Products of this category (internal links to product pages) -->
+{{ $products := where .Site.RegularPages "Section" "products" }}
+{{ $products = where $products "CurrentSection.File.Dir" (printf "products/%s/" .Params.category_slug) }}
+{{ $products = $products.ByDate.Reverse }}
+{{ if gt (len $products) 0 }}
+<section class="cdp-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>{{ printf (T "bg_products_title") .Params.category_title }}</h2>
+      <p class="section-subtitle">{{ T "bg_products_sub" }}</p>
+    </div>
+    <div class="product-grid">
+      {{ range first 12 $products }}
+        {{ $coverImage := "" }}
+        {{ if .Params.cover }}{{ if .Params.cover.image }}{{ $coverImage = .Params.cover.image }}{{ end }}{{ end }}
+        {{ if not $coverImage }}{{ if .Params.banner }}{{ $coverImage = .Params.banner }}{{ end }}{{ end }}
+        <div class="product-card animate-fade-in-up">
+          <div class="product-card-image" style="position: relative; background: linear-gradient(135deg, var(--color-bg-alt) 0%, #e8e7e5 100%);">
+            <a href="{{ .RelPermalink }}">
+              {{ if $coverImage }}
+                <img src="{{ $coverImage }}" alt="{{ .Title }}" loading="lazy" decoding="async" style="width: 100%; aspect-ratio: 1; object-fit: cover; display: block;">
+              {{ else }}
+                <div style="width: 100%; aspect-ratio: 1; display: flex; align-items: center; justify-content: center; font-size: 3rem;">📦</div>
+              {{ end }}
+            </a>
+          </div>
+          <div class="product-card-content">
+            <a href="{{ .RelPermalink }}">
+              <div class="product-card-category">{{ .Params.product_type }}</div>
+              <h3 class="product-card-title">{{ .Title }}</h3>
+            </a>
+            <a href="mailto:sales@yiwuyimei.com?subject=Inquiry: {{ .Title }}" class="card-inquiry-btn">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              {{ T "send_inquiry" }}
+            </a>
+          </div>
+        </div>
+      {{ end }}
+    </div>
+    {{ if gt (len $products) 12 }}
+    <p style="text-align: center; margin-top: 2rem;">
+      <a href="{{ printf "/products/%s/" .Params.category_slug | relLangURL }}" class="btn btn-outline">{{ printf (T "cddep_view_all") .Params.category_title }}</a>
+    </p>
+    {{ end }}
+  </div>
+</section>
+{{ end }}
+
+<!-- Related resources (internal links: category, buying guide, supplier pages, custom development, contact) -->
+<section class="cdp-section alt">
+  <div class="container">
+    <div class="cdp-section-head">
+      <h2>{{ T "cddep_res_title" }}</h2>
+    </div>
+    <div class="cdp-chips">
+      <a class="cdp-chip" style="text-decoration: none;" href="{{ printf "/products/%s/" .Params.category_slug | relLangURL }}">{{ T "cddep_res_cat" }}: {{ .Params.category_title }}</a>
+      {{ with .Params.guide }}
+      <a class="cdp-chip" style="text-decoration: none;" href="{{ . | relLangURL }}">{{ T "cddep_res_guide" }}</a>
+      {{ end }}
+      {{ range .Params.suppliers }}
+      <a class="cdp-chip" style="text-decoration: none;" href="{{ .path | relLangURL }}">{{ .label }}</a>
+      {{ end }}
+      <a class="cdp-chip" style="text-decoration: none;" href="{{ "/custom-development/" | relLangURL }}">{{ T "cddep_res_custom" }}</a>
+      <a class="cdp-chip" style="text-decoration: none;" href="{{ "/suppliers/" | relLangURL }}">{{ T "cddep_res_suppliers" }}</a>
+      <a class="cdp-chip" style="text-decoration: none;" href="{{ "/contact/" | relLangURL }}">{{ T "cddep_res_contact" }}</a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Band -->
+<section class="cdp-cta-band">
+  <div class="container">
+    <h2>{{ T "bg_cta_title" }}</h2>
+    <p>{{ T "bg_cta_sub" }}</p>
+    <div class="cd-cta">
+      <a href="{{ "/contact/" | relLangURL }}" class="btn btn-accent">{{ T "bg_cta_btn" }}</a>
+      <a href="{{ "/products/" | relLangURL }}" class="btn btn-outline">{{ T "cdp_cta_products" }}</a>
+    </div>
+  </div>
+</section>
+
+{{ end }}
