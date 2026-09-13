@@ -292,3 +292,9 @@ cddep_dif_cap3: "亜鉛合金ダイカスト - 車載ベンチディフューザ
 cddep_fan_cap1: "射出成形 - ファンハウジングとブレード部品は一貫して自社生産します。"
 cddep_fan_cap2: "CNC加工 - ファンモーター・ハウジング用の金型と金属部品。"
 cddep_fan_cap3: "ファンブレードの金型ベース - カスタム形状はここから始まります。"
+
+# Homepage country-supplier hub entry
+home_sup_kicker: "市場別の卸売供給"
+home_sup_title: "国別サプライヤーページ"
+home_sup_sub: "市場に合わせたコンプライアンス対応の供給: 米国FCC、EU CE、英国UKCA、日本PSE、韓国KC - 国ごとのMOQ・電圧・配送情報をご案内します。"
+home_sup_cta: "国別サプライヤーをすべて見る"

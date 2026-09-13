@@ -184,11 +184,29 @@
   </div>
 
   <!-- Buying Guide backlink (categories with a guide page; chargers only for ywc-* models) -->
+  {{ $ptype := index (dict
+      "아로마 디퓨저" "aroma diffuser"
+      "アロマディフューザー" "aroma diffuser"
+      "배지" "badges"
+      "バッジ" "badges"
+      "가습기" "humidifier"
+      "加湿器" "humidifier"
+      "신발 건조기" "shoe dryer"
+      "シューズドライヤー" "shoe dryer"
+      "모니터 조명" "monitor light"
+      "モニターライト" "monitor light"
+      "선풍기" "portable fan"
+      "扇風機" "portable fan"
+      "휴대용 선풍기" "portable fan"
+    ) (.Params.product_type | default "") | default (.Params.product_type | default "") }}
   {{ $guidePath := "" }}
-  {{ if eq .Params.product_type "portable fan" }}{{ $guidePath = "/buying-guide-fans/" }}
-  {{ else if eq .Params.product_type "aroma diffuser" }}{{ $guidePath = "/buying-guide-aroma-diffusers/" }}
-  {{ else if eq .Params.product_type "badges" }}{{ $guidePath = "/buying-guide-custom-badges/" }}
-  {{ else if and (eq .Params.product_type "mobile accessory") (hasPrefix .File.ContentBaseName "ywc") }}{{ $guidePath = "/buying-guide-65w-chargers/" }}{{ end }}
+  {{ if eq $ptype "portable fan" }}{{ $guidePath = "/buying-guide-fans/" }}
+  {{ else if eq $ptype "aroma diffuser" }}{{ $guidePath = "/buying-guide-aroma-diffusers/" }}
+  {{ else if eq $ptype "badges" }}{{ $guidePath = "/buying-guide-custom-badges/" }}
+  {{ else if eq $ptype "humidifier" }}{{ $guidePath = "/buying-guide-humidifiers/" }}
+  {{ else if eq $ptype "shoe dryer" }}{{ $guidePath = "/buying-guide-shoe-dryers/" }}
+  {{ else if eq $ptype "monitor light" }}{{ $guidePath = "/buying-guide-monitor-lights/" }}
+  {{ else if and (eq $ptype "mobile accessory") (hasPrefix .File.ContentBaseName "ywc") }}{{ $guidePath = "/buying-guide-65w-chargers/" }}{{ end }}
   {{ with $guidePath }}
   <div class="container" style="padding-bottom: 2.5rem;">
     <a href="{{ . | relLangURL }}" style="display: flex; padding: 1.2rem 1.8rem; border-radius: var(--border-radius); background: linear-gradient(135deg, var(--color-bg-alt) 0%, #e8e7e5 100%); color: var(--color-text); align-items: center; justify-content: space-between; gap: 1.2rem; flex-wrap: wrap; text-decoration: none; box-shadow: var(--shadow-sm);">

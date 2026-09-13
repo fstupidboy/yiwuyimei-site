@@ -2,6 +2,25 @@
     Shown only for product types that have dedicated country supplier pages.
     Self-links are filtered out so a supplier page never links to itself. */}}
 {{- $type := .Params.product_type | default "" -}}
+{{- /* Normalize localized ko/ja product_type values to the English canonical
+    form so banner branches match on every language. Keys missing from the map
+    fall through unchanged via default. */}}
+{{- $ptypeMap := dict
+      "아로마 디퓨저" "aroma diffuser"
+      "アロマディフューザー" "aroma diffuser"
+      "배지" "badges"
+      "バッジ" "badges"
+      "가습기" "humidifier"
+      "加湿器" "humidifier"
+      "신발 건조기" "shoe dryer"
+      "シューズドライヤー" "shoe dryer"
+      "모니터 조명" "monitor light"
+      "モニターライト" "monitor light"
+      "선풍기" "portable fan"
+      "扇風機" "portable fan"
+      "휴대용 선풍기" "portable fan"
+-}}
+{{- $type = index $ptypeMap $type | default $type -}}
 {{- $links := slice -}}
 {{- if eq $type "portable fan" -}}
   {{- $links = slice

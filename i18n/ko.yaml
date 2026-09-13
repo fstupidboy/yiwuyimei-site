@@ -292,3 +292,9 @@ cddep_dif_cap3: "아연합금 다이캐스팅 - 차량 벤트 디퓨저 바디, 
 cddep_fan_cap1: "사출 성형 - 팬 하우징과 날개 어셈블리를 자체 생산합니다."
 cddep_fan_cap2: "CNC 가공 - 팬 모터와 하우징용 금형 및 금속 부품."
 cddep_fan_cap3: "팬 날개 어셈블리 금형 베이스 - 맞춤 팬 형상은 여기서 시작됩니다."
+
+# Homepage country-supplier hub entry
+home_sup_kicker: "시장별 도매 공급"
+home_sup_title: "국가별 공급업체 페이지"
+home_sup_sub: "시장에 맞는 컴플라이언스 준비 공급: 미국 FCC, EU CE, 영국 UKCA, 일본 PSE, 한국 KC - 국가별 MOQ, 전압, 배송 정보를 안내합니다."
+home_sup_cta: "전체 국가별 공급업체 보기"

@@ -301,3 +301,9 @@ cddep_dif_cap3: "Zinc alloy die-casting - the body of a car vent diffuser, cast 
 cddep_fan_cap1: "Injection molding - fan housings and blade assemblies made in-house."
 cddep_fan_cap2: "CNC machining - molds and metal parts for fan motors and housings."
 cddep_fan_cap3: "Mold base for a fan blade assembly - custom fan shapes start here."
+
+# Homepage country-supplier hub entry
+home_sup_kicker: "Wholesale by Market"
+home_sup_title: "Country Supplier Pages"
+home_sup_sub: "Compliance-ready supply for your market: FCC documents for the USA, CE for the EU, UKCA for the UK, PSE for Japan, KC for Korea - MOQ, voltage and shipping details per country."
+home_sup_cta: "Browse All Country Supplier Pages"

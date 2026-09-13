@@ -258,6 +258,28 @@
     </section>
     {{ end }}
 
+    <!-- Country supplier pages hub entry (data from default-language site: supplier pages are en-only) -->
+    {{ $sups := where (index site.Sites 0).RegularPages "Layout" "supplier-page" }}
+    {{ if gt (len $sups) 0 }}
+    <section class="cdp-section">
+      <div class="container">
+        <div style="padding: 2rem; border-radius: var(--border-radius); background: linear-gradient(135deg, var(--color-bg-alt) 0%, #e8e7e5 100%); text-align: center;">
+          <div style="font-size: 0.8rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-primary); margin-bottom: 0.4rem;">{{ T "home_sup_kicker" }}</div>
+          <h2 style="margin: 0 0 0.5rem; font-size: 1.8rem;">{{ T "home_sup_title" }}</h2>
+          <p style="margin: 0 auto 1.4rem; max-width: 640px; color: var(--color-text-muted); font-size: 0.95rem; line-height: 1.6;">{{ T "home_sup_sub" }}</p>
+          <div style="display: flex; flex-wrap: wrap; gap: 0.8rem; justify-content: center; margin-bottom: 1.2rem;">
+            <a href="https://www.yiwuyimei.com/en/suppliers/" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.7rem 1.4rem; background: var(--color-primary); color: #fff; font-weight: 600; border-radius: 50px; text-decoration: none; box-shadow: var(--shadow-sm);">{{ T "home_sup_cta" }} →</a>
+          </div>
+          <div style="display: flex; flex-wrap: wrap; gap: 0.6rem; justify-content: center;">
+            {{ range where $sups "Params.country" "USA" }}
+            <a href="https://www.yiwuyimei.com{{ .RelPermalink }}" style="padding: 0.45rem 1rem; border: 1px solid var(--color-primary); color: var(--color-primary); border-radius: 50px; font-size: 0.85rem; font-weight: 600; text-decoration: none;">{{ .Params.product_type }} · USA</a>
+            {{ end }}
+          </div>
+        </div>
+      </div>
+    </section>
+    {{ end }}
+
     <!-- Buying guides (internal links to deep content pages) -->
     {{ $guides := where .Site.RegularPages "Layout" "buying-guide" }}
     {{ if gt (len $guides) 0 }}
