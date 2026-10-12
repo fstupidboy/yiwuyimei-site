@@ -1,5 +1,5 @@
 ---
-title: "Certifications & Compliance | CE, FCC, RoHS, UKCA, UN38.3 | YiwuYimei"
+title: "Certifications: CE, FCC, RoHS, UKCA, UN38.3"
 description: "YiwuYimei factory export certifications: CE, FCC, RoHS, UKCA, UN38.3, MSDS and more — certification matrix by product line, plus battery transport documentation for global wholesale shipping."
 slug: "certifications"
 layout: "buying-guide"

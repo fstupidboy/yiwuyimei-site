@@ -148,6 +148,9 @@
   letter-spacing: 0.08em;
 }
 
+/* Product title is an <h2> since 2026-10-12 (one H1 per page: the hero keeps it).
+   Element selector sits next to the class so h2 defaults can never change size/weight. */
+h2.product-title,
 .product-title {
   font-size: 1.875rem;
   font-weight: 700;
@@ -549,6 +552,7 @@
     padding: 1.5rem;
   }
 
+  h2.product-title,
   .product-title {
     font-size: 1.5rem;
   }

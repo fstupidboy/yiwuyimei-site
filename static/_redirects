@@ -82,3 +82,32 @@
 /ko/en/* /en/:splat 301
 /ja/en/ /en/ 301
 /ja/en/* /en/:splat 301
+
+# 404 landing pages with real traffic (2026-10-12): the 10 paths below were the only non-200 entries
+# in a full 30d landing-path sweep (258 paths, curl per path). Every target was re-verified HTTP 200
+# before being added here. Trailing-slash and no-slash variants are both listed; the FI slugs
+# (seinälaturi / luchtaire = wall charger) get both raw and percent-encoded forms.
+/en/en/products/aroma-diffuser-yws-177/ /en/products/aroma-diffuser-yws-177/ 301
+/en/en/products/aroma-diffuser-yws-177 /en/products/aroma-diffuser-yws-177/ 301
+/en/products/65w-seinälaturi-yw-c-003-uk/ /en/products/65w-wall-charger-yw-c-003-uk/ 301
+/en/products/65w-seinälaturi-yw-c-003-uk /en/products/65w-wall-charger-yw-c-003-uk/ 301
+/en/products/65w-sein%C3%A4laturi-yw-c-003-uk/ /en/products/65w-wall-charger-yw-c-003-uk/ 301
+/en/products/65w-sein%C3%A4laturi-yw-c-003-uk /en/products/65w-wall-charger-yw-c-003-uk/ 301
+/en/products/65w-seinälaturi-yw-c-004-au/ /en/products/65w-wall-charger-yw-c-004-au/ 301
+/en/products/65w-seinälaturi-yw-c-004-au /en/products/65w-wall-charger-yw-c-004-au/ 301
+/en/products/65w-sein%C3%A4laturi-yw-c-004-au/ /en/products/65w-wall-charger-yw-c-004-au/ 301
+/en/products/65w-sein%C3%A4laturi-yw-c-004-au /en/products/65w-wall-charger-yw-c-004-au/ 301
+/en/products/luchtaire-balla-65w-yw-c-002-eu/ /en/products/65w-wall-charger-yw-c-002-eu/ 301
+/en/products/luchtaire-balla-65w-yw-c-002-eu /en/products/65w-wall-charger-yw-c-002-eu/ 301
+/en/products/luchtaire-balla-65w-yw-c-003-uk/ /en/products/65w-wall-charger-yw-c-003-uk/ 301
+/en/products/luchtaire-balla-65w-yw-c-003-uk /en/products/65w-wall-charger-yw-c-003-uk/ 301
+/en/products/luchtaire-balla-65w-yw-c-004-au/ /en/products/65w-wall-charger-yw-c-004-au/ 301
+/en/products/luchtaire-balla-65w-yw-c-004-au /en/products/65w-wall-charger-yw-c-004-au/ 301
+/en/products/aroma-diffuser-yws-189/ /en/products/scent-diffusers/ 301
+/en/products/aroma-diffuser-yws-189 /en/products/scent-diffusers/ 301
+/en/products/aroma-diffuser-yws-190/ /en/products/scent-diffusers/ 301
+/en/products/aroma-diffuser-yws-190 /en/products/scent-diffusers/ 301
+/en/products/badge-ywb013/ /en/products/custom-metal-badge-ywb-013/ 301
+/en/products/badge-ywb013 /en/products/custom-metal-badge-ywb-013/ 301
+/en/products/water-bottles/ /en/products/ 301
+/en/products/water-bottles /en/products/ 301
