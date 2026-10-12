@@ -1,5 +1,5 @@
 ---
-title: "65W Charger Supplier Germany | CE Certified GaN Wall Chargers from China | MOQ"
+title: "65W Charger Supplier Germany | CE Certified Wholesale"
 description: "Wholesale 65W GaN wall chargers for Germany and the EU from a China factory — CE, RoHS & WEEE documents, Type F (Schuko) plug options, MOQ from 200 pcs, DDP shipping to Germany. OEM/ODM welcome."
 slug: "65w-charger-supplier-germany"
 layout: "supplier-page"

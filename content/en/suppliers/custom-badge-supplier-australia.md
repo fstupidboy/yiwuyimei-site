@@ -1,5 +1,5 @@
 ---
-title: "Custom Badge Supplier Australia | Wholesale Enamel Pins & Coins from China | MOQ"
+title: "Custom Badge Supplier Australia | Enamel Pins Wholesale"
 description: "Custom metal badges, enamel pins, coins and medals wholesale for Australian buyers from a China factory — lead-safe enamels, nickel-release tested, MOQ from 500 pcs, DDP shipping to Australia. OEM/ODM welcome."
 slug: "custom-badge-supplier-australia"
 layout: "supplier-page"

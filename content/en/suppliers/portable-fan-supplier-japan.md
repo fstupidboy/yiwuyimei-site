@@ -1,5 +1,5 @@
 ---
-title: "Portable Fan Supplier Japan | PSE Compliant Wholesale from China | MOQ"
+title: "Portable Fan Supplier Japan | PSE Compliant Wholesale"
 description: "Wholesale portable fans for Japan from a China factory — PSE (denki yohin) compliant 100V/USB models, MOQ from 100 pcs, DDP shipping to Japan. OEM/ODM private label welcome."
 slug: "portable-fan-supplier-japan"
 layout: "supplier-page"

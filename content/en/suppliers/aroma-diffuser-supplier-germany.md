@@ -1,5 +1,5 @@
 ---
-title: "Aroma Diffuser Supplier Germany | CE Certified Wholesale from China | MOQ"
+title: "Aroma Diffuser Supplier Germany | CE Certified Wholesale"
 description: "Wholesale aroma diffusers for German buyers from a China factory — CE, RoHS, REACH & GS-style documentation, Type F (Schuko) 230V models, LUCID packaging data, MOQ from 100 pcs, DDP to Germany. OEM/ODM welcome."
 slug: "aroma-diffuser-supplier-germany"
 layout: "supplier-page"

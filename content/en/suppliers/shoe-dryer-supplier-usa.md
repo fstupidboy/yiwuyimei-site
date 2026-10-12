@@ -1,5 +1,5 @@
 ---
-title: "Shoe Dryer Supplier USA | Wholesale Boot Dryers from China Factory | MOQ"
+title: "Shoe Dryer Supplier USA | Boot Dryers Wholesale"
 description: "Wholesale shoe dryers and boot dryers for US buyers from a China factory — 120V Type A/B models, ETL-ready documentation, winter-boot and work-boot dryers, MOQ from 200 pcs, DDP shipping to the USA. OEM/ODM private label welcome."
 slug: "shoe-dryer-supplier-usa"
 layout: "supplier-page"

@@ -18,6 +18,16 @@
   </nav>
 </div>
 
+{{/* Hub body from content/en/suppliers/_index.md (checked 2026-10-12, checklist #9): the hub had
+     0 FAQ blocks and no FAQPage JSON-LD while all 26 country pages had 6 each. Body-only, additive. */}}
+{{ with .Content }}
+<section class="cdp-section">
+  <div class="container">
+    {{ . }}
+  </div>
+</section>
+{{ end }}
+
 <!-- Country supplier page cards -->
 <section class="cdp-section">
   <div class="container">

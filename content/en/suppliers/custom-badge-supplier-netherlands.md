@@ -1,5 +1,5 @@
 ---
-title: "Custom Badge Supplier Netherlands | Enamel Pin & Metal Badge Wholesale | MOQ"
+title: "Custom Badge Supplier Netherlands | Enamel Pins Wholesale"
 description: "Custom enamel pins and metal badges for Dutch buyers from a China factory — REACH & nickel-safe plating test reports, King Willem-Alexander Day and event-pin runs, MOQ from 500 pcs, DDP to the Netherlands. OEM/ODM welcome."
 slug: "custom-badge-supplier-netherlands"
 layout: "supplier-page"
