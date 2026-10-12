@@ -20,3 +20,23 @@ draft: false
 - [65W 충전기 · 보조배터리](/ko/products/mobile-accessories/) — GaN 충전기, 보조배터리
 
 유연한 MOQ와 OEM/ODM 맞춤 제작 — [영업팀 문의](/ko/contact/)로 24시간 이내 견적을 받으시거나, 주문 전 [모기 퇴치 램프 구매 가이드](/ko/buying-guide-mosquito-repellent/)를 확인하세요.
+
+<!-- catfaq-2026-10-12 -->
+
+## FAQ
+
+<div class="cdp-faq">
+<details>
+<summary>기프트·생활가전 라인에는 어떤 제품이 있나요?</summary>
+<p>YWYM 2-in-1 모기 퇴치 스와터 & 램프(검증된 시즌 베스트셀러), 차량용 청소기, 의류 건조기, 화병이 있습니다. 특화 사이트에서 이쪽으로 옮겨온 라인입니다.</p>
+</details>
+<details>
+<summary>기프트 아이템 MOQ는 어떻게 되나요?</summary>
+<p>MOQ는 200개부터이며 OEM/ODM 맞춤 제작이 가능합니다.</p>
+</details>
+<details>
+<summary>샘플·생산·배송은 어떻게 진행되나요?</summary>
+<p>양산 전 샘플을 제공하며, 재고 모델은 입금 후 3~7일 내 출하되고 OEM 주문은 보통 20~35일이 소요됩니다. 해상·항공·특송으로 전 세계 배송하며 대량 주문에는 DDP 서비스도 가능합니다.</p>
+</details>
+</div>
+
