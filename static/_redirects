@@ -112,8 +112,12 @@
 /en/products/water-bottles/ /en/products/ 301
 /en/products/water-bottles /en/products/ 301
 
-# 2026-11-04: FI slug (seinälaturi) for YW-C-005-IN was 404 — raw + percent-encoded, slash + no-slash
+# 2026-11-04: FI slug (seinälaturi) for YW-C-005-IN was 404 — raw + percent-encoded, slash + no-slash.
+# Lowercase hex (%c3%a4) listed too: _redirects match is case-sensitive, and clients that do not
+# normalize (curl, some crawlers) send lowercase while browsers send %C3%A4.
 /en/products/65w-seinälaturi-yw-c-005-in /en/products/65w-wall-charger-yw-c-005-in/ 301
 /en/products/65w-seinälaturi-yw-c-005-in/ /en/products/65w-wall-charger-yw-c-005-in/ 301
 /en/products/65w-sein%C3%A4laturi-yw-c-005-in /en/products/65w-wall-charger-yw-c-005-in/ 301
 /en/products/65w-sein%C3%A4laturi-yw-c-005-in/ /en/products/65w-wall-charger-yw-c-005-in/ 301
+/en/products/65w-sein%c3%a4laturi-yw-c-005-in /en/products/65w-wall-charger-yw-c-005-in/ 301
+/en/products/65w-sein%c3%a4laturi-yw-c-005-in/ /en/products/65w-wall-charger-yw-c-005-in/ 301
